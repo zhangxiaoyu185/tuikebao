@@ -1,0 +1,335 @@
+<div class="productDesc_top">
+	<div class="item selected ui_btn base" data-action="productDescType" data-type="base">基本信息</div>
+	<div class="separate"></div>
+	<div class="item ui_btn desc" data-action="productDescType" data-type="desc">商品详情</div>
+	<div class="separate" data-action="productDescType"></div>
+	<div class="item ui_btn" data-action="productDescType" data-type="evaluate">评价<span id="evaluateCount"></span></div>
+</div>
+
+<div id="productDesc_share_note" class="productDesc_share_note ui_btn" data-action="shareLine" data-openTypeId="paramShade" >
+	<div id="note_close" class="note_close ui_btn" data-action="noteClose"></div>
+	<span class="note_span">分享赚<%=shareEarnings.money%>元   <%=shareEarnings.integral%>积分</span>
+	<div class="note_share"></div>
+</div>
+
+<!-- <div class="productDesc_share_fixed"></div> -->
+<!-- 商品基本信息 -->
+<div id="productDesc_base" class="productDesc_base">
+<!-- <div style=" width: 100%; height: 50px; background-color: #000;	position: relative;z-index: 99;"></div> -->
+	<a href="tel:0572-8888888">
+		<div class="telePhone" >
+			
+			<!-- <div class="item">
+				客服热线电话1：0572-8888888
+				<div class="phone_flag"></div>
+			</div> -->
+		
+		</div>
+	</a>
+	<div id="index_slides" style="margin-top: 50px;">	
+			<%if(prduct.bsprtImageUrl1){%>
+				<img src="<%=WEB_URL+"coreAttachment/image/get/"+prduct.bsprtImageUrl1%>" class="productDesc_img" />
+			<%}%>
+			<%if(prduct.bsprtImageUrl2){%>
+				<img src="<%=WEB_URL+"coreAttachment/image/get/"+prduct.bsprtImageUrl2%>" class="productDesc_img" />
+			<%}%>
+			<%if(prduct.bsprtImageUrl3){%>
+				<img src="<%=WEB_URL+"coreAttachment/image/get/"+prduct.bsprtImageUrl3%>" class="productDesc_img" />
+			<%}%>
+			<%if(prduct.bsprtImageUrl4){%>
+				<img src="<%=WEB_URL+"coreAttachment/image/get/"+prduct.bsprtImageUrl4%>" class="productDesc_img" />
+			<%}%>
+			<%if(prduct.bsprtImageUrl5){%>
+				<img src="<%=WEB_URL+"coreAttachment/image/get/"+prduct.bsprtImageUrl5%>" class="productDesc_img" />
+			<%}%>
+	</div>
+	
+	<div class="productDesc_content">
+		<div class="title" data-name="<%=prduct.bsprtName%>"><%=prduct.bsprtName%></div>
+		<div class="price">￥<%=prduct.bsprtSalePrice%>元</div>
+		<div class="order_price">原价<span class="out_time">￥<%=prduct.bsprtOrignalPrice%></span></div>
+		<div class="bottom">
+			<span class="left">快递：<%=prduct.bsprtExpress%></span>
+			<span>销售：<%=prduct.bsprtSaleCount%>笔</span>
+			<span class="right"><%=prduct.bsprtAddress%></span>
+		</div>
+		<div class="boundary"></div>
+		<%if(bsprtProductTagNames && bsprtProductTagNames.length>1){%>
+			<div class="label ui_btn" data-action="openShade" data-openTypeId="baseService">
+				<%for(var i=0; i<bsprtProductTagNames.length-1; i++){%>
+					<span class="item"><%=bsprtProductTagNames[i]%></span>
+				<%}%>
+				<div class="more"></div>
+			</div>
+		<%}%>
+	</div>
+
+	<div class="productDesc_param ui_btn" data-action="openShade" data-openTypeId="paramShade">
+		<span class="ml-12">产品参数</span>
+		<div class="rightArrows_flag"></div>
+	</div>
+
+	<div class="productDesc_param attr ui_btn" data-action="openShade" data-openTypeId="attribute"> 
+		<span class="ml-12">请选择<%=attrTitle%></span>
+		<div class="rightArrows_flag"></div>
+	</div>
+
+	<div  class="productDesc_shade_div" >
+		<div class="productDesc_shade ui_btn" id="shuts"  data-action="shut"></div>
+		<!-- 产品参数 start -->
+		<div id="paramShade" class="productDesc_shade_cotent" style="background:#fff;z-index: 3">
+			<div class="param" >
+				<div class="title">产品参数</div>
+				<%for(var i=0; i<bsprtRuleParam.length; i++){%>
+					<div class="item">
+						<div class="attr"><%=bsprtRuleParam[i].flag%></div>
+						<div class="value"><%=bsprtRuleParam[i].val%></div>
+					</div>
+				<%}%>	
+			</div>
+		</div>
+		<!-- 产品参数 end -->
+
+		<!-- 基础服务 start -->
+	<div id="baseService" class="productDesc_shade_cotent " style=" background-color: rgb(255, 255, 255);">
+		<div class="baseService">
+			<div class="title">基础服务</div>
+			<%for(var i=0; i<bsprtRuleParamContent.length; i++){%>
+				<div class="item">
+					<div class="attr">
+						<div class="flag"><%=bsprtRuleParamContent[i].bststIcon%><</div>
+					</div>
+					<div class="value">
+						<div class="value_title"><%=bsprtRuleParamContent[i].bststName%></div>
+						<div class="value_content">
+							<%=bsprtRuleParamContent[i].bststDesc%>
+						</div>
+					</div>
+				</div>
+			<%}%>
+		</div>
+	</div>
+		<!-- 基础服务 end -->
+
+		<!-- 属性 start -->
+	<div id="attribute" class="productDesc_shade_cotent" style="z-index: 3;" >
+			<div class="attribute">
+				<div class="top">
+					<div class="product_border">
+						<img src="<%=WEB_URL+"coreAttachment/image/get/"+prduct.bsprtSharePic%>" class="product_img" />
+					</div>
+					<div class="title">
+
+						<div class="price">￥<span id="selectPrice"></div>
+						<div class="content">请选择<%=attrTitle%><span>库存:<span id="store"></span></span></div>
+						<div class="quit ui_btn" data-action="closeShade">
+						<!-- <img src=""> -->
+						</div>						
+<!-- 						<img src="images/commPage/delet_flag.png" class="ui_btn" data-action="closeShade"> -->
+					</div>
+				</div>
+				<div class="selectArea">
+					<div class="cotent">
+						<%for(var i=0; i<bsprtAttrJson.length; i++) {%>
+							<div class="cotent_title" data-uuid="<%=bsprtAttrJson[i].uuid%>"><%=bsprtAttrJson[i].name%></div>
+							<div class="cotent_item">
+								<%for(var j=0; j<bsprtAttrJson[i].data.length; j++){%>
+									<div class="item_select ui_btn" data-action="attrSelect" data-type="<%=bsprtAttrJson[i].data[j].uuid%>"><%=bsprtAttrJson[i].data[j].name%></div>
+								<%}%>
+							</div>
+						<%}%>
+					</div>
+				</div>
+				<div class="div_number">
+					<span>数量</span>
+					<div class="right_div">
+						<div class="addSubtract_btn ui_btn" data-action="subtract">-</div>
+						<div id="number_val" class="number_val">1</div>
+						<div class="addSubtract_btn ui_btn" data-action="add">+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 属性 end -->
+		<div id="close_btn" style="z-index: 3" class="close_btn ui_btn" data-action="closeShade">关闭</div>
+		<div id="sure_btn" style="z-index: 3" class="close_btn ui_btn" data-action="sureBuy">关闭</div>
+		<div id="close_attr" style="z-index: 3" class="close_attr">
+		<div class="item esc ui_btn" data-action="closeShade" >关闭</div>
+				
+		</div>
+	</div>
+
+
+<!-- 	<div class="productDesc_btn_bottom">
+		<div class="item addToCart ui_btn" data-action="addToCart" data-openTypeId="attribute">加入购物车</div>
+		<div class="item goBuy ui_btn"  data-action="goSure" data-openTypeId="attribute">立即购买</div>
+	</div> -->
+</div>
+
+<!-- 商品详情 -->
+<div id="productDesc_content" class="productDesc_content"></div>
+
+
+
+<!-- <div class="productDesc_btn_bottom_placeholder"></div> -->
+<!-- 分享区start -->
+<div  class="productDesc_shade_div" >
+	<div class="productDesc_shade ui_btn"  data-action="shut" id="shade" style="z-index: 1000"></div><!--遮罩-->
+	<!--图片分享start-->
+	<div class="productDesc_shareArea ui_btn" id="productDesc_shareArea" data-action="shareArea">
+		<img src="" id="sharePic">
+<!-- 		<img src="./images/commPage/tx.png" alt="" style="width: 46px;height: 46px;margin-left: 12px;border-radius:23px;float: left;margin-right:13px;background-size: cover;">
+		<span style="font-size:15px;width:200px;padding-top:15px;">我发现这个宝贝很好，非常适合你哦</span>
+
+		<div class="productDesc_details">
+			<img src="images/test/product_desc.png" style="margin-bottom:13px;" class="productDesc_img" />
+			<span style="font-size:14px;">珍视明蒸汽敷眼罩睡眠蒸气发热护</span>
+			<span style="font-size:14px;">眼罩缓解眼疲劳保护视力洋甘菊</span>
+		</div> -->
+
+		<!-- 扫码区start -->
+<!-- 
+		<div class="productDesc_sweepArea" id="attribute">
+			<div class="productDesc_sweep">
+				<img src="./images/commPage/qrcode.png" alt="" style="float:left;">
+				
+				<img src="./images/commPage/frame.png" alt="" style="float:right;">
+			</div>
+			<div class="productDesc_sweep_txt">
+				<span style="float:left;">长按识别二维码</span>
+				<span style="float:right;">查看分享按钮</span>
+			</div>
+		</div> -->
+		<!-- 扫码区end -->
+	</div>
+	<!--图片分享end-->
+
+	<!-- 自定义分享文案start -->
+	<div class="productDesc_shareCopy" id="productDesc_shareCopy">
+		<div class="sharingmode">
+			<div class="sharing">分享方式</div>
+			<div class="area">
+				<div class="arealt">链接推广</div>
+				<div class="areaRg ui_btn" data-action="shareOpen">图片分享</div>
+			</div>
+			<div class="sharingarea">
+				<span id="commodity" class="ui_btn" data-action="linkShare"></span>
+			</div><!-- 链接区 -->
+		</div>
+		<div class="productDesc_shareCopy_area">
+			<div class="productDesc_shareCopy_top  ">
+				<div class="ft ui_btn" data-action="editCopy">
+					<span>编辑自定义文案</span>
+				</div>
+				<div class="txt ui_btn"  data-action="openLine">
+					<img src="./images/commPage/edit.png" alt=""><span>自定义分享文案</span>
+				</div>	
+			</div>
+		</div>
+		<!--自定义文案start-->
+		<div class="productDesc_shareCopy_nav" id="nav">
+			<%for(var x=0; x<crscyCopy.length; x++){%>
+				<div class="productDesc_custom ui_btn "  data-action="checkLine">
+					<nobr><span ><%=crscyCopy[x].crscyCopy%></span></nobr>
+					<div class="check"></div>
+				</div>			
+			<%}%>
+<!-- 				<div class="productDesc_custom ui_btn "  data-action="checkLine">
+					<span>我发现这个宝贝很好，非常适合你哦</span>
+					<div class="check"></div>
+				</div>
+
+				<div class="productDesc_custom ui_btn "  data-action="checkLine">
+					<span >重要的宝贝重复三遍，强烈推荐给你哦</span>
+					<div class="check"></div>
+				</div>
+
+				<div class="productDesc_custom ui_btn "  data-action="checkLine">
+					<span>这么好的宝贝而且不贵，我已经跪啦</span>
+					<div class="check selected"></div>
+				</div>
+
+				<div class="productDesc_custom ui_btn "  data-action="checkLine">
+					<span>拖家带口用生命保证的好宝贝</span>
+					<div class="check"></div>
+				</div> -->
+		</div>	
+		<!--自定义文案end-->
+		<!--编辑自定义文案start-->
+		<div class="productDesc_shareCopy_nav" id="edit">
+		<textarea class="content" id="text"></textarea>
+		<p style=" margin-left: 10%">你已填写</p>
+		<p id="len">0</p>
+		<p>个字，最多可写50个字</p>
+		<div class="submit ui_btn" data-action="submitCopy">提交</div>
+		</div>	
+		<!--编辑自定义文案startend-->		
+		<!--分享图标区-->
+		<div class="productDesc_spread">
+		
+			<div class="txt">
+				分享到
+			</div>
+			<div class="productDesc_spread_icon ui_btn" data-action="share">
+				<img src="./images/commPage/weixin.png" alt="">
+				<span>微信好友</span>
+			</div>	
+			
+			<div class="productDesc_spread_icon ui_btn" data-action="share">
+				<img src="./images/commPage/quan.png" alt="">
+				<span>朋友圈</span>
+			</div>	
+
+			<div class="productDesc_spread_icon ui_btn" data-action="share">
+				<img src="./images/commPage/friend.png" alt="">
+				<span>QQ好友</span>
+			</div>	
+			<div class="productDesc_shade ui_btn" id="conceal" data-action="conceal">
+				<div class="shade"></div>
+				<div class="shareTo"></div>				
+			</div>
+		</div>
+	</div>
+	<!-- 自定义分享文案end -->
+	
+</div>
+<!-- 分享区end -->
+
+
+
+<!-- 商品评价 -->
+
+<div id="productDesc_evaluate" class="productDesc_evaluate">
+	<a href="tel:0572-8888888">
+		<div class="telePhone" >
+			<!-- 
+				<div class="item">
+					客服热线电话1：0572-8888888
+					<div class="phone_flag"></div>
+				</div> -->	
+		</div>
+	</a>
+	<div class="div_content">
+		<div id="wrapper" style="margin-top:48px;overflow: auto;" >
+			<div id="scroller" >
+				<div id="scroller-pullDown">
+					<span id="down-icon" class="icon-double-angle-down pull-down-icon"></span>
+					<span id="pullDown-msg" class="pull-down-msg">下拉刷新</span>
+				</div>
+				<div id="scroller-content">
+					<ul >
+						
+					</ul>
+				</div>
+
+				<div id="scroller-pullUp">
+					<span id="up-icon" class="icon-double-angle-up pull-up-icon"></span>
+					<span id="pullUp-msg" class="pull-up-msg">上拉加载</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+		

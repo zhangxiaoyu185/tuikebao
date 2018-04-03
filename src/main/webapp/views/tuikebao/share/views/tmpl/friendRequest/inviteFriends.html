@@ -1,0 +1,68 @@
+
+	<div class="inviteFriends_warp">
+		<div class="inviteFriends_top">
+			<div class="inviteFriends_points ui_btn" data-action="toInvitersListView">
+				<span>累计邀请</span>	
+				<span style="font-size:12px;margin-top:5px;"><%=totalInvitation%>人</span>
+			</div>
+			<div class="inviteFriends_points ui_btn" data-action="toInvitersListView">
+				<span>今日邀请</span>
+				
+				<span style="font-size:12px;margin-top:5px;"><%=invitationTodayParam%>人</span>
+			</div>
+			<div class="inviteFriends_points ui_btn" data-action="toRankingListView" style="line-height:40px;"><span>排行榜</span></div>
+			<div class="inviteFriends_points  ui_btn" data-action="toRewardCollection" id="crusrInviteNused" data-crusrInviteNused="<%=totalInvitation%>" style="line-height:40px;"><span>领取奖励</span></div>
+		</div>
+
+		<div class="inviteFriends_nav">
+			<img src="./images/pigeonhole/img_1.png" alt="">
+			<div class="inviteFriends_btn">
+				马上邀请
+			</div>
+		</div>
+		<div class="inviteFriends_choose" style="position: relative;">
+			<div class="inviteFriends_left ui_btn" data-action="shadeOpen">
+				我的专属链接
+			</div>
+			<div class="inviteFriends_right ui_btn" data-action="openShade">
+				我的专属二维码
+			</div>
+			<div style="position: absolute;absolute;bottom:-25px;left: 45%;"><!-- 拷贝的按钮 -->
+			<div class="clickCopy ui_btn" data-action="duplicate" data-clipboard-target="#code">拷贝
+				<div class="select"></div>
+			</div>
+			</div>
+		</div>
+		
+		<div class="inviteFriends_code" id="twoCode" >
+			<!-- <img src="./images/pigeonhole/qr-code.png" alt=""> -->
+		</div>
+		<div class="inviteFriends_link" style="text-overflow:ellipsis;overflow:hidden;">
+			<span id="code" class="ui_btn" data-action="longCopy">
+			</span>
+		</div> 
+		
+		
+		<div class="txt"><span >分享请点击右上角</span></div>
+		<div class="inviteFriends_share">
+			<div class="inviteFriends_icon ui_btn"  data-action="share">
+				<img src="images/pigeonhole/weixin.png" alt="">
+			
+				<span>微信好友</span>
+			</div>
+			<div class="inviteFriends_icon ui_btn" data-action="share">
+				<img src="images/pigeonhole/quan.png" alt="">
+				
+				<span>朋友圈</span>
+			</div>
+			<div class="inviteFriends_icon ui_btn"  data-action="share">
+				<img src="images/pigeonhole/friend.png" alt="">
+				
+				<span>QQ好友</span>
+			</div>
+			<div class="productDesc_shade ui_btn" id="conceal" data-action="conceal">
+					<div class="shade"></div>
+					<div class="shareTo"></div>				
+			</div>
+		</div> 	
+	</div>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加商品表</title>
+<link type="text/css" rel="stylesheet" href="../css/common/base-min.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../css/common/index.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../css/busiproduct_add.css" media="all" />
+<script type="text/javascript" src="../js/jquery/jquery-1.8.3.min.js?ts=new Date()"></script>
+<script type="text/javascript" src="../ckeditor/ckeditor.js?ts=new Date()"></script>
+<script type="text/javascript" src="../ckfinder/ckfinder.js?ts=new Date()"></script>
+<script type="text/javascript" src="../../js/jquery.js?ts=new Date()"></script>
+<script type="text/javascript" src="../../js/jquery-form.js?ts=new Date()"></script>
+<script type="text/javascript" src="../js/layer/layer.js?ts=new Date()"></script>
+<script type="text/javascript" src="../js/common/common.js?ts=new Date()"></script>
+<script type="text/javascript" src="../js/product/busiproduct_add.js?ts=new Date()"></script>
+
+<script type="text/javascript" src="../js/ztree/jquery.ztree.core-3.5.js?ts=new Date()"></script>
+<script type="text/javascript" src="../js/ztree/jquery.ztree.excheck-3.5.js?ts=new Date()"></script>
+
+<!-- 上传控件 -->
+<link rel="stylesheet" type="text/css" href="../js/upFile/cropper/dist/cropper.css" />
+<link rel="stylesheet" type="text/css" href="../js/upFile/cropper/css/main.css"/>
+<link rel="stylesheet" type="text/css" href="../js/upFile/upImg.css"/>
+<script type='text/javascript' src='../js/upFile/upImg/js/LocalResizeIMG.js'></script>
+<script type="text/javascript" src="../js/upFile/cropper/dist/cropper.js"></script>
+<script type="text/javascript" src="../js/upFile/upImg.js"></script>
+</head>
+
+<body>
+	<div class="warp">
+		<div class="top">添加商品</div>
+		<div class="container">
+			<div class="set">
+				<div class="btn select" onclick="">基础设置</div> 
+				<div class="btn">属性设置</div> 
+				<div class="clear"></div>
+			</div>
+			
+			<div class="plate leftSelect rG">
+				<ul  class="list">
+					<li class="list-li">
+						<label class="leftLi">商品名称：</label>
+						<div class="rightLi">
+							<input type="text" class="inputStyle bsprtName"/>
+							<span class="p-red"> *</span>
+						</div>
+					</li>
+					<li class="list-li">
+						<label class="leftLi">商品类型：</label>
+						<div class="rightLi">
+							<span class="bsprtCategory"></span>
+						</div>
+					</li>
+					<li class="list-li">
+						<label class="leftLi">商品描述：</label>
+						<div class="rightLi">
+							<textarea class="bsprtDesc" rows="5" cols="54"></textarea>
+						</div>
+					</li>
+					<li class="list-li">
+						<label class="leftLi">客服电话：</label>
+						<div class="rightLi">
+							<input type="tel" class="inputStyle bsprtTel"/>
+							<span class="p-red"> *</span>
+						</div>
+					</li>
+					<li class="list-li">
+						<label class="leftLi">售价范围：</label>
+						<div class="rightLi">
+							<input type="text" class="inputStyle bsprtSalePrice"/>
+							<span class="p-red"> *</span>
+						</div>
+					</li>
+					<li class="list-li">
+						<label class="leftLi">原价范围：</label>
+						<div class="rightLi">
+							<input type="text" class="inputStyle bsprtOrignalPrice"/>
+							<span class="p-red"> *</span>
+						</div>
+					</li>
+					<li class="list-li">
+						<label class="leftLi">销售数量：</label>
+						<div class="rightLi">
+							<input type="number" class="inputStyle bsprtSaleCount"/>
+							<span class="p-red"> *</span>
+						</div>
+					</li>
+					
+					<li class="list-li">
+						<label class="leftLi">地区</label>
+						<div class="rightLi">
+							<input type="text" class="inputStyle bsprtAddress"/>
+							<span class="p-red"> *</span>
+						</div>
+					</li>
+					<li class="list-li">
+						<label class="leftLi">是否是虚拟商品:</label>
+						<div class="rightLi">
+						<select class="inputStyle bsprtIsVirtual">
+							<option value="0">否</option>
+							<option value="1">是</option>
+						</select>
+<!-- 								<label><input name="bsprtIsVirtual" type="radio" value="0"  checked="checked"/>否 </label>  -->
+<!-- 								<label><input name="bsprtIsVirtual" type="radio" value="1" />是 </label>  -->
+							<span class="p-red"> *</span>
+						</div>
+					</li>
+<!-- 					<li class="list-li"> -->
+<!-- 						<label class="leftLi">页面访问数量</label> -->
+<!-- 						<div class="rightLi"> -->
+<!-- 							<input type="text" class="inputStyle bsprtSharePic"/> -->
+<!-- 							<span class="p-red"> *</span> -->
+<!-- 						</div> -->
+<!-- 					</li> -->
+					
+<!-- 					<li class="list-li"> -->
+<!-- 						<label class="leftLi">状态:1销售中2已下架：</label> -->
+<!-- 						<div class="rightLi"> -->
+<!-- 							<div class="ck"> -->
+<!-- 								<input type="checkbox"/> -->
+<!-- 							    <label></label> -->
+<!-- 							</div> -->
+<!-- 							<span class="p-red"> *</span> -->
+<!-- 						</div> -->
+<!-- 					</li> -->
+					<li class="list-li">
+						<label class="leftLi">快递费用：</label>
+						<div class="rightLi">
+							<input type="number" class="inputStyle bsprtExpress"/>
+							
+							<span class="p-red"> *</span>
+						</div>
+					</li>
+				
+					<li class="list-li">
+						<label class="leftLi">推客封面图：</label>
+						<div class="rightLi">
+							<div class="upImg_div" style="width: 120px;">
+								<div class="upImg_flag bsprtSharePic"  data-field="bsprtSharePic" data-uuid="" data-width="200" data-height="200" data-cratmType="5" data-cratmDir="5">
+									<input type="file" class="input_filt"/>
+									200X200
+								</div>
+							</div>	
+							<span class="p-red"> *</span>
+						</div>
+					</li>
+					<li class="list-li">
+						<label class="leftLi">商城封面图：</label>
+						<div class="rightLi">
+<!-- 							<input type="text" class="inputStyle bsprtStorePic"/> -->
+							<div class="upImg_div" style="width: 120px;">
+								<div class="upImg_flag bsprtStorePic"  data-field="bsprtStorePic" data-uuid="" data-width="750" data-height="480" data-cratmType="4" data-cratmDir="4">
+									<input type="file" class="input_filt"/>
+									750X480
+								</div>
+							</div>	
+							<span class="p-red"> *</span>
+						</div>
+					</li>
+					<li class="list-li">
+						<label class="leftLi">主图1：</label>
+						<div class="rightLi">
+							<div class="upImg_div" style="width: 120px;">
+								<div class="upImg_flag bsprtImageUrl1"  data-field="bsprtImageUrl1" data-uuid="" data-width="750" data-height="468" data-cratmType="3" data-cratmDir="3">
+									<input type="file" class="input_filt"/>
+									750X468
+								</div>
+							</div>	
+							<span class="p-red"> *</span>
+						</div>
+					</li>
+					<li class="list-li">
+						<label class="leftLi">主图2：</label>
+						<div class="rightLi">
+							<div class="upImg_div">
+								<div class="upImg_flag bsprtImageUrl2"  data-field="bsprtImageUrl2" data-uuid="" data-width="750" data-height="468" data-cratmType="3" data-cratmDir="3">
+									<input type="file" class="input_filt"/>
+									750X468
+								</div>
+							</div>	
+						</div>
+					</li>
+					<li class="list-li">
+						<label class="leftLi">主图3：</label>
+						<div class="rightLi">
+							<div class="upImg_div">
+								<div class="upImg_flag bsprtImageUrl3"  data-field="bsprtImageUrl3" data-uuid="" data-width="750" data-height="468" data-cratmType="3" data-cratmDir="3">
+									<input type="file" class="input_filt"/>
+									750X468
+								</div>
+							</div>	
+						</div>
+					</li>
+					<li class="list-li">
+						<label class="leftLi">主图4：</label>
+						<div class="rightLi">
+							<div class="upImg_div">
+								<div class="upImg_flag bsprtImageUrl4"  data-field="bsprtImageUrl4" data-uuid="" data-width="750" data-height="468" data-cratmType="3" data-cratmDir="3">
+									<input type="file" class="input_filt"/>
+									750X468
+								</div>
+							</div>	
+						</div>
+					</li>
+					<li class="list-li">
+						<label class="leftLi">主图5：</label>
+						<div class="rightLi">
+							<div class="upImg_div">
+								<div class="upImg_flag bsprtImageUrl5"  data-field="bsprtImageUrl5" data-uuid="" data-width="750" data-height="468" data-cratmType="3" data-cratmDir="3">
+									<input type="file" class="input_filt"/>
+									750X468
+								</div>
+							</div>	
+						</div>
+					</li>
+<!-- 					<li class="list-li"> -->
+<!-- 						<label class="leftLi">所有属性标识JSON串：</label> -->
+<!-- 						<div class="rightLi"> -->
+<!-- 							<input type="text" class="inputStyle bsprtAttrJson"/> -->
+<!-- 							<span class="p-red"> *</span> -->
+<!-- 						</div> -->
+<!-- 					</li> -->
+<!-- 					<li class="list-li"> -->
+<!-- 						<label class="leftLi">所有属性值标识JSON串：</label> -->
+<!-- 						<div class="rightLi"> -->
+<!-- 							<input type="text" class="inputStyle bsprtValueJson"/> -->
+<!-- 							<span class="p-red"> *</span> -->
+<!-- 						</div> -->
+<!-- 					</li> -->
+					<li class="list-li">
+						<label class="leftLi">标签：</label>
+						<div class="rightLi">
+<!-- 							<input type="text" class="inputStyle bsprtProductTag"/> -->
+<!-- 							<span class="p-red"> *</span> -->
+							<div class="select-box bsprtProductTag">
+			                    <input class="select-item" data-ids="" data-values="" type="text" value="" readonly="readonly"/>
+			                    <ul class="select-ul align-left">                        
+			                    </ul>
+			                </div>
+						</div>
+					</li>
+					<li class="list-li" >
+						<label class="leftLi" style=" margin-top: 10px;">热点图标：</label>
+						<div class="rightLi">
+<!-- 							<input type="text" class="inputStyle bsprtProductTag"/> -->
+<!-- 							<span class="p-red"> *</span> -->
+							<div class="select-box bshstHot" style=" padding-top: 10px;">
+			                    <!-- <input class="select-item" data-ids="" data-values="" type="text" value="" readonly="readonly"/> -->
+<!-- 			                    <ul class="select-ul align-left">                        
+			                    </ul> -->
+			                </div>
+						</div>
+					</li>
+<!-- 					<li class="list-li"> -->
+<!-- 						<label class="leftLi">规格参数JSON串：</label> -->
+<!-- 						<div class="rightLi"> -->
+<!-- 							<input type="text" class="inputStyle bsprtRuleParam"/> -->
+<!-- 							<span class="p-red"> *</span> -->
+<!-- 						</div> -->
+<!-- 					</li> -->
+<!-- 					<li class="list-li"> -->
+<!-- 						<label class="leftLi">商品等级分享金额JSON串：</label> -->
+<!-- 						<div class="rightLi"> -->
+<!-- 							<input type="text" class="inputStyle bsprtGradeShare"/> -->
+<!-- 							<span class="p-red"> *</span> -->
+<!-- 						</div> -->
+<!-- 					</li> -->
+				</ul>
+
+				<div class="shop">
+					<div class="describe selected" data-type="productDescribe">商品详情</div>
+					<div class="parameter" data-type="productParam">商品规格</div>
+					<div class="shareGrade" data-type="shareGrade">分享等级</div>
+				</div>
+				<div id="productDescribe" class="product_content">
+					<textarea class="textAreaStyle bsprtView" name="bsprtView"></textarea>
+				</div>
+				<div id="productParam" class="product_content"  style="display: none; min-height: 410px;">
+					<div class="item">
+						<input id="productFlag" class="ml-12" type="text"/><input id="productVal" class="ml-12" type="text"/> <div id="paramAdd" class="addBtn">添加</div>
+					</div>
+				</div>
+				<div id="shareGrade" class="product_content"  style="display: none; min-height: 410px;">
+<!-- 					<div class="item"> -->
+<!-- 					<span style="float: left">分享等级名称：</span><input id="productFlag" type="text" placeholder="请输入分享获得积分数"/><input id="productFlag" type="text" placeholder="请输入分享并确认收货获得单个返现收益"/> -->
+<!-- 					</div> -->
+				</div>
+			</div>
+			
+			<div class="plate rightSelect">
+				<div id="typeCheck" class="first">
+					<div class="attribute">属性选择</div>
+					<div class="add"><input id="typeCheckAddVal" type="text" name="" placeholder="请输入要添加的属性"><input type="button" name="" value="添加" onclick="addType()"></div>
+					<div class="much">
+<!-- 						<input type="checkbox" name=""><span class="time">出发时间</span> -->
+<!-- 						<input type="checkbox" name=""><span class="time">成人／儿童</span> -->
+<!-- 						<input type="checkbox" name=""><span class="time">颜色</span> -->
+<!-- 						<input type="checkbox" name=""><span class="time">套餐</span> -->
+<!-- 						<input type="checkbox" name=""><span class="time">尺寸</span> -->
+<!-- 						<input type="checkbox" name=""><span class="time">手膜</span> -->
+<!-- 						<input type="checkbox" name=""><span class="time">足膜</span> -->
+					</div>
+				</div>
+				<div id="attrSelect" class="second noline">
+					<div id="attrs" class="value">属性值选择</div>
+<!-- 					<div class="add">颜色<input type="text" name="" value="请输入要添加的属性"><input type="button" name="" value="添加"></div> -->
+<!-- 					<div class='attrItem'> -->
+<!-- 						<div class="add"><input type="text" name="" value="请输入要添加的属性"><input type="button" name="" value="添加"></div> -->
+<!-- 						<div class="color"> -->
+<!-- 							<input type="checkbox" name=""><span class="time">红</span> -->
+<!-- 							<input type="checkbox" name=""><span class="time">白</span> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 					<div class='attrItem'> -->
+<!-- 						<div class="add"><input type="text" name="" value="请输入要添加的属性"><input type="button" name="" value="添加"></div> -->
+<!-- 						<div class="color"> -->
+<!-- 							<input type="checkbox" name=""><span class="time">红</span> -->
+<!-- 							<input type="checkbox" name=""><span class="time">白</span> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+				</div>
+				<div class="three noline">
+					<div class="quote">商品报价及库存（注：价格不能少于0.01元）</div>
+					<div id="product_table" class="product_table">
+<!-- 						<div class="tr"><div class="td">颜色</div><div class="td">库存</div><div class="td">价格</div><div class="td">成本</div></div> -->
+<!-- 						<div class="tr"><div class="td">颜色</div><input class="td" /><input class="td"/><input class="td"/></div> -->
+<!-- 					
+      <div class="css_td">颜色 -->
+<!-- 					          <div class="css_tr">红</div> -->
+<!-- 					          <div class="css_tr">白</div> -->
+					          
+<!-- 					      </div> -->
+<!-- 					      <div class="css_td">库存（可修改） -->
+<!-- 					          <div class="css_tr">0</div> -->
+<!-- 					          <input  class="css_tr" /> -->
+					          
+	
+<!-- 					      </div> -->
+<!-- 					      <div class="css_td">价格（可修改） -->
+<!-- 					          <div class="css_tr">0</div> -->
+<!-- 					          <input  class="css_tr" /> -->
+					          
+<!-- 					      </div> -->
+<!-- 					      <div class="css_td">成本（可修改） -->
+<!-- 					          <div class="css_tr">0</div> -->
+<!-- 					          <div class="css_tr">0</div> -->
+<!-- 					      </div> -->
+					</div>
+				</div>
+			</div>
+			
+			<div class="submit_placeholder"></div>
+			<div class="submit">
+				<input type="button" name="" class="submit_btn" value="保存表格">
+<!-- 				<input type="button" name="" class="submit_btn" value="返回列表" onclick="saveProduct()"> -->
+			</div>
+		</div>	
+	</div>
+</body>
+</html>

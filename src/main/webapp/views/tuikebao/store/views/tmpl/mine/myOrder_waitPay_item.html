@@ -1,0 +1,63 @@
+<%if( list.length == 0 ){%>
+	<li>
+		<div id="mainStage">
+			<div class="warp">
+				<div class="page">
+					<img src="./images/order/order.png" alt="" style="width:88px;height:92px;"><span style="color:#999">无相关订单</span>
+				</div>
+			</div>
+		</div>
+	</li>
+
+<%}else{%>
+
+	<%for(var i=0; i<list.length; i++){%>
+		<div class="myOrder_item">
+			<div class="top">
+				<span class="orderNumber">订单号：<%=list[i].bsorrUuid%></span>
+			</div>
+			<div class="div_middle_border">
+		<%
+
+			var busiOrderItemList = list[i].busiOrderItemList;
+			for(var j=0; j<busiOrderItemList.length; j++){%>
+			<div class="div_middle waitPay ui_btn" data-action="goDesc_waitPay" data-type="<%=i%>">
+				<img src="<%=WEB_URL+"coreAttachment/image/get/"+busiOrderItemList[j].bsoimStorePic%>" class="product_img" />
+
+				<div class="content">
+					<div class="title ellipsis"><%=busiOrderItemList[j].bsoimProductName%></div>
+					<div class="div_number waitPay">x<span class="number_x"><%=busiOrderItemList[j].bsoimQuantity%></spn></div>
+					<div class="attr waitPay"><%=busiOrderItemList[j].bsoimAttrName%></div>
+					<div class="div_flag">
+						<!-- <span class="item">七天退换</span>
+						<span class="item">七天退换</span> -->
+					</div>
+					<div class="price_red" >￥<%=busiOrderItemList[j].bsoimPrice%></div>
+				</div>
+			</div>
+		<%}%>
+			</div>
+			<div class="sum_item">
+				<div class="flag">商品总价：</div>
+				<div class="content">￥<%=(list[i].bsorrProductValue + list[i].bsorrAdjustProduct).toFixed(2)%></div>
+			</div>
+			<div class="sum_item">
+				<div class="flag">快递运费：</div>
+				<div class="content">￥<%=(list[i].bsorrExpressValue + list[i].bsorrAdjustExpress).toFixed(2)%></div>
+			</div>
+			<div class="sum_item">
+				<div class="flag">优惠合计：</div>
+				<div class="content">-￥0</div>
+			</div>
+			<div class="sum_item">
+				<div class="flag">共<%=busiOrderItemList.length%>件商品  支付合计:</div>
+				<div class="content">￥<%=(list[i].bsorrProductValue + list[i].bsorrExpressValue + list[i].bsorrAdjustProduct + list[i].bsorrAdjustExpress).toFixed(2)%></div>
+			</div>
+			<div class="goPay_div ">				
+				<div class="goPay ui_btn" data-action="goPay" data-number="<%=i%>">立即支付</div>
+				<div style=" background-color: #9c9c9c; float: left;" class="goPay ui_btn" data-action="delete" data-uuid="<%=list[i].bsorrUuid%>">取消订单</div>
+			</div>
+		</div>
+	<%}%>	
+<%}%>	
+

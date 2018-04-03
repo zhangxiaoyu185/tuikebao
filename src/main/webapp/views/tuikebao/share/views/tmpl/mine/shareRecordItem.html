@@ -1,0 +1,36 @@
+
+<%if( shareRecordList.length == 0 ){%>
+	<li>
+		<div id="mainStage">
+			<div class="warp">
+				<div class="page">
+					<img src="./images/order/order.png" alt="" style="width:88px;height:92px;"><span style="color:#999">无相关信息</span>
+				</div>
+			</div>
+		</div>
+	</li>
+
+<%}else{%>
+
+
+	<%for(var i=0; i<shareRecordList.length; i++){%>
+		<div class="shareRecord">
+			<div class="shareRecord_area">
+				<div class="shareRecord_areaLt">
+					<div class="photo">
+						<img src="<%=WEB_URL+"coreAttachment/image/get/"+shareRecordList[i].bssrdSharePic%>" alt="">
+					</div>
+				</div>
+				<div class="shareRecord_areaRg">
+					<span style="margin-top: 0;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2; -webkit-box-orient: vertical;text-overflow: ellipsis;">分享<%=shareRecordList[i].bssrdProductName%>商品</span>					
+					<span style="color:#888;"><%=shareRecordList[i].bssrdCdate%></span>
+				</div>
+				<div class="shareRecord_areaRg">
+					<span style="margin-top:0;">完成笔数：<%=shareRecordList[i].bssrdPaymentCount%></span>				
+					<span>返现收益：+<%=shareRecordList[i].bssrdBackNow%></span>				
+					<span>积分收益：+<%=shareRecordList[i].bssrdIntegral%></span>
+				</div>
+			</div>
+		</div>
+	<%}%>
+<%}%>

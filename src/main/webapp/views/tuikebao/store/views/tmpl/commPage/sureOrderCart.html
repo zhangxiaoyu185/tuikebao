@@ -1,0 +1,105 @@
+<%if(addressBuy){%>
+	<div class="sureOrder_address ui_btn" data-action="selectAddress">
+		<div class="top">
+			<span id="receiveName" class="left"><%=addressBuy.bssasName%></span>
+			<span id="phoneNo" class="right"><%=addressBuy.bssasMobile%></span>
+		</div>
+		<div class="bottom">
+			<span class="left"><%=addressBuy.bssasProvinceName%><%=addressBuy.bssasCityName%><%=addressBuy.bssasCountyName%><%=addressBuy.bssasAddress%></span>
+		</div>
+	</div>
+<%}else{%>
+	<div class="sureOrder_item address_flag ui_btn" data-action="selectAddress">请选择收货地址</div>
+<%}%>
+
+<!-- <div class="sureOrder_item address_flag">请选择收货地址</div> -->
+
+<div class="sureOrder_border">
+	<div class="sureOrder_item">订单详情</div>
+	<%for(var i=0; i<selectCartList.length; i++){%>
+		<div class="sureOrder_item_border">
+			<div class="sureOrder_content">
+				<div class="div_middle">
+					<img src="<%=WEB_URL+"coreAttachment/image/get/"+selectCartList[i].bssctSharePic%>" class="product_img" />
+					<div class="content">
+						<div class="title"><%=selectCartList[i].bssctName%></div>
+						<div class="div_number">x<span class="number_x"><%=selectCartList[i].bssctQuantity%></spn></div>
+
+						<div class="attr"><%=selectCartList[i].bssctAttrName%></div>
+					<!-- 	<div class="div_flag">
+			
+						</div> -->
+						<div class="price_red" >￥<span><%=selectCartList[i].bssctFee*selectCartList[i].bssctQuantity%></span></div>
+					</div>
+				</div>
+			</div>
+			<div class="sureOrder_item">
+				购买数量
+				<div class="div_addSubtractBtn">
+					<div class="addSubtractBtn ui_btn" data-action="subtract">-</div>
+					<div class="number"><%=selectCartList[i].bssctQuantity%></div>
+					<div class="addSubtractBtn ui_btn" data-action="add">+</div>
+				</div>
+			</div>
+			<div class="sureOrder_item">
+				购买方式
+				<span class="kd_type" data-express="0">快递  免邮</span>
+			</div>
+			<div class="sureOrder_item">
+				买家留言：
+				<input class="leaveMessage" type="text" placeholder="选填：对本次交易的说明或要求"/>
+			</div>
+			<div class="sureOrder_item">
+				<span class="sum_price">￥<span class="sum_price_val"><%=selectCartList[i].bssctFee*selectCartList[i].bssctQuantity%></span></span>
+				<span class="sum_black">共<span class="sum_black_val"><%=selectCartList[i].bssctQuantity%></span>件商品  小计:</span>
+			</div>
+		</div>
+	<%}%>
+	
+
+	<!-- <div class="sureOrder_item_border">
+		<div class="sureOrder_content">
+			<div class="div_middle">
+				<img src="images/test/myOrder.png" class="product_img" />
+				<div class="content">
+					<div class="title">商品标题商品标题商品标题商品标商品标题商品标题商品标题商品标</div>
+					<div class="div_number">x<span class="number_x">1</spn></div>
+					<div class="attr">颜色分类：绿色  尺寸：L</div>
+					<div class="div_flag">
+						<span class="item">七天退换</span>
+						<span class="item">七天退换</span>
+					</div>
+					<div class="price_red" >￥200.00</div>
+				</div>
+			</div>
+		</div>
+		<div class="sureOrder_item">
+			购买数量
+			<div class="div_addSubtractBtn">
+				<div class="addSubtractBtn ui_btn" data-action="subtract">-</div>
+				<div class="number">1</div>
+				<div class="addSubtractBtn ui_btn" data-action="add">+</div>
+			</div>
+		</div>
+		<div class="sureOrder_item">
+			购买方式
+			<span class="kd_type">快递  免邮</span>
+		</div>
+		<div class="sureOrder_item">
+			买家留言：
+			<input type="text" placeholder="选填：对本次交易的说明或要求"/>
+		</div>
+		<div class="sureOrder_item">
+			<span class="sum_price">￥400.00</span>
+			<span class="sum_black">共2件商品  小计:</span>
+		</div>
+	</div> -->
+</div>
+
+
+<div class="sureOrder_bottom_placeholder"></div>
+<div class="sureOrder_bottom">
+	<div class="sureBtn ui_btn" data-action="upHeadOrder">提交订单</div>
+	<span class="sure_price">￥<span id="sumPrice"><%=totalPrice%></span></span>
+	<span class="sum_flag">合计</span>
+</div>

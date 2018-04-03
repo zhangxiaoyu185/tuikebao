@@ -1,0 +1,53 @@
+<div class="myOrderDesc_warp">
+	<div class="myOrderDesc_top">
+		<span>待发货</span>
+		<div class="gift_flag"></div>
+	</div>
+
+	<div class="myOrderDesc_address">
+		<div class="address_flag"></div>
+		<div class="address_item"><span>收货人：<%=information.bsorrName%></span> <span class="phone"><%=information.bsorrMobile%></span></div>
+		<div class="address_item"><nobr>收获地址：<%=information.bsorrCityName+information.bsorrCountyName+information.bsorrAddress%></nobr></div>
+	</div>
+
+	<div class="myOrderDec_content">
+		<span class="number">订单号：<%=information.bsoimOrder%></span>
+	</div>
+
+	<div class="myOrderDec_content_border">
+		<div class="div_middle">
+			<img src="<%=WEB_URL+"coreAttachment/image/get/"+information.bsoimStorePic%>" class="product_img" />
+			<div class="content">
+				<div class="title"><%=information.bsoimProductName%></div>
+				<div class="attr"><%=information.bsoimAttrName%></div>
+			</div>
+			<div class="div_right">
+				<div class="price">￥<%=information.bsoimPrice%></div>
+				<div class="number">x<%=information.bsoimQuantity%></div>
+			</div>
+		</div>
+	</div>
+	<div class="myOrder_total">
+		<div class="item">
+			<span class="left">共1件商品  支付合计：</span>
+			<% 
+				var total = information.bsoimPrice * information.bsoimQuantity;
+			%>
+			<span class="price right">￥<%=total%></span>
+		</div>
+	</div>
+
+
+
+	<div class="myOrder_bottom">
+		<div class="item">订单编号：<%=information.bsoimUuid%></div>
+		<div class="item">交易号：<%=information.bsoimOrder%></div>
+		<div class="item">创建时间：<%=information.bsoimCdate%></div>
+		<div class="item">付款时间：<%=information.bsoimPayTime%></div>
+	</div>
+
+	<div class="myOrder_bottom_btn">
+		<div class="myOrder_btn normal ui_btn" data-action="goRemind" data-uuid="<%=information.bsoimUuid%>"">提醒发货</div>
+		<!-- <div class="myOrder_btn normal ui_btn" data-action="goOnLine">联系客服</div> -->
+	</div>
+</div>

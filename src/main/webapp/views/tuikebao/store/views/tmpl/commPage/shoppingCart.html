@@ -1,0 +1,100 @@
+<div class="shoppingCart_warp">
+	<%if( shoppingInfo.length == 0 ){%>
+	<li>
+		<div id="mainStage">
+			<div class="warp">
+				<div class="page">
+					<img src="./images/order/order.png" alt="" style="width:88px;height:92px;"><span style="color:#999">无相关订单</span>
+				</div>
+			</div>
+		</div>
+	</li>
+
+<%}else{%>
+				<%for(var i=0; i<sure.length; i++){%>
+				<%
+					var numerical = sure[i];
+				%>
+			
+			<div class="shoppingCart_area">
+				<div class="photo">
+				<div style=" width: 45px; height: 100%; float: left;" class="ui_btn" data-action="addressSelected">
+					<div data-index="<%=numerical%>" class="photo_btn"></div>
+				</div>
+					
+					<!-- <div class="photo_im"style="backgroun:"<%=WEB_URL+"coreAttachment/image/get/"+shoppingInfo[numerical].bssctStorePic%>";"></div> -->
+					<img src="<%=WEB_URL+"coreAttachment/image/get/"+shoppingInfo[numerical].bssctStorePic%>" alt="" class="photo_im ui_btn" data-action="openDetails" data-uuid="<%=shoppingInfo[numerical].bssctProduct%>">
+				</div>	
+				<div class="shoppingCart_price ui_btn">
+					<div class="ui_btn" data-action="openDetails" data-uuid="<%=shoppingInfo[numerical].bssctProduct%>" style="width: 62%">
+						<span class="ui_btn" data-action="openDetails" data-uuid="<%=shoppingInfo[numerical].bssctProduct%>"><nobr><%=shoppingInfo[numerical].bssctName%></nobr></span>
+						<span style="color:#ababab;padding-top:4px;"><%=shoppingInfo[numerical].bssctAttrName%></span>
+						<span style="color:#fb0200;padding-top:4px;" class="money" id="prices" data-prices="<%=shoppingInfo[numerical].bssctFee%>">￥<%=shoppingInfo[numerical].bssctFee%></span>
+					</div>
+
+					<div class="shoppingCart_del ui_btn" data-action="delet" data-uid="<%=shoppingInfo[numerical].bssctUuid%>">删除</div>
+					<div class="shoppingCart_amount">
+						<div class="minPrices ui_btn" data-action="minPrices">-</div>
+						<div class="numRegion" data-info="<%=shoppingInfo[numerical].bssctQuantity%>"><%=shoppingInfo[numerical].bssctQuantity%></div>
+						<div class="plusPrices ui_btn" data-action="plusPrices">+</div>
+					</div>
+				</div>	
+			</div>
+		<%}%>
+
+		<%for(var x=0; x<invalid.length; x++){%>
+			<%
+			var iNumerical = invalid[x];
+			%>
+			<div class="shoppingCart_area">
+				<div class="photo">
+				<div style=" width: 45px; height: 100%; float: left;">
+					<!-- <div data-index="<%=x%>" class="photo_btn"></div> -->
+					已失效
+				</div>				
+					<!-- <div class="photo_im"style="backgroun:"<%=WEB_URL+"coreAttachment/image/get/"+shoppingInfo[x].bssctStorePic%>";"></div> -->
+					<img src="<%=WEB_URL+"coreAttachment/image/get/"+shoppingInfo[iNumerical].bssctStorePic%>" alt="" class="photo_im ui_btn" data-action="openDetails" data-uuid="<%=shoppingInfo[iNumerical].bssctProduct%>">
+				</div>	
+				<div class="shoppingCart_price ui_btn">
+					<div class="ui_btn" data-action="openDetails" data-uuid="<%=shoppingInfo[iNumerical].bssctProduct%>" style="width: 62%">
+						<span class="ui_btn" data-action="openDetails" data-uuid="<%=shoppingInfo[iNumerical].bssctProduct%>"><nobr><%=shoppingInfo[iNumerical].bssctName%></nobr></span>
+						<span style="color:#ababab;padding-top:4px;"><%=shoppingInfo[iNumerical].bssctAttrName%></span>
+						<span style="color:#fb0200;padding-top:4px;" class="money" id="prices" data-prices="<%=shoppingInfo[iNumerical].bssctFee%>">￥<%=shoppingInfo[iNumerical].bssctFee%></span>
+					</div>
+
+					<div class="shoppingCart_del ui_btn" data-action="delet" data-uid="<%=shoppingInfo[iNumerical].bssctUuid%>">删除</div>
+					<div class="shoppingCart_amount">
+						<div class="minPrices ui_btn" data-action="minPrices">-</div>
+						<div class="numRegion" data-info="<%=shoppingInfo[iNumerical].bssctQuantity%>"><%=shoppingInfo[iNumerical].bssctQuantity%></div>
+						<div class="plusPrices ui_btn" data-action="plusPrices">+</div>
+					</div>
+				</div>	
+			</div>
+		<%}%>
+	<%}%>
+
+</div>
+
+<div style="height: 47px;"></div>
+<%
+var bottom;
+	if(flag == "true"){
+		bottom = 0;
+	}else{
+		bottom = 50;
+	}
+%>
+<div class="shoppingCart_balance" style="bottom:<%=bottom%>px">
+	<%if(shoppingInfo.length == 0){%>
+		<div class="photoBtn" data-action="commoditySelection">全选</div>
+	<%}else{%>
+		<div class="photoBtn ui_btn" data-action="commoditySelection">全选</div>
+	<%}%>
+	
+	<div class="middlePart">
+		<div class="middle">
+			<span>合计:<span style="color:#fb0200;" class="aggregatePrice"></span></br><span style="color:#999;">不含运费</span></span>
+		</div>
+		<div class="back ui_btn" data-action="cartGoBuy">结算</div>
+	</div>
+</div>

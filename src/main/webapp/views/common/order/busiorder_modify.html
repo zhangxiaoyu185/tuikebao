@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>客服调整价格表单</title>
+<link type="text/css" rel="stylesheet" href="../css/common/base-min.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../css/common/index.css" media="all" />
+<script type="text/javascript" src="../js/jquery/jquery-1.8.3.min.js?ts=new Date()"></script>
+<script type="text/javascript" src="../ckeditor/ckeditor.js?ts=new Date()"></script>
+<script type="text/javascript" src="../ckfinder/ckfinder.js?ts=new Date()"></script>
+<script type="text/javascript" src="../../js/jquery.js?ts=new Date()"></script>
+<script type="text/javascript" src="../../js/jquery-form.js?ts=new Date()"></script>
+<script type="text/javascript" src="../js/layer/layer.js?ts=new Date()"></script>
+<script type="text/javascript" src="../js/common/common.js?ts=new Date()"></script>
+<script type="text/javascript" src="../js/order/busiorder_modify.js?ts=new Date()"></script>
+</head>
+
+<body>
+	<div class="box">
+		<ul class="list">
+			<li class="list-li">
+				<label class="leftLi">客服调整运费(带正负)：</label>
+				<div class="rightLi">
+					<input type="number" class="inputStyle bsorrAdjustExpress"/>
+					<span class="p-red"> *</span>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">客服调整总价(带正负)：</label>
+				<div class="rightLi">
+					<input type="number" class="inputStyle bsorrAdjustProduct"/>
+					<span class="p-red"> *</span>
+				</div>
+			</li>
+			<li class="list-li">
+				<input type="button" class="buttonStyle submit" value="修改"/>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">订单号：</label>
+				<div class="rightLi">
+					<label class="bsorrUuid"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">所属用户：</label>
+				<div class="rightLi">
+					<label class="bsorrUserName"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">商品总价：</label>
+				<div class="rightLi">
+					<label class="bsorrProductValue"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">运费总价：</label>
+				<div class="rightLi">
+					<label class="bsorrExpressValue"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">客服调整运费：</label>
+				<div class="rightLi">
+					<label class="bsorrAdjustExpress"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">客服调整总价：</label>
+				<div class="rightLi">
+					<label class="bsorrAdjustProduct"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">订单总价：</label>
+				<div class="rightLi">
+					<label class="bsorrOrderValue"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">实际支付：</label>
+				<div class="rightLi">
+					<label class="bsorrActualPay"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">合计支付金额(实付款)：</label>
+				<div class="rightLi">
+					<label class="bsorrTotalValue"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">退款总额：</label>
+				<div class="rightLi">
+					<label class="bsorrRefund"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">交易号：</label>
+				<div class="rightLi">
+					<label class="bsorrTradeNo"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">商品总数：</label>
+				<div class="rightLi">
+					<label class="bsorrTotalQuantity"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">商品总重量：</label>
+				<div class="rightLi">
+					<label class="bsorrTotalWeight"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">支付时间：</label>
+				<div class="rightLi">
+					<label class="bsorrPayTime"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">支付状态:</label>
+				<div class="rightLi">
+					<label class="bsorrStatus"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">创建时间(下单时间)：</label>
+				<div class="rightLi">
+					<label class="bsorrCdate"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">更新时间：</label>
+				<div class="rightLi">
+					<label class="bsorrUdate"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">收货人姓名：</label>
+				<div class="rightLi">
+					<label class="bsorrName"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">收货人身份证号：</label>
+				<div class="rightLi">
+					<label class="bsorrIdCard"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">收货人联系方式：</label>
+				<div class="rightLi">
+					<label class="bsorrMobile"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">邮政编码：</label>
+				<div class="rightLi">
+					<label class="bsorrZipCode"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">所在省：</label>
+				<div class="rightLi">
+					<label class="bsorrProvince"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">所在市：</label>
+				<div class="rightLi">
+					<label class="bsorrCity"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">所在区：</label>
+				<div class="rightLi">
+					<label class="bsorrCounty"></label>
+				</div>
+			</li>
+			<li class="list-li">
+				<label class="leftLi">详细地址：</label>
+				<div class="rightLi">
+					<label class="bsorrAddress"></label>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

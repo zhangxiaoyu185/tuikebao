@@ -1,0 +1,70 @@
+<div class="myOrderDesc_warp">
+	<div class="myOrderDesc_top">
+		<span>待付款</span>
+		<div class="gift_flag"></div>
+	</div>
+
+	<div class="myOrderDesc_address">
+		<div class="address_flag"></div>
+		<div class="address_item"><span>收货人：<%=List.bsorrName%></span> <span class="phone"><%=List.bsorrMobile%></span></div>
+		<div class="address_item"><nobr>收货地址：<%=List.bsorrCityName+List.bsorrCountyName +List.bsorrAddress%></nobr></div>
+	</div>
+
+	<div class="myOrderDec_content">
+		<span class="number">订单号：<%=List.bsorrUuid%></span>
+		
+	</div>
+
+	<div class="myOrderDec_content_border">
+		<%
+			var busiOrderItemList = List.busiOrderItemList;
+		%>
+		<%for( var i=0; i<busiOrderItemList.length; i++){%>
+			<div class="div_middle">
+				<img src="<%=WEB_URL+"coreAttachment/image/get/"+busiOrderItemList[i].bsoimStorePic%>" class="product_img" />
+				<div class="content">
+					<div class="title"><%=busiOrderItemList[i].bsoimProductName%></div>
+					<div class="attr"><%=busiOrderItemList[i].bsoimAttrName%></div>
+				</div>
+				<div class="div_right">
+					<div class="price">￥<%=busiOrderItemList[i].bsoimPrice%></div>
+					<div class="number">x<%=busiOrderItemList[i].bsoimQuantity%></div>
+				</div>
+			</div>		
+		<%}%>
+	</div>
+
+	<div class="myOrder_total">
+		<div class="item">
+			<span class="left">商品总价：</span>
+			<span class="right">￥<%=List.bsorrProductValue%></span>
+		</div>
+		<div class="item">
+			<span class="left">快递运费：</span>
+			<span class="right">￥<%=List.bsorrExpressValue%></span>
+		</div>
+		<div class="item">
+			<span class="left">优惠合计：</span>
+			<span class="right">-￥0.00</span>
+		</div>
+		<div class="item">
+			<span class="left">共1件商品  支付合计：</span>
+			<span class="price right">￥<%=List.bsorrProductValue + List.bsorrExpressValue%></span>
+		</div>
+	</div>
+
+
+
+	<div class="myOrder_bottom">
+		<div class="item">订单编号：<%=List.bsorrUuid%></div>
+		<div class="item">交易号：<%=List.bsorrUuid%></div>
+		<div class="item">创建时间：<%=List.bsorrCdate%></div>
+	<!-- 	<div class="item">付款时间：<%=List.bsoimPayTime%></div>
+		<div class="item">发货时间：<%=List.bsoimShippingTime%></div>
+		<div class="item">成交时间：<%=List.bsoimFinishTime%></div> -->
+	</div>
+
+	<div class="myOrder_bottom_btn ui_btn" data-action="goPay">
+		<div class="goPay">立即支付</div>
+	</div>
+</div>

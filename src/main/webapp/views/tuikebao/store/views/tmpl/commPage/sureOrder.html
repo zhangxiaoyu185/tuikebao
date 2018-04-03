@@ -1,0 +1,72 @@
+<%if(addressBuy){%>
+	<div class="sureOrder_address ui_btn" data-action="selectAddress">
+		<div class="top">
+			<span id="receiveName" class="left"><%=addressBuy.bssasName%></span>
+			<span id="phoneNo" class="right"><%=addressBuy.bssasMobile%></span>
+		</div>
+		<div class="bottom">
+			<span class="left"><%=addressBuy.bssasProvinceName%><%=addressBuy.bssasCityName%><%=addressBuy.bssasCountyName%><%=addressBuy.bssasAddress%></span>
+		</div>
+	</div>
+<%}else{%>
+	<div class="sureOrder_item address_flag ui_btn" data-action="selectAddress">请选择收货地址</div>
+<%}%>
+
+<div class="sureOrder_border">
+	<div class="sureOrder_item">订单详情</div>
+	<div class="sureOrder_item_border">
+		<div class="sureOrder_content">
+			<div class="div_middle">
+				<img src="<%=WEB_URL+"coreAttachment/image/get/"+orderInfo.bssctSharePic%>" class="product_img" />
+				<div class="content">
+					<div class="title"><%=orderInfo.bssctName%></div>
+					<div class="div_number">x<span class="number_x">1</spn></div>
+
+					<div class="attr"><%=orderInfo.bssctAttrName%>：<%=orderInfo.bssctAttrValueName%></div>
+					<div class="div_flag">
+						<%for(var i=0; i<orderInfo.bsprtProductTagNames.length-1; i++){%>
+							<span class="item" style="float: none;"><%=orderInfo.bsprtProductTagNames[i]%></span>
+						<%}%>
+					</div>
+					<div class="price_red" >￥<span><%=orderInfo.bssctFee%></span></div>
+				</div>
+			</div>
+		</div>
+		<div class="sureOrder_item">
+			购买数量
+			<div class="div_addSubtractBtn">
+				<div class="addSubtractBtn ui_btn" data-action="subtract">-</div>
+				<div class="number"><%=orderInfo.bssctQuantity%></div>
+				<div class="addSubtractBtn ui_btn" data-action="add">+</div>
+			</div>
+		</div>
+		<div class="sureOrder_item">
+			快递费用
+			<%
+				var bsprtExpressName = "";
+				if(orderInfo.bsprtExpress==0) {
+					bsprtExpressName = "免邮";
+				}else {
+					bsprtExpressName = orderInfo.bsprtExpress +"元";
+				}
+			%>
+			<span class="kd_type" data-express="<%=orderInfo.bsprtExpress%>"><%=bsprtExpressName%></span>
+		</div>
+		<div class="sureOrder_item">
+			买家留言：
+			<input class="leaveMessage" type="text" placeholder="选填：对本次交易的说明或要求"/>
+		</div>
+		<div class="sureOrder_item">
+			<span class="sum_price">￥<span class="sum_price_val"><%=quantity%></span></span>
+			<span class="sum_black">共<span class="sum_black_val"><%=orderInfo.bssctQuantity%></span>件商品  小计:</span>
+		</div>
+	</div>
+</div>
+
+
+<div class="sureOrder_bottom_placeholder"></div>
+<div class="sureOrder_bottom">
+	<div class="sureBtn ui_btn" data-action="upHeadOrder">提交订单</div>
+	<span class="sure_price">￥<span id="sumPrice"><%=bssctFee%></span></span>
+	<span class="sum_flag">合计</span>
+</div>

@@ -1,0 +1,246 @@
+/***********************邀请好友start**********************/
+.inviteFriends_warp {
+	width: 100%;
+	overflow: auto;
+}
+
+.inviteFriends_warp .inviteFriends_top {
+	width: 100%;
+	height: 56px;
+	background: #fff;
+	color: #666;
+	text-align: center;
+
+}
+
+.inviteFriends_warp .inviteFriends_top .inviteFriends_points {
+	width:25%;
+	 margin-left: -1px;
+	height:40px;
+	border-left: 1px solid #cacaca;
+	float: left;
+	padding-top:16px;
+	text-align: center;
+
+}
+
+.inviteFriends_warp .inviteFriends_nav {
+	width: 100%;
+	height:auto;
+	display: block;
+	position: relative;
+	margin-bottom: 40px;
+}
+.inviteFriends_warp .inviteFriends_nav img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: center;
+}
+.inviteFriends_warp .inviteFriends_nav .inviteFriends_btn {
+	position: absolute;
+	width: 100px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	bottom: 10px;
+	left:50%;
+	margin-left:-50px;
+	color: #fff;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%,rgba(255, 255, 255, 0.2) 98%);
+	border-radius: 5px;
+	background-color:#ff8600;
+	border:1px solid #fff;
+}
+
+.inviteFriends_warp .inviteFriends_choose {
+	width:95%;
+	height: 34px;
+	margin:20px auto;
+	line-height: 34px;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+}
+
+.inviteFriends_warp .inviteFriends_choose .inviteFriends_left {
+	background: #ffae00;
+	width: 50%;
+	border-bottom-left-radius: 17px;
+	border-top-left-radius: 17px;
+	float: left;
+	
+}
+
+.inviteFriends_warp .inviteFriends_choose .inviteFriends_right {
+	background: #f51a18;
+	width: 50%;
+	float: right;
+	border-bottom-right-radius: 17px;
+	border-top-right-radius: 17px;
+
+}
+
+.inviteFriends_warp .inviteFriends_code img{
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	background:url(../images/pigeonhole/qr-code.png);
+	background-size: cover;
+	margin-bottom: 30px;
+	display: none;
+
+}
+
+.inviteFriends_warp .inviteFriends_link {
+	width: 88%;
+	height: 40px;
+	padding: 10px;
+	background: #ececeb;
+	margin:0 auto;
+	font-size: 13px;
+	margin-bottom: 30px;
+}
+
+
+
+
+.inviteFriends_warp p {
+	text-align: center;
+	width:95%;
+	margin:26px auto;
+	color: #666;
+
+}
+
+.inviteFriends_warp .inviteFriends_share {
+	width:100%;
+	
+	height: 45px;
+	
+}
+
+
+.inviteFriends_warp .inviteFriends_share .inviteFriends_icon {
+	width:33%;
+	float: left;
+	text-align: center;
+
+}
+.inviteFriends_warp .inviteFriends_share .inviteFriends_icon img{
+	width: 45px;
+	height: 45px;	
+	background-size: cover;
+}
+
+
+/***********************邀请好友end**********************/
+
+/***********************领取奖励start**********************/
+.rewardCollection_warp {
+	width:100%;
+	overflow:auto;
+	font-size: 17px;
+}
+
+.rewardCollection_warp .rewardCollection_rule {
+	width:100%;
+	height: 50px;
+	text-align: center;
+	background: #fff;
+	line-height: 50px;
+	border-bottom: 1px solid #cacaca;
+}
+
+.rewardCollection_warp .rewardCollection_rule .rewardCollection_area {
+	width: 95%;
+	margin:0 auto;
+}
+.rewardCollection_warp .rewardCollection_rule img {
+	width:6px;
+	height:14px;
+	margin-left:8px;
+}
+
+.rewardCollection_warp .rewardCollection_detail {
+	width:100%;
+	border-bottom: 1px solid #cacaca;
+	background: #fff;
+}
+
+.rewardCollection_warp .rewardCollection_detail .rewardCollection_ico {
+	width:100%;
+	height: 34px;
+	padding-top: 12px;
+	margin: 0 auto
+}
+
+.rewardCollection_warp .rewardCollection_detail .share {
+	width: 33%;
+	float: left;
+	text-align: center;
+
+}
+.rewardCollection_warp .rewardCollection_detail .rewardCollection_ico .share img:nth-child(1){
+	width: 30px;
+	height: 22px;
+	background: url(../images/pigeonhole/people.png);
+	background-size: cover;
+
+	
+}
+
+.rewardCollection_warp .rewardCollection_detail .rewardCollection_ico .share img:nth-child(2){
+	width: 31px;
+	height:30px;
+	background: url(../images/pigeonhole/integral.png);
+	background-size: cover;
+	margin-left: 115px;
+}
+
+.rewardCollection_warp .rewardCollection_detail .rewardCollection_ico .share img:nth-child(3){
+	width: 24px;
+	height:30px;
+	background: url(../images/pigeonhole/medal.png);
+	background-size: cover;
+	margin-left: 98px;
+
+
+}
+.rewardCollection_warp .rewardCollection_detail .rewardCollection_text{
+	height: 40px;
+	line-height: 40px;
+	width:95%; 
+	margin: 0 auto;
+	border-bottom: 1px solid #cacaca;
+
+}
+/***********************领取奖励end**********************/
+
+
+
+/***********************邀请联系人start**********************/
+.invitersList_warp {
+	width: 376px;
+	overflow: auto;
+}
+
+.invitersList_warp .invitersList_list {
+	width: 350px;
+	height: 80px;
+	padding-left: 12px;
+	padding-right: 12px;
+	line-height: 80px;
+	color: #666;
+	background:#fff;
+	border-bottom: 2px solid #f5f6f7;
+}
+
+.invitersList_warp .invitersList_list img {
+	width: 40px;
+	height: 40px;
+	background-size: cover;
+	
+}
+
+/***********************邀请联系人end**********************/
+

@@ -1,0 +1,545 @@
+/***********************邀请好友start**********************/
+.inviteFriends_warp {
+	width: 100%;
+	overflow: auto;
+	background: #fff;
+}
+
+.inviteFriends_warp .inviteFriends_top {
+	width: 100%;
+	height: 56px;
+	background: #fff;
+	color: #666;
+	text-align: center;
+}
+
+.inviteFriends_warp .inviteFriends_top .inviteFriends_points {
+	width:25%;
+	margin-left: -1px;
+	height:48px;
+	border-left: 1px solid #cacaca;
+	float: left;
+	padding-top:8px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.inviteFriends_warp .inviteFriends_top .inviteFriends_points span {
+	display: block;
+}
+
+.inviteFriends_warp .inviteFriends_nav {
+	width: 100%;
+	height:auto;
+	display: block;
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.inviteFriends_warp .inviteFriends_nav img {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	vertical-align: center;
+}
+
+.inviteFriends_warp .inviteFriends_nav .inviteFriends_btn {
+	position: absolute;
+	width: 100px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	bottom: 10px;
+	left:50%;
+	font-size: 15px;
+	margin-left:-50px;
+	color: #fff;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 2%, rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 0.2) 98%);
+	border-radius: 5px;
+	background-color:#ff8600;
+	border:1px solid #fff;
+}
+
+.inviteFriends_warp .inviteFriends_choose {
+	width:95%;
+	height: 34px;
+	margin:20px auto;
+	line-height: 34px;
+	color: #fff;
+	background: #fff;
+	text-align: center;
+	font-size: 16px;
+}
+
+.inviteFriends_warp .inviteFriends_choose .inviteFriends_left {
+	background: #ffae00;
+	width: 50%;
+	border-bottom-left-radius: 17px;
+	border-top-left-radius: 17px;
+	float: left;
+}
+
+.inviteFriends_warp .inviteFriends_choose .inviteFriends_right {
+	background: #f51a18;
+	width: 50%;
+	float: right;
+	border-bottom-right-radius: 17px;
+	border-top-right-radius: 17px;
+}
+
+.inviteFriends_warp .inviteFriends_code {
+	background: #fff;
+	display: none;
+	text-align: center;
+}
+
+.inviteFriends_warp .inviteFriends_code img {
+	/*	width: 200px;
+	height: 200px;*/
+	margin: 0 auto;
+	background:url(../images/pigeonhole/qr-code.png);
+	background-size: cover;
+	margin-bottom: 30px;
+}
+
+.inviteFriends_warp .inviteFriends_link {
+	width: 88%;
+	height: 40px;
+	padding: 10px;
+	background: #ececeb;
+	margin:0 auto;
+	color:#888;
+	font-size: 13px;
+}
+
+.inviteFriends_warp .txt {
+	text-align: center;
+	width:100%;
+	height: 70px;
+	line-height: 70px;
+	color: #666;
+	font-size: 14px;
+	background: #fff;
+}
+
+.inviteFriends_warp .inviteFriends_share {
+	width:100%;
+	height: 45px;
+	padding-bottom: 45px;
+}
+
+.inviteFriends_warp .inviteFriends_share .inviteFriends_icon {
+	width:33.33%;
+	float: left;
+	margin-bottom:70px;
+	text-align: center;
+}
+
+.inviteFriends_warp .inviteFriends_share .inviteFriends_icon span {
+	font-size:12px;
+	color:#666;
+	display:block;
+	margin-top: 7px;
+}
+
+.inviteFriends_warp .inviteFriends_share .inviteFriends_icon img {
+	width: 45px;
+	height: 45px;
+	background-size: cover;
+}
+
+.inviteFriends_share .shade {
+	width: 100%;
+	height:20%;
+	background-image: url("../images/commPage/arrowhead.png");
+	background-position:95% 20%;
+	background-size: 100px;
+	background-repeat: no-repeat;
+}
+
+.inviteFriends_share .productDesc_shade {
+	width: 100%;
+	height: 100%;
+	background: #000;
+	position: fixed;
+	top: 0px;
+	opacity: 0.5;
+	display: none;
+	z-index: 3;
+}
+
+.inviteFriends_share .shareTo {
+	width: 100%;
+	height: 5%;
+	background-size:250px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url("../images/commPage/txt.png");
+}
+
+.inviteFriends_warp .clickCopy {
+	width:40px;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    background: -webkit-linear-gradient(top,#fff,#000);
+    border-radius: 5px;
+    position: relative;
+    display: none;
+}
+
+.inviteFriends_warp .clickCopy .select {
+	text-align: center;
+	background-image: url("../images/pigeonhole/horn.png");
+    background-size:10px;
+    background-repeat:no-repeat;
+    position: absolute;
+    bottom:-15px;
+    width: 15px;
+    height: 15px;
+    left: 37%;
+
+}
+
+/***********************邀请好友end**********************/
+
+/***********************领取奖励start**********************/
+.rewardCollection_warp {
+	width:100%;
+	overflow:auto;
+	font-size: 17px;
+}
+
+.rewardCollection_warp .rewardCollection_top {
+	width: 98%;
+	padding-left:1%;
+	padding-right: 1%;
+	height: 40px;
+	color: #333;
+	font-size: 17px;
+	background: #fff;
+	line-height: 40px;
+	text-align: center;
+}
+
+.rewardCollection_warp .rewardCollection_top span {
+	display:block;
+}
+
+.rewardCollection_warp .rewardCollection_nav {
+	width: 100%;
+	height:215px;
+	padding-top: 40px;
+	text-align: center;
+	margin:0 auto;
+	color: #fff;
+	background-color: #549688;
+}
+
+.rewardCollection_warp .rewardCollection_nav .outsideFrame {
+	width: 198px;
+	height: 115px;
+	margin:0 auto;
+	border-radius: 5px;
+	border:2px solid #fff;
+	position: relative;
+	margin-bottom: 17px;
+}
+.rewardCollection_warp .rewardCollection_nav .outsideFrame .insideFrame {
+	width: 192px;
+	height: 87px;
+	margin:2px;
+	text-align:center;
+	border-radius: 5px;
+	padding-top: 22px;
+	border:1px solid #fff;
+}
+
+.rewardCollection_warp .rewardCollection_nav .outsideFrame .imperialCrown {
+	background-image: url("../images/pigeonhole/imperialCrown.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	top:-25%;
+	left:25%;
+	background-position:center;
+	background-color: #549688;
+	background-size: 50px 46px;
+	width: 93px;
+	height: 46px;
+}
+
+.rewardCollection_warp .rewardCollection_nav .outsideFrame .bronze {
+	margin-top: 10px;
+	display: block;
+	font-size: 30px;
+	text-align: center;
+	letter-spacing:10.5px;
+	line-height: 30px;
+	padding-left:8px;
+}
+
+.rewardCollection_warp .rewardCollection_nav .grade {
+	width:290px;
+	margin:0 auto;
+	height: 42px;
+	padding-right: 0;
+}
+
+.rewardCollection_warp .rewardCollection_nav .grade_logo {
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin-right: 4px;
+	margin-left: 4px;
+	line-height: 40px;
+	border:1px solid #fff;
+	border-radius: 20px;
+}
+
+/*.rewardCollection_warp .rewardCollection_nav .grade hr {
+	width:10%;
+	background-color: #fff;
+	float: left;
+	margin-top: 19px;
+	margin-left:4px;
+	margin-right: 4px;
+}
+*/
+
+.rewardCollection_warp .rewardCollection_nav .grade .beeline {
+	width:30px;
+	height:1px;
+	margin:21px auto;
+	padding:0px;
+	background-color:#D5D5D5;
+	overflow:hidden;
+	float:left;
+	
+}
+
+.clear {
+	clear: both;
+}
+
+.rewardCollection_warp .inviteColumn {
+	width: 95%;
+	background-color: #fff;
+	margin:10px auto;
+	overflow: auto;
+	border-radius:5px;
+}
+
+.rewardCollection_warp .inviteColumn_top {
+	width: 95%;
+	margin:0 auto;
+	height: 49px;
+	font-size: 17px;
+	line-height: 49px;
+	border-bottom: 1px solid #dbdbdb;
+}
+
+.rewardCollection_warp .rewardCollection_top .inviteColumn_topRule {
+	color:#666;
+	float:right;
+	font-size: 12px;
+}
+
+.rewardCollection_warp .inviteColumn_top .inviteColumn_top_nav {
+	width: 50%;
+	text-align: center;
+	height: 100%;
+}
+
+.rewardCollection_warp .inviteColumn_top .inviteColumn_topLt {
+	float: left;
+}
+
+.rewardCollection_warp .inviteColumn_top .inviteColumn_topRg {
+	float: right;
+}
+
+.rewardCollection_warp .rewardCollection_receive {
+	width: 95%;
+	height: 40px;
+	line-height: 40px;
+	margin:0 auto;
+	color: #fff;
+	margin-top: 14px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #ffae00;
+}
+
+.rewardCollection_warp .selected {
+	background-color: #ffae00;
+}
+
+/***********************领取奖励end**********************/
+
+
+
+/***********************邀请联系人start**********************/
+.invitersList_warp {
+	width:100%;
+	overflow: auto;
+}
+
+.invitersList_area {
+	width: 100%;
+	background: #fff;
+	height: 80px;
+	border-bottom: 2px solid #f5f6f7;
+}
+
+.invitersList_warp .invitersList_list {
+	width:95%;
+	height: 80px;
+	margin: 0 auto;
+	line-height: 80px;
+	color: #666;
+	border-bottom: 2px solid #f5f6f7;
+}
+
+
+.invitersList_warp .invitersList_list img {
+	width: 40px;
+	height: 40px;
+	background-size: cover;
+}
+
+/***********************邀请联系人end**********************/
+
+/***********************排行榜 start**********************/
+.rankingList_top {
+	width: 100%;
+	height: 50px;
+	background: #fff;
+	border-bottom: 1px solid #cacaca;
+}
+
+.rankingList_top .rankingList_nav {
+	width: 33%;
+	line-height: 50px;
+	height: 50px;
+	text-align: center;
+	float:left;
+}
+
+.rankingList_top .selected {
+	background: #ffcd02;
+	color: #fff;
+}
+
+.rankingList_area {
+	width: 100%;
+	height: 85px;
+}
+
+.rankingList_area .areaLt {
+	width: 70%;
+	height: 85px;
+	float: left;
+	background: #fff;
+}
+
+.rankingList_area .areaLt img {
+	width: 45px;
+	height: 45px;
+	float: left;
+	background-size: cover;
+	padding: 24px 12px
+}
+
+.rankingList_area .areaLt span {
+	display: block;
+	margin-top: 7px;
+	font-size: 15px;
+	color: #666;
+}
+
+.rankingList_area .areaRg {
+	width:29.5%;
+	height: 85px;
+	line-height: 85px;
+	float: right;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	margin-left: 1px;
+	background-image:url(../images/pigeonhole/ranking1.png);
+	background-repeat: no-repeat;
+	background-size:25px 30px;
+	background-position:50% 32px;
+	background-color:#fff;
+	margin-bottom: 2px;
+}
+
+.invitersList_warp .txt {
+	font-size:14px;
+	width:95%;
+	margin: 0 auto;
+	color: #666;
+	margin-top: 12px;
+}
+
+/***********************排行榜 end**********************/
+
+
+/***********************领取规则 start**********************/
+.collectionRules_top {
+	height:42px;
+	line-height: 42px;
+	font-size: 17px;
+	color: #333;
+	border-bottom: 1px solid #cacaca;
+}
+
+.collectionRules_top span {
+	margin-left: 8%;
+}
+
+.collectionRules_receiveIcon {
+	border-bottom: 1px solid #cacaca;
+	height: 50px;
+	width: 100%;
+	line-height: 50px;
+	text-align: center;
+}
+
+.collectionRules_areaLt {
+	width: 50%;
+	float: left;
+}
+
+.collectionRules_areaLt img {
+	width: 30px;
+	height: 22px;
+	background:cover;
+}
+
+.collectionRules_areaRt {
+	width: 50%;
+	float: right;
+}
+
+.collectionRules_areaRt img {
+	width: 30px;
+	height: 30px;
+	background:cover;
+}
+
+.collectionRules_list {
+	width: 95%;
+	height: 47px;
+	font-size: 17px;
+	text-align: center;
+	color: #333;
+	margin: 0 auto;
+	line-height: 47px;
+	border-bottom: 1px solid #cacaca
+}
+
+/***********************领取规则 end**********************/

@@ -1,0 +1,1018 @@
+/***********************我的订单  start**********************/
+.myOrder_type_border {
+	width: 100%;
+	height: 45px;
+}
+
+.myOrder_type_border .item {
+	width: 20%;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+	color: #666;
+	font-weight: bold;
+	float: left;
+	background: #fff;
+	border-bottom: solid 1px #b0b0b0;
+	display: none;
+}
+
+.myOrder_type_border .item.selected {
+	height: 42px;
+	color: #ff5a00;
+	border-bottom: solid 4px #ff5a00;
+}
+
+.myOrder_item {
+	width: 100%;
+	overflow: auto;
+	margin-top: 10px;
+}
+
+.myOrder_item .top {
+	width: 100%;
+	height: 34px;
+	line-height: 34px;
+	background: #fff;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.myOrder_item .top .orderNumber {
+	color: #333;
+	margin-left: 10px;
+	float: left;
+}
+
+.myOrder_item .top .status {
+	color: #ff5a00;
+	margin-right: 10px;
+	float: right;
+}
+
+.myOrder_item .middle {
+	width: 100%;
+	height: 78px;
+}
+
+.myOrder_item .middle .div_left {
+	width: 22%;
+	height: 78px;
+	float: left;
+}
+
+.myOrder_item .middle .div_left img {
+	width: 61px;
+    height: 61px;
+    margin: 0px auto;
+    display: block;
+    position: relative;
+    top: 8px;
+}
+
+.myOrder_item .middle .div_middle {
+	width: 54%;
+	height: 78px;
+	float: left;
+}
+
+.myOrder_item .middle .div_middle .title {
+	width: 100%;
+    height: 28px;
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    top: 10px;
+    overflow: hidden;
+}
+
+.myOrder_item .middle .div_middle .attr {
+	width: 100%;
+    height: 28px;
+    color: #999;
+    font-size: 12px;
+    top: 18px;
+    position: relative;
+}
+
+.myOrder_item .middle .div_right {
+	width: 24%;
+	height: 78px;
+	float: left;
+}
+
+.myOrder_item .middle .div_right .price {
+	height: 13px;
+	margin: 10px;
+	float: right;
+	color: #333;
+	font-size: 12px;
+}
+
+.myOrder_item .middle .div_right .number {
+	height: 13px;
+	margin: 15px 10px 0px 0px;
+	float: right;
+	color: #333;
+	font-size: 12px;
+	clear: both;
+}
+
+.myOrder_item .div_sum {
+	width: 100%;
+	height: 34px;
+	line-height: 34px;
+	background: #fff;
+	color: #999;
+} 
+
+.myOrder_item .div_sum .span_sum {
+	font-size: 12px;
+	float: right;
+	color: #333;
+	margin-right: 10px;
+}
+
+.myOrder_item .bottom {
+	width: 100%;
+	height: 40px;
+	margin-top: 1px;
+	background: #fff;
+}
+
+.myOrder_item .bottom .myOrder_btn {
+	width: 67px;
+	height: 21px;
+	line-height: 21px;
+	text-align: center;
+	margin-right: 10px;
+	float: right;
+	font-size: 12px;
+	/*font-weight: bold;*/
+	border-radius: 3px;
+	margin-top: 10px;
+}
+
+.myOrder_item .bottom .myOrder_btn.goPay {
+	background: #ff5a00;
+	color: #fff;
+}
+
+.myOrder_item .bottom .myOrder_btn.normal {
+	background: #fff;
+	color: #ff5a00;
+	border: solid 1px #ff5a00;
+}
+
+.myOrder_item .bottom .myOrder_btn.cancel {
+	background: #fff;
+	color: #999;
+	border: solid 1px #dedede;
+}
+
+/***********************我的订单  end***********************/
+
+
+/***********************申请提现start**********************/
+.cashWithdrawal_warp {
+	width:100%;
+	overflow: auto;
+}
+
+.cashWithdrawal_warp .cashWithdrawal_top {
+	width:99%;
+	height: 33px;
+	border: 1px solid #FFCD02;
+	background:#f9e594;
+	color: #343434;
+	line-height: 33px;
+}
+
+.cashWithdrawal_warp .cashWithdrawal_area {
+	width: 95%;
+	margin: 0 auto;
+	clear: both;
+} 
+
+
+.cashWithdrawal_warp .cashWithdrawal_transfer {
+	width:100%;
+	margin: 0 auto;
+	height: 38px;
+	background: #fff;
+	line-height: 38px;
+	border-bottom: 1px solid #cacaca;
+	
+}
+
+.cashWithdrawal_warp .cashWithdrawal_transfer .cashWithdrawal_table {
+	width:78%;
+	height: 30px;
+	float: right;
+	border: 0;
+	font-weight: bold;
+	line-height: 30px;
+	text-align: left;
+}
+
+.cashWithdrawal_warp .cashWithdrawal_transfer .cashWithdrawal_verify {
+	width: 44%;
+	height: 30px;
+	border: 0;
+	font-weight: bold;
+	line-height: 30px;
+	margin-left: 16px;
+	padding-left:5px;
+	margin-top: -3px;
+}
+
+.cashWithdrawal_warp .cashWithdrawal_transfer .cashWithdrawal_btn {
+	width: 94px;
+	height: 24px;
+	border-radius: 5px;
+	line-height: 21px;
+	color: #666;
+	float: right;
+	border: 1px solid #999;
+	text-align: center;
+	margin-top: 6px;
+	background-color: #fff;
+	font-size: 12px;
+}
+
+
+.cashWithdrawal_warp .cashWithdrawal_bn {
+	width:90%;
+	height: 50px;
+	background: #fb0200;
+	margin: 0 auto;
+	line-height: 50px;
+	color: #fff;
+	text-align: center;
+	margin-top: 20px;
+	border-radius: 5px;
+}
+/***********************申请提现end**********************/
+
+/***********************个人中心start**********************/
+.personalCenter_warp {
+	width: 100%;
+	position:relative;
+	overflow: hidden;
+}
+
+.personalCenter_warp .personalCenter_top {
+	width:98%;
+	height: 46px;
+	padding-top:12px;
+	padding-bottom: 12px;
+	padding-left: 2%;
+	background: #fff;
+	border-bottom: 1px solid #cacaca;
+}
+
+.personalCenter_warp .personalCenter_top .upgrade{
+	float: left;
+	padding-top:4px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	margin-top: 10px;
+	margin-left: 10px;
+	background-color:#ffcd02;
+	line-height:15px;
+	text-align:right;
+	font-size: 12px;
+	font-weight:bold;
+	border-radius: 3px;
+	color: #fff;
+}
+
+.personalCenter_warp .personalCenter_top .quit {
+	width: 22px;
+    margin-right: 20px;
+    margin-top: 10px;
+    height: 20px;
+    background-size:cover;
+    float: right;
+}
+
+.personalCenter_warp .personalCenter_top img:nth-child(1) {
+	width: 45px;
+	height: 45px;
+	background-size: cover;
+	border-radius: 5px;
+	float: left;
+}
+
+
+
+.personalCenter_warp .lt {
+	float: left;
+} 
+
+.personalCenter_warp .rg {
+	float: right;
+} 
+.personalCenter_warp .personalCenter_earnings {
+	width:100%;
+	height: 41px;
+	padding-top: 9px;
+	font-size: 14px;
+	background: #fff;
+	border-bottom: 1px solid #cacaca;
+	
+	
+
+}
+.personalCenter_warp .personalCenter_area {
+	height: 25px;
+	width:49.5%;
+	text-align: center;
+	
+
+}
+
+.personalCenter_warp .personalCenter_change {
+	color:#ff5a00;
+}
+
+.personalCenter_warp .personalCenter_sign {
+	width:98%;
+	height:53px;
+	font-size: 14px;
+	margin:12px auto;
+	text-align: center;	
+	
+
+}
+.personalCenter_warp .personalCenter_sign .arew {
+	width: 19.8%;
+	height:55px;
+	float: left;
+}
+
+.personalCenter_warp .personalCenter_sign .depressed{
+	 display:none;
+     position: absolute;
+     top:14%;
+     right:-30px;
+     z-index: auto;
+     width: 30px;
+     height:30px;
+     line-height: 30px; 
+     border-radius:15px;
+     text-align: center;
+     animation:myfirst 2s;
+
+}
+ @keyframes myfirst {
+  	 0%{left:5%;top:22%;}
+     70%{top:14%;left:75%;width:0;height:0;}
+}
+
+.personalCenter_warp .personalCenter_sign .arew img {
+	width: 32px;
+	height: 32px;
+	background-size: cover;
+	margin-bottom:8px;
+}
+
+.personalCenter_warp .personalCenter_sharing {
+	width: 100%;
+	background: #fff;
+	margin-top: 15px;
+	border-bottom: 1px solid #cacaca;
+}
+
+.personalCenter_warp .personalCenter_record {
+	width:96%;
+	height: 38px;
+	font-size: 14px;
+	padding: 2%;
+	margin: 0 auto;
+	background:#fff;
+	border-bottom: 1px solid #cacaca;
+	line-height: 38px;
+
+}
+
+.personalCenter_warp .personalCenter_record img:nth-child(1) {
+	width: 16px;
+	height: 16px;
+	background-size: cover;
+	margin-right: 8px;
+
+}
+.personalCenter_warp .impression {
+	width: 100%;
+	border-bottom: 1px solid #cacaca;
+	background: #fff;
+}
+.personalCenter_warp .personalCenter_share {
+	width:100%;
+	height: 38px;
+	line-height:38px;
+	font-size: 16px;
+	margin: 0 auto;
+	border-bottom: 1px solid #cacaca;
+	background: #fff;
+	text-align: center;
+
+}
+.personalCenter_warp .personalCenter_share span {
+	width: 33%;
+	display: block;
+	float: left;
+}
+
+.personalCenter_warp .personalCenter_integral {
+	width:100%;
+	margin: 0 auto;
+	height: 60px;
+	border-bottom: 1px solid #cacaca;
+	text-align: center;
+	background: #fff;
+
+}
+
+
+.personalCenter_warp .personalCenter_integral span {
+	width:25%;
+	margin-top: 12px;
+	line-height: 20px;
+
+}
+
+
+.personalCenter_warp .personalCenter_money {
+	width:100%;
+	height: 60px;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 14px;
+	border-bottom: 1px solid #cacaca;
+	background:#fff;
+}
+
+.personalCenter_warp .personalCenter_money span {
+	margin-top: 12px;
+	line-height: 20px;
+}
+
+/***********************个人中心end**********************/
+.warp {
+	width: 100%;
+	overflow: auto;
+}/*公共类*/
+
+/***********************消息中心start**********************/
+.messageCenter_bg {
+	width:100%;
+	height:auto;
+	background:#fff;
+	padding-top: 12px;
+	padding-bottom:12px;
+	border-bottom: 1px solid #cacaca;
+}
+.messageCenter_bg .messageCenter_warp {
+	width: 95%;
+	height:auto;
+	margin:0 auto;
+	overflow: hidden;
+
+}
+.messageCenter_bg .messageCenter_warp .rank {
+ 	width:81%;
+ 	display: inline;
+ 	height: auto;
+ 	text-overflow:ellipsis;
+ 	font-size:16px;
+ }
+
+.messageCenter_bg .messageCenter_warp img {
+	width: 44px;
+	height: 42px;
+	background-size: cover;
+	float: left;
+	margin-right: 12px;
+
+}
+
+.messageCenter_bg .messageCenter_warp span {
+	display: block;
+	line-height:20px;
+
+	
+}
+/***********************消息中心end**********************/
+
+
+
+/***********************升级start**********************/
+.warp .upGrade_bg {
+	width: 100%;
+	height: 80px;
+	background: #fdad3b;
+	margin-top: 12px;
+	border-top: 1px solid #cacaca;
+	border-bottom: 1px solid #cacaca;
+	margin-bottom: 40px;
+}
+
+.warp .upGrade_bg .upGrade_warp {
+	width: 96%;
+	height: 56px;
+	margin: 12px auto;
+	color: #fff;
+}
+
+.warp .upGrade_bg .upGrade_warp img {
+	width: 56px;
+	height: 56px;
+	background-size: cover;
+	float: left;
+}
+
+.warp .upGrade_bg .upGrade_warp .upGrade_shell {
+	height:51px;
+	margin-left: 68px;
+	padding-top:5px;
+}
+.warp .upGrade_bg .upGrade_warp .upGrade_shell .upGrade_rectangle {
+	border: 1px solid #fff;
+	height: 21px;
+	border-radius:10px;
+	background:#f19149;
+}
+
+.warp .upGrade_bg .upGrade_warp .upGrade_shell .upGrade_txt {
+	height: 25px;
+	width: 100%;
+	
+}
+
+.warp .upGrade_bg .upGrade_warp .upGrade_shell .upGrade_txt .rack {
+	padding-top: 0px;
+	padding-left: 4px;
+	padding-bottom: 0px;
+	padding-right: 4px;
+	float: right;
+	font-size: 14px;
+	border-radius: 4px;
+	text-align: center;
+	background:#ffcd02; 
+}
+.warp .upGrade_bg .upGrade_warp .upGrade_shell .upGrade_txt .rack img {
+	width: 12px;
+	height: 10px;
+	float: left;
+	background-size: cover;
+	margin-top: 3px;
+    margin-left: 15px;
+}
+.warp .upGrade_bg .upGrade_warp .upGrade_shell .upGrade_txt .rack span:nth-child(2) {
+	display: block;
+	margin-right: 8px;
+}
+
+.warp .upGrade_bg .upGrade_warp .upGrade_shell .upGrade_rectangle .bar {
+	width: 70%;
+	height: 21px;
+	line-height: 21px;
+	border-radius:10px;
+	background: 
+	/*-webkit-gradient( linear,left top,right top,from(#ffcb02),to(#fe4602));*/
+}
+
+.warp .upGrade_bg .upGrade_warp .upGrade_shell .upGrade_rectangle .bar img {
+	width: 16px;
+	height: 14px;
+	margin-top: 3px;
+	margin-left:8px; 
+	background-size: cover;
+}
+
+.warp .upGrade_bg .upGrade_warp .upGrade_shell .upGrade_rectangle .bar span {
+	
+	float: right;
+	font-size: 12px;
+}
+
+.warp .upGrade_btn {
+	width: 172px;
+	margin:0 auto;
+	height: 32px;
+	font-size: 18px;
+	color: #fff;
+	background: #fb0200;
+	border-radius: 5px;
+	line-height:32px;
+	text-align: center;
+}
+/***********************升级end**********************/
+
+
+/***********************积分兑换start**********************/
+.warp .creditsExchange_top {
+	width:100%;
+	height: 78px;
+	background: #fff;
+	border-bottom: 1px solid #cacaca;
+	border-top: 1px solid #cacaca;
+	color: #333;
+	margin-bottom: 24px;
+}
+
+.warp .creditsExchange_top .creditsExchange_txt {
+	width: 95%;
+	margin:0 auto;
+	height: 56px;
+	font-size: 17px;
+	margin-top: 17px;
+}
+
+.warp .creditsExchange_area {
+	height: 150px;
+	width: 96%;
+	margin:0 auto;
+	color: #888;
+	margin-bottom: 15px;
+}
+
+.warp .creditsExchange_area .creditsExchange_convert {
+	height: 122px;
+	margin-top: 12px;
+	width:100%;
+}	
+
+.warp .creditsExchange_area .creditsExchange_convert .creditsExchange_bar {
+	width: 32%;
+	height: 60px;
+	background: #fff;
+	color: #ffae00;
+	float: left;
+	font-size: 17px;
+	margin-bottom: 2px;
+	text-align: center;
+
+}
+
+.warp .creditsExchange_area .creditsExchange_convert .selected {
+	width: 32%;
+	height: 60px;
+	color: #fff;
+	background: #ffae00;
+}
+
+.warp .creditsExchange_area .creditsExchange_bar span:nth-child(1) {
+	display: block;
+	padding-top: 12px;
+}
+
+.warp .creditsExchange_alarm {
+	width: 95%;
+	line-height: 14px;
+	margin:0 auto;
+
+}
+
+.warp .creditsExchange_alarm img {
+	width: 17px;
+	height: 17px;
+	float: left;
+	margin-right: 7px;
+	background-size: cover;
+}
+
+ .creditsExchange_balance {
+	width: 100%;
+	height: 55px;
+	line-height:55px;
+	background: #fff;
+	position: fixed;
+	bottom:0;
+	font-size:17px;
+}
+
+.creditsExchange_balance .creditsExchange_btn {
+	width: 100px;
+	height: 55px;
+	background: #fb0200;
+	text-align:center;
+	color: #fff;
+	float: right;
+}
+/***********************积分兑换end**********************/
+
+
+/***********************收益明细start**********************/
+.warp .details {
+	width: 100%;
+	overflow: auto;
+	background:#fff;
+	border-bottom: 2px solid #f6f5f7;
+}
+
+.warp .details .details_bg {
+	width: 95%;
+	height:auto;
+	color: #333;
+	margin:0 auto;
+
+}
+
+.warp .details .details_bg span {
+	float: left;
+	display: block;
+
+}
+
+.warp .details .details_bg .details_areaLt {
+	width: 125px;
+	height:auto;
+	font-size: 13px;
+	float: left;
+	padding-bottom:12px;
+}
+
+.warp .details .details_bg .details_areaLt img:first-child{
+	width: 27px;
+	height: 25px;
+	background-size: cover;
+	float: left;
+	margin-left: 20px;
+}
+
+.warp .details .details_bg .details_areaLt img{
+	width: 27px;
+	height: 27px;
+	background-size: cover;
+	float: left;
+	margin-top:3px;
+	margin-left: 20px;
+}
+
+.warp .details .details_bg .details_areaRg {
+	display: block;
+	height:auto;
+	float:left;
+	width:56%;
+	padding-bottom: 12px;
+	font-size: 13px;
+	
+}
+/***********************收益明细end**********************/
+
+
+/***********************积分明细start**********************/
+
+/***********************积分明细end**********************/
+
+
+/***********************提现记录start**********************/
+.warp .presentationRecord_area {
+	width:33%;
+	height:100%;
+	float: left;
+	text-align: center;
+
+}
+
+.warp .record_top .selected {
+	background: #ffcd02;
+	width:33%;
+	height:45px;
+
+}
+.warp .record_top  .presentationRecord_bar {
+	width: 100%;
+	float: left;
+	height: 30px;
+	overflow: hidden;
+	text-align: center;
+	line-height: 30px;
+	margin-top: 8px;
+	margin-bottom: 7px;
+	border-right: 1px solid #cacaca;
+}
+
+.warp .presentationRecord_shell {
+	width: 100%;
+	height: 38px;
+	line-height: 38px;
+	background: #fff;
+	margin-top: 12px;
+	font-size: 15px;
+	border-top: 1px solid #cacaca;
+	border-bottom: 1px solid #cacaca;
+}
+/***********************提现记录end**********************/
+
+.warp .record_top {
+	width: 100%;
+	height: 45px;
+	background: #fff;
+	line-height: 45px;
+	text-align: center;
+	border-bottom: 1px solid #cacaca;
+	border-top: 1px solid #cacaca;
+}
+/***********************分享记录start**********************/
+.warp .shareRecord {
+	width: 100%;
+	height: 100px;
+	 background: #fff;
+	 margin-bottom: 2px;
+}
+
+.warp .shareRecord .shareRecord_area {
+	height:86px;
+	width: 95%;
+	padding-top:14px;
+	margin: 0 auto;
+
+}
+
+.warp .shareRecord .shareRecord_area .shareRecord_areaLt {
+	/*float: left;*/
+	width:65%;
+	font-size: 15px;
+
+}
+
+.warp .shareRecord .shareRecord_area .shareRecord_areaLt .photo {
+	width: 70px;
+	/*height: 70px;*/
+	float: left;
+	margin-right: 12px;
+	/*border: 1px solid #cacaca;*/
+}
+
+.warp .shareRecord .shareRecord_area .shareRecord_areaLt .photo img {
+	width: 64px;
+	/*height: 64px;*/
+	margin:3px 3px;
+	background-size: cover;
+}
+
+.warp .shareRecord .shareRecord_area span {
+	display: block;
+}
+
+.warp .shareRecord .shareRecord_area .shareRecord_areaLt span {
+	margin-top: 20px;
+}
+
+.warp .shareRecord .shareRecord_area .shareRecord_areaRg span {
+	margin-top: 8px;
+
+}
+.warp .shareRecord .shareRecord_area .shareRecord_areaRg {
+	float: left;
+    width: 35%;
+    font-size: 14px;
+    text-align: center;
+	
+}
+/***********************分享记录end**********************/
+
+
+/***********************兑换记录start**********************/
+.warp  .recordConversion_bg {
+	width: 95%;
+	height: 100%;
+	margin:0 auto;
+	color: #222;
+	
+
+}
+
+.warp .recordConversion_bar {
+	width: 23%;
+	height: 100%;
+	float: left;
+	font-size: 13px;
+	text-align: center;
+
+}
+
+.warp .recordConversion_area {
+	width: 100%;
+	height: 40px;
+	margin-top: 8px;
+	background: #fff;
+	line-height: 40px;
+	border-bottom: 2px solid #cacaca;
+	
+} 
+
+.warp .recordConversion_area .recordConversion_bg .recordConversion_bar img {
+	width:10px;
+	height:10px;
+	float: left;
+	padding-top: 15px;
+	
+	background-size:cover;
+}
+/***********************兑换记录end**********************/
+
+/***********************账户设置  start***********************/
+
+.div-head {
+	width: 95%;
+	float: right;
+	height: 55px;
+	line-height: 55px;
+	font-size: 16px;
+	border-bottom: solid 1px #e2e1e1;
+}
+
+.img-head-picture {
+	width: 46px;
+	height: 46px;
+	background: url("../images/mine/img-head-picture.png") no-repeat;
+	-webkit-background-size: 46px 46px;
+	background-size: 46px 46px;
+	float: right;
+	margin-top: 5px;
+	margin-right: 6px;
+	border-radius: 23px;
+	position: relative;
+}
+
+.img-head-input {
+	width: 72px;
+    height: 46px;
+    border-radius: 23px;
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0;
+    float: right;
+    position: relative;
+}
+
+.accountSetting_warp {
+	width: 100%;
+	overflow: auto;
+}
+
+.accountSetting_warp .accountSetting_warp_rg {
+	float:right;
+	margin-right:2%;
+	font-size: 15px;
+}
+
+.accountSetting_warp .accountSetting_warp_rg img {
+	width: 45px;
+	height: 45px;
+}
+
+.accountSetting_warp .divide {
+	width: 100%;
+	height: 13px;
+	background: #f5f6f7;
+}
+
+.accountSetting_warp .accountSetting_portrait {
+	width: 98%;
+	height: 65px;
+	border-bottom: 1px solid #cacaca;
+	background: #fff;
+	line-height: 65px;
+	text-align:left;
+	padding-left:2%;
+	font-size: 15px;
+	
+}
+
+.accountSetting_warp .accountSetting_text {
+	width: 98%;
+	height: 50px;
+	border-bottom: 1px solid #cacaca;
+	background: #fff;
+	line-height: 50px;
+	text-align:left;
+	padding-left: 2%;
+} 
+
+.accountSetting_btn {
+	width:85%;
+	height:44px;
+	margin:0 auto;
+	background:#ffcd02;
+	border-radius:5px; 
+	margin-top:25px;
+	color:#f5f5f5;
+	line-height:44px;
+	text-align: center;
+}
+
+.accountSetting_birth {
+	width: 55%;
+    height: 40px;
+    border: 0px;
+    text-align: right;
+}
+/***********************账户设置  end***********************/

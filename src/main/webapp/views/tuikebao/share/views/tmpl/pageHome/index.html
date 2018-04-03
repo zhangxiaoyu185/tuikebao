@@ -1,0 +1,118 @@
+<div id="wrapper" style="bottom: 100px">
+	<div id="scroller">
+		<div id="scroller-pullDown">
+			<span id="down-icon" class="icon-double-angle-down pull-down-icon"></span>
+			<span id="pullDown-msg" class="pull-down-msg">下拉刷新</span>
+		</div>
+		<div id="scroller-content">
+			<ul class="index_page">
+				<li class="notRefresh">
+					<div id="index_slides">
+						<%for(var i=0; i<banner.length; i++){%>
+							<a href="<%=banner[i].bsbarLink%>">
+								<img src="<%=WEB_URL+"coreAttachment/image/get/"+banner[i].bsbarPic%>" alt="">
+							</a>
+						<%}%>
+					</div>
+
+					<div id="h_wrapper" class="h_wrapper" >
+						<div class="h_scroller">
+							<%
+								var len = classification.length;
+								if( len < 10){
+									var lenOne = len ;
+									var lenTwo = 0;
+									
+								}else if( len < 20){
+									var lenOne = 10 ;
+									var lenTwo = len;
+								}else{
+									var lenOne = 10 ;
+									var lenTwo = 20;
+								}
+								
+							%>
+										
+							<div class="type_container">
+								<ul class="h_scroller_ul">
+									<%for(var i=0; i<lenOne; i++){%>
+										<li class="type_item ui_btn" data-action="goProductType" data-Uuid="<%=classification[i].bspcyUuid%>">
+											<img src="<%=WEB_URL+"coreAttachment/image/get/"+classification[i].bspcyIcon%>"  class="type_img" /> 
+											<div class="type_span"><%=classification[i].bspcyName%></div>
+										</li>
+									<%}%>
+									<!-- <li class="ui_btn" data-action="goProductType">
+										<img src="images/test/type1.png"  class="type_img" /> 
+										<div class="type_span">美食</div>
+									</li> -->
+								</ul>
+							</div>
+							<div class="type_container">
+								<ul class="h_scroller_ul">
+									<%for(var i=10; i<lenTwo; i++){%>
+										<li class="ui_btn" data-action="goProductType" data-Uuid="<%=classification[i].bspcyUuid%>">
+											<img src="<%=WEB_URL+"coreAttachment/image/get/"+classification[i].bspcyIcon%>"  class="type_img" /> 
+											<div class="type_span"><%=classification[i].bspcyName%></div>
+										</li>
+									<%}%>
+									<!-- <li class="ui_btn" data-action="goProductType">
+										<img src="images/test/type1.png"  class="type_img" /> 
+										<div class="type_span">美食</div>
+									</li> -->
+								</ul>
+							</div>
+						</div>
+						<!-- 计算宽度 点数n*12 -->
+						<div class="type_dot_border">
+							<div class="type_dot selected"></div>
+							<div class="type_dot"></div>
+						</div>	
+					</div>
+					<a href="<%=advertising[0].bsaetLink%>">
+						<img src="<%=WEB_URL+"coreAttachment/image/get/"+advertising[0].bsaetPic%>" class="ad" />
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="scroller-pullUp">
+			<span id="up-icon" class="icon-double-angle-up pull-up-icon"></span>
+			<span id="pullUp-msg" class="pull-up-msg">上拉加载</span>
+		</div>
+	</div>
+</div>
+
+	<!-- 微信关注模块  -->
+	<div class="follow">
+		<div class="followLeft">
+			<div class="logo" style="background-image: url(<%=WEB_URL+"coreAttachment/image/get/"+Wechat.crwctProjectLogo%>);"></div>
+			<div class="title">
+				<div class="name"><nobr><%=Wechat.crwctProjectName%></nobr></div>
+				<div class="advertising"><nobr><%=Wechat.crwctProjectDesc%></nobr></div>
+			</div>
+		</div>
+		<div class="followButton ui_btn" data-action="followButton" >立即关注</div>
+	</div>
+
+	<div class="followContent" id="followContent">
+		<div class="title">
+			<p>感谢关注“<%=Wechat.crwctName%>”官方微信号</p>
+			<div class="weChat">
+				<div class="weChatLogo"></div>
+				<div class="weChatNumber">微信号：<%=Wechat.crwctName%></div>
+			</div>
+		</div>
+		<div class="qrCode">
+			<!-- <div class="qrCodeLeft" style="background-image: url(../images/weChatLogo/qrCode.png);"></div> -->
+			<div class="qrCodeLeft">
+				<img src="<%=WEB_URL+"coreAttachment/image/get/"+Wechat.crwctPic%>">
+			</div>
+			<!-- <div class="qrCodeRight"></div> -->
+		</div>
+		<div class="prompt">长按识别二维码 查看分享内容</div>
+		<div class="followContentButton ui_btn" data-action="contentClose">关闭</div>
+	</div>
+
+
+
+
+

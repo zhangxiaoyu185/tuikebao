@@ -1,0 +1,67 @@
+<div class="warp" style="padding-top:12px;border-bottom:1px solid #cacaca">
+<%if( list.length == 0 ){%>
+	<li>
+		<div id="mainStage">
+			<div class="warp">
+				<div class="page">
+					<img src="./images/order/order.png" alt="" style="width:88px;height:92px;"><span style="color:#999">无相关信息</span>
+				</div>
+			</div>
+		</div>
+	</li>
+<%}else{%>
+	<%for(var i=0; i<list.length; i++){%>
+<%
+			var picName = "";
+			if(list[i].bsprdType == 1) {picName="Withdrawals"}
+			if(list[i].bsprdType == 2) {picName="Cashback"}
+		
+			var imgPath =  "./images/mine/"+picName+".png"
+							
+			var bsirdCdate = list[i].bsprdCdate;
+			var timeCdate = bsirdCdate.split(" ");
+
+		%>
+	<div class="details">
+		<div class="details_bg" style="padding-top:12px;">
+			<div class="details_areaLt">
+				<span><span><%=timeCdate[0]%></span>
+				</br>
+				<span style="padding-left:8px;" ><%=timeCdate[1]%></span></span>
+				<img src="<%=imgPath%>" alt="">
+
+			</div>
+			<div class="details_areaRg">
+				<span><%=list[i].bsprdQuota%></span>
+				</br>
+				<span><%=list[i].bsprdBill%></span>
+
+			</div>
+		</div>	
+	</div>
+
+<!-- 
+
+	<div class="details">
+		<div class="details_bg" style="padding-top:12px;">
+			<div class="details_areaLt">
+				<span><span>2017-01-10</span>
+				</br>
+				<span style="padding-left:20px;" >21:19</span></span>
+				<img src="./images/mine/Cashback.png" alt="">
+			</div>
+			<div class="details_areaRg">
+				<span><%=list[i].bsprdQuota%></span>
+				</br>
+				<span><%=list[i].bsprdBill%></span>
+
+			</div>
+		</div>	
+	</div> -->
+
+	<%}%>
+<%}%>
+
+	
+</div>
+

@@ -1,0 +1,68 @@
+<div class="cashWithdrawal_warp">
+	
+	<div class="cashWithdrawal_top">
+		<div class="cashWithdrawal_area">
+		<span>您账户的可体现收益为<%=cashInfo.availableFee%>元</span>
+		</div>
+	</div>
+	<div class="cashWithdrawal_points"></div>
+	<div class="cashWithdrawal_transfer">
+		<div class="cashWithdrawal_area">
+			<span>提现方式</span>
+			<select style="margin-top: 4px;" id="payType" name="selse" class="cashWithdrawal_table ">
+				<option value="2" style="padding:0">支付宝转账</option>
+				<!-- <option value="2" style="padding:0">微信转账</option>
+				<option value="3" style="padding:0"> 支付宝转账</option>
+				<option value="4" style="padding:0">支付宝转账</option> -->
+			</select>
+		</div>
+	</div>
+
+	<div class="cashWithdrawal_transfer">
+		<div class="cashWithdrawal_area">
+			<span>账户姓名</span>
+			<input id="bscrdAlipayName" type="text"style="color:#999;"  class="cashWithdrawal_table" placeholder="支付宝实名认证姓名">
+		</div>
+	</div>
+
+	<div class="cashWithdrawal_transfer">
+		<div class="cashWithdrawal_area">
+			<span>支付账号</span>
+			<input id="bscrdAlipayNo" type="text"style="color:#999;" class="cashWithdrawal_table " placeholder="支付宝账号(手机/邮箱)">
+		</div>
+	</div>
+
+	<div class="cashWithdrawal_transfer">
+		<div class="cashWithdrawal_area">
+			<span>提现金额</span>
+			<!-- <select id="content" name="selse" class="cashWithdrawal_table ">
+				<option value="5" style="padding:0">10.00元</option>
+				<option value="6" style="padding:0">20.00元</option>
+				<option value="7" style="padding:0"> 30.00元</option>
+				<option value="8" style="padding:0">40.00元</option>
+			</select> -->
+			<input id="money" type="number" class="cashWithdrawal_table" placeholder="请输入提现金额"/>
+		</div>
+	</div>
+
+	<div class="cashWithdrawal_points"></div>
+	<div class="cashWithdrawal_transfer">
+		<div class="cashWithdrawal_area">
+			<span>手机号码</span>
+			<input id="phoneNo" type="number" style="color:#999;" class="cashWithdrawal_table" placeholder="账户手机号(1516****5186)" value="<%=cashInfo.mobileCode%>"  readonly="true">
+
+		</div>		
+	</div>
+
+	<div class="cashWithdrawal_transfer">
+		<div class="cashWithdrawal_area">
+		<span>验证码</span>
+		<input id="checkCode" type="text"style="color:#999;"placeholder="请输入验证码" class="cashWithdrawal_verify" >
+		<!-- <div class="cashWithdrawal_btn ui_btn" data-action="sendVerificationCode">发送验证码</div> -->
+		<input type="button" name="" class="cashWithdrawal_btn ui_btn" data-action="sendVerificationCode" value="发送验证码">
+		</div>
+	</div>
+	<div class="cashWithdrawal_bn ui_btn" data-action="sumbitApply">
+		提交申请
+	</div>
+</div>

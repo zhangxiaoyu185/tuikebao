@@ -1,0 +1,97 @@
+/***********************登录  start**********************/
+.loginPage_warp {
+	width: 100%;
+	overflow: auto;
+
+}
+
+.loginPage_warp .loginPage_top {
+	width: 98%;
+	margin:60px auto;
+	margin-top:70px;
+	text-align: center;
+
+}
+
+.loginPage_warp .loginPage_top img {
+	width: 105px;
+	height: 66px;
+	background:cover;
+}
+
+.loginPage_warp .loginPage_inputBox {
+	height: 40px;
+	padding-left:20%;
+	line-height: 40px;
+	color:#767676;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 12px;
+	background: #fff;
+	position: relative;
+	border: 1px solid #e3e3e3;
+}
+
+.loginPage_warp .confirm {
+	padding-right:32%;
+}
+
+.loginPage_warp .loginPage_inputBox_login {
+	width: 95%;
+	height: 36px;
+	text-align: center;
+	color:#fff;
+	line-height: 36px;
+	border-radius:5px;
+	margin:6px auto;
+	margin-top:36px;
+	background: #fecc2f;
+}
+
+.loginPage_warp .forgetPassword {
+	width: 95%;
+	margin:0 auto;
+	color: #7d7d7d;
+}
+
+/***********************登录  end**********************/
+
+/***********************忘记密码  start**********************/
+.loginPage_warp .loginPage_inputBox .loginPage_inputBox_btn {
+	height: 26px;
+	width: 85px;
+	position: absolute;
+	top:15%;
+	right: 3%;
+	color: #828282;
+	font-size: 12px;
+	line-height: 26px;
+	text-align: center;
+	border-radius:2px;
+	border: 1px solid #e2e2e2;
+	background:-webkit-linear-gradient(top,#fff,#f4f3f3);
+
+}
+/***********************忘记密码  end**********************/
+
+/***********************注册  start**********************/
+.loginPage_warp .loginPage_inputBox .phone {
+	width:95%;
+	height:32px;
+	border:0;
+	line-height:32px;
+	font-size: 14px;
+	color: #767676;
+}
+
+.loginPage_warp .loginPage_inputBox input {
+	outline:none; 
+}
+
+.loginPage_warp .loginPage_inputBox span {
+	position: absolute;
+	top:0;
+	left: 3%;
+}
+
+/***********************注册  end**********************/

@@ -1,0 +1,33 @@
+<%if( hotList.length == 0 ){%>
+	<li>
+		<div id="mainStage">
+			<div class="warp">
+				<div class="page">
+					<img src="./images/order/order.png" alt="" style="width:88px;height:92px;"><span style="color:#999">无相关信息</span>
+				</div>
+			</div>
+		</div>
+	</li>
+<%}else{%>
+	<%for(var j=0; j<hotList.length; j++){%>
+		<li>
+			<div class="indexProduct_item ui_btn" data-uuid="<%=hotList[j].bshltProduct%>" data-action="goBuy">
+				<img class="lazy" src="<%=WEB_URL+"coreAttachment/image/get/"+hotList[j].bsprtStorePic%>">
+				<!-- <div class="img_label fireStorm">爆抢</div> -->
+				<div style=" width: 35px; height: 35px; background-image: url(<%=WEB_URL+"coreAttachment/image/get/"+hotList[j].bsprtHotspotIcon%>);  background-size: cover; margin-top: 10px;  margin-left: 25px; float: left;"></div>
+				<div class="title"><nobr><%=hotList[j].bsprtName%></nobr></div>
+				<div class="bottom">
+					<div class="div_left">
+						<div class="price">￥<%=hotList[j].bsprtSalePrice%>元</div>
+						<div class="order_price">原价<span class="out_time">￥<%=hotList[j].bsprtOrignalPrice%>元</span></div>
+					</div>
+					<div class="div_middle">
+						<div class="status">已售：<%=hotList[j].bsprtSaleCount%>件</div>
+						<div class="kd">快递：<%=hotList[j].bsprtExpress%></div>
+					</div>
+					<div class="toBuy">立即购买</div>
+				</div>
+			</div>
+		</li>
+	<%}%>
+<%}%>

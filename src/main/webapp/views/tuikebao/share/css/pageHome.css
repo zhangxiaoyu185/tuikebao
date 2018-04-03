@@ -1,0 +1,406 @@
+	/*********************首页  start********************/
+/****************横向滑动块******************/
+.h_wrapper {
+  	width:100%;
+  	height:176px;
+  	float:left;
+  	position:relative;
+  	z-index:1;
+  	background: #fff;
+}
+
+.h_scroller {
+  	width:200%;
+  	height:164px;
+  	float:left;
+  	padding:0;
+}
+
+.h_scroller_ul {
+  	margin:0px;
+  	list-style: none;
+  	list-style-type: none;
+  	padding:0px;
+}
+
+.h_scroller_ul>li {
+  	width: 20%;
+ 	height: 78px;
+ 	float:left;
+  	font: 16px/1.231 "Lato", sans-serif;
+}
+
+.h_scroller_ul>li:active {
+  	background:rgba(58, 142, 190, 0.5);
+}
+
+.type_container {
+	text-align: center;
+	font-weight: bold;
+	float:left;
+	width:50%;
+	overflow:hidden;
+}
+
+.type_img {
+	width: 45px;
+	height: 45px;
+	margin: 12px auto 6px auto;
+	border-radius: 50%;
+	display: block;
+}
+
+.type_span {
+	color: #666;
+	font-size: 13px;
+	text-align: center;
+}
+
+.type_dot_border {
+	width: 24px;
+	height: 6px;
+	margin: 0px auto;
+}
+
+.type_dot_border .type_dot {
+	width: 6px;
+	height: 6px;
+	float: left;
+	background: url(../images/pageHome/type_dot.png) no-repeat;
+	-webkit-background-size: 6px 6px;
+	background-size: 6px 6px;
+	margin: 0px 3px;
+}
+
+.type_dot_border .type_dot.selected {
+	background: url(../images/pageHome/type_dot_selected.png) no-repeat;
+	-webkit-background-size: 6px 6px;
+	background-size: 6px 6px;
+}
+
+.ad {
+	width: 100%;
+}
+
+.index_recommend {
+	width: 100%;
+	height: 100px;
+	margin-bottom: 8px;
+	background: #fff;
+}
+
+.index_recommend:first-child {
+	margin-top: 10px;
+}
+
+.index_recommend .img_product {
+	width: 100px;
+	height: 100px;
+	border-right: solid 1px #e5e5e5;
+	position: absolute;
+    left: 0px;
+}
+
+.index_recommend .div_product {
+	width: 76%;
+	height: 100px;
+	float: left;
+}
+
+.index_recommend .div_product .name {
+	margin-top: 12px;
+	color: #333;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 110px;
+}
+
+.index_recommend .div_product .desc {
+	margin-top: 12px;
+	padding-left: 110px;
+	height: 15px;
+	clear: both;
+}
+
+.index_recommend .div_product .desc .price {
+	font-size: 15px;
+	color: #fb0200;
+	float: left;
+	font-weight: bold;
+}
+
+.index_recommend .div_product .desc .order_price {
+	color: #333;
+	font-size: 14px;
+	float: left;
+}
+
+.index_recommend .div_product .desc .sell_num {
+	font-size: 12px;
+	color: #333;
+	float: right;
+}
+
+.index_recommend .div_product .desc .kd {
+	font-size: 12px;
+	float: right;
+	color: #888;
+	margin-top: 2px;
+}
+
+.index_recommend .div_share {
+	width: 22%;
+	height: 100px;
+	stroke-dasharray: 4px;
+    stroke-dashoffset: 2px;
+    border-left: 1px dashed #e5e5e5;
+    float: right;
+}
+
+.index_recommend .div_share .span_share {
+	width: 100%;
+	font-size: 14px;
+	color: #fb0200;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 25px;
+}
+
+.index_recommend .div_share .btn_share {
+	width: 64px;
+	height: 20px;
+	margin-top: 16px;
+	margin: 16px auto 0px auto;
+	background: #ffcd02;
+	color: #fff;
+	line-height: 20px;
+	text-align: center;
+	font-size: 13px;
+	font-weight: bold;
+	border-radius: 3px;
+}
+/*********************首页  end********************/
+
+/*********************分类  start********************/
+.productType {
+	width: 100%;
+	overflow: auto;
+}
+
+.productType_wrapper {
+	width: 100%;
+	height: 55px;
+	border-top: solid 1px #e5e5e5;
+	border-bottom: solid 1px #e5e5e5;
+	background: #fff;
+	margin-top: 12px;
+}
+
+.productType_wrapper_placeholder {
+	width: 100%;
+	height: 67px;
+	display: none;
+}
+
+.productType_wrapper.fixed {
+	position: fixed;
+    top: 0px;
+    z-index: 999;
+    margin-top: 0px;
+}
+
+.productType_border {
+	width: 200%;
+	height: 55px;
+}
+
+.productType_border .item {
+	width: 75px;
+	height: 55px;
+	text-align: center;
+	line-height: 55px;
+	color: #222;
+	font-weight: bold;
+	float: left;
+}
+
+.productType_border .item.selected {
+	height: 51px;
+	border-bottom: solid 4px #e40c4d;
+}
+
+/*********************分类  end********************/
+
+/*********************商品详情  start******************/
+
+
+/*********************商品详情  end********************/
+
+/*********************关注公众号  start********************/
+
+.follow{
+	width: 100%;
+	height: 50px;
+	position:fixed;
+	bottom: 55px;
+	background-color: #fff;
+	z-index: 10;
+}
+
+.follow .followLeft{
+	width: 60%;
+	height: 100%;
+	float: left;
+}
+
+.follow .followLeft .logo{
+	width: 25%;
+	height: 38px;
+	margin-top: 6px;
+	margin-left: 10%;
+	/*background-image: url(../images/login/login.png);*/
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position:center center;
+	margin-right: 10px;
+	float: left;
+}
+
+.follow .followLeft .title{
+	width: 55%;
+	height: 100%;
+	background-color: #fff;
+	float: left;
+
+}
+
+.follow .followLeft .title .name{
+	width: 100%;
+	text-align: left;
+	font-weight: bold;
+	margin-top: 5px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.follow .followLeft .title .advertising{
+	width: 100%;
+	font-size: 12px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #747474;
+}
+
+.follow .followButton{
+	width: 80px;
+	height: 25px;
+	background-color: #ffae00;
+	border-radius: 5px;
+	float:right;
+	margin-top: 14px;
+	margin-right: 20px;
+	text-align: center;
+	line-height: 25px;
+	font-size: 12px;
+	color: #fff;
+}
+
+.followContent{
+	width: 100%;
+	height: 340px;
+	background-color: #fff;
+	position: fixed;
+	bottom: 0px;
+	z-index: 1000;
+	display: none;
+}
+
+.followContent .title{
+	width: 76%;
+	height: 75px;
+/*	background-color: #000;*/
+	margin-left: 12%;
+	margin-top: 20px;
+}
+
+.followContent .title p{
+	text-align: center;
+	font-weight: bold;
+}
+
+.followContent .title .weChat{
+	width: 80%;
+	height: 40%;
+	margin-left: 10%;
+	line-height: 30px;
+}
+
+.followContent .title .weChat .weChatLogo{
+	width: 15%;
+	height: 100%;
+	background-image: url(../images/weChatLogo/weChatLogo.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 80%;
+	float: left;
+}
+
+.followContent .title .weChat .weChatNumber{
+	width: 80%;
+	height: 100%;
+	line-height: 30px;
+	margin-left: 5%;
+	float: left;
+}
+
+.followContent .qrCode{
+	width: 76%;
+	height: 130PX;
+	margin-left: 12%;
+	margin-top: 5px;
+}
+
+.followContent .qrCode .qrCodeLeft{
+	width: 100%;
+	height: 100%;
+	float: left;
+	/*background-image: url(../images/weChatLogo/code.png);*/
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+}
+
+.followContent .qrCode .qrCodeRight{
+	width: 50%;
+	height: 100%;
+	float: left;
+	background-image: url(../images/weChatLogo/fingerprint.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 75%;
+}
+
+.followContent .prompt{
+	width:76%;
+	text-align: center;
+	font-size: 12px;
+	margin-left: 12%;
+	margin-top: 3%;	
+
+}
+
+.followContent .followContentButton{
+	width:76%;
+	height: 45px;
+	margin-left: 12%;
+	margin-top: 20px;
+	background-color: #fb0200;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 45px;
+	font-size: 24px;
+	color: #fff;
+}
+
+
+/*********************关注公众号  end********************/

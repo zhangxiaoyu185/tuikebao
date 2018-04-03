@@ -1,0 +1,37 @@
+<div class="accountSetting_warp">
+	<div class="divide"></div>
+	<div class="accountSetting_portrait">
+		<span>头像</span>
+		<div id="img_head_pic" class="img-head-picture" >
+			<input type="file" id="uploadphoto" name="uploadfile"  class="img-head-input"/>
+		</div>
+	</div>
+	<div class="accountSetting_text ui_btn" data-action="changeName">
+		<span>昵称</span>
+		<span id="name" class="accountSetting_warp_rg"><%=userInfo.crusrName%></span>
+	</div>
+	<div class="accountSetting_text ui_btn" data-action="changeSexLayer">
+		<span>性别</span>
+		<span class="accountSetting_warp_rg">
+			<span id="sex"><%=userInfo.crusrGender==1?'男':'女'%></span>
+			<img src="./images/mine/rightArrows_flag.png" style="width:8px;height:14px; margin-left:10px;"alt="">
+		</span>
+	</div>
+	<div class="accountSetting_text">
+		<span>地址</span>
+		<input id="area" class="accountSetting_warp_rg accountSetting_birth" placeholder="请输入您的地址" value="<%=userInfo.crusrProvinceName?userInfo.crusrProvinceName:"" + ' ' + userInfo.crusrCityName?userInfo.crusrCityName:"" + ' ' + userInfo.crusrDistrictName?userInfo.crusrDistrictName:""%>"  crusrProvince="<%=userInfo.crusrProvince?userInfo.crusrProvince:""%>" crusrCity="<%=userInfo.crusrCity?userInfo.crusrCity:""%>" crusrDistrict="<%=userInfo.crusrDistrict?userInfo.crusrDistrict:""%>"  readonly="readonly"/>
+	</div>
+	<div class="accountSetting_text">
+		<span>出生年月</span>
+		<input id="birth" class="accountSetting_warp_rg accountSetting_birth" placeholder="请输入出生年月" value="<%=userInfo.crusrBirthday%>"  readonly="readonly"/>
+	</div>
+<!-- 	<div class="accountSetting_text ui_btn" data-action="changePhone">
+		<span>手机号码</span>
+		<span id="phoneNo" class="accountSetting_warp_rg"><%=userInfo.crusrMobile%></span>
+	</div> -->
+	<div class="accountSetting_text" data-action="">
+		<span>手机号码</span>
+		<span id="phoneNo" class="accountSetting_warp_rg"><%=userInfo.crusrMobile%></span>
+	</div>
+</div>
+<div class="accountSetting_btn ui_btn" data-action="personSave" >保存</div>

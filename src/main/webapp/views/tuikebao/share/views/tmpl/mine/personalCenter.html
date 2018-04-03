@@ -1,0 +1,106 @@
+<div id="wrapper" style="bottom: 50px">
+<div class="personalCenter_warp">
+	<div class="personalCenter_top">
+		<img src="<%=WEB_URL + "coreAttachment/image/get/" + userInfo.crusrHead%>" alt="" id="headPic" class="ui_btn" data-action="toAccountSetting">
+		<span style="margin-left:8px; margin-top:10px;font-size:17px; float: left;"><%=userInfo.crusrName%></span>
+		
+		<span class="upgrade">
+			<%=userInfo.crusrGradeName%>
+		</span>
+		
+		<span style="color:#fb0200;font-size:12px;float: left; margin-top:13px;margin-left: 10px;" class="ui_btn" data-action="toUpGradeView" data-uuid="<%=userInfo.crusrUuid%>">升级</span>
+
+		<img src="./images/mine/quit.png" alt="" class="quit ui_btn" data-action="exitApp">
+	</div>
+	<div class="personalCenter_earnings">
+		<div class="personalCenter_area lt ui_btn" data-action="toIncomeDetails" style="border-right:1px solid #cacaca;">
+			<span>收益</span></br>
+			<span class="personalCenter_change" style="
+    display: block">￥<%=userInfo.crusrAvailableIncome%></span>
+		</div>
+		<div class="personalCenter_area rg ui_btn" data-action="toIntegralDetails">
+			<span>积分</span></br>
+			<span class="personalCenter_change" style=" 
+    display: block"><%=userInfo.crusrIntegral%></span>
+		</div>	
+	</div>
+	<div class="personalCenter_sign">
+		<div class="arew ui_btn" data-action="clickBtn">
+			<img src="./images/pigeonhole/sign.png" alt="">
+			</br>
+			<span style="margin-top:8px;">签到</span>
+		</div>
+		<div class="depressed"></div>
+
+		<div class="arew ui_btn" data-action="toMessageCenter">
+			<img src="./images/pigeonhole/new.png" alt="">
+			</br>
+			<span style="margin-top:8px;">消息</span>
+		</div>
+		<div class="arew ui_btn" data-action="toCreditsExchange">
+			<img src="./images/pigeonhole/tegral.png" alt="">
+		</br>
+			<span style="margin-top:8px;">兑换</span>
+		</div>
+		<div class="arew ui_btn"  data-action="toCashWithdrawal">
+			<img src="./images/pigeonhole/withdraw.png" alt="">
+			</br>
+			<span style="margin-top:8px;">提现</span>
+		</div>
+		<div class="arew ui_btn" style="margin:0;" data-action="toAccountSetting">
+			<img src="./images/pigeonhole/icon_set.png" alt="">
+			</br>
+			<span style="margin-top:8px;">设置</span>
+		</div>
+	</div>
+	<div class="personalCenter_record ui_btn" data-action="toShareRecord">
+		<img src="./images/pigeonhole/share.png" alt="">
+		<span>分享记录</span>
+		<img src="./images/pigeonhole/enter.png" alt="" style="width: 10px;height: 15px;float:right;margin-top:11px;">
+	</div>
+	<div id="shareRecord" class="personalCenter_share">
+		<span class="personalCenter_change lt ui_btn" data-action="shareRecord" data-type="now">今日</span>
+		<span class="ui_btn" data-action="shareRecord" data-type="yesterday">昨日</span>
+		<span class="rg ui_btn" data-action="shareRecord" data-type="month">当月</span>
+	</div>
+	<div class="personalCenter_integral">
+		<span class="lt"><span>分享数</span></br><span id="shareNumber"><%=userInfo.crusrNowShare%></span></span>
+		<span class="lt"><span>返现收益</span></br><span>￥<span id="shareMoney"><%=userInfo.crusrNowAddincome%></span></span></span>
+		<span class="rg"><span>完成交易</span></br><span><span id="shareFinish"><%=userInfo.crusrNowFinish%></span>笔</span></span>
+		<span class="rg"><span>积分收益</span></br><span id="shareIntegral"><%=userInfo.crusrNowAddintegral%></span></span>
+		
+		
+	</div>
+	<div class="personalCenter_record ui_btn" data-action="toPresentationRecord" style="margin-top:14px;">
+		<img src="./images/pigeonhole/record.png" alt="">
+		<span >提现记录</span>
+		<img src="./images/pigeonhole/enter.png" alt="" style="width: 10px;height: 15px;float:right;margin-top:11px;">
+	</div>
+	<div id="moneyRecord" class="personalCenter_share">
+		<span class="personalCenter_change lt ui_btn" data-action="moneyRecord" data-type="now">今日</span>
+		<span class=" ui_btn" data-action="moneyRecord" data-type="yesterday">昨日</span>
+		<span class="rg ui_btn"  data-action="moneyRecord" data-type="month">当月</span>
+	</div>
+	<div class="personalCenter_money">
+		<span class="lt"style="width:50%">提现次数</br><span id="moneyNumber"><%=userInfo.crusrNowCashcount%></span></span>
+
+		<span class="rg"style="width:50%">提现金额</br><span id="moneySum"><%=userInfo.crusrNowCashfee%></span></span></span>
+
+	</div>
+	<div class="personalCenter_record ui_btn" data-action="toRecordConversion" style="margin-top:14px;">
+		<img src="./images/pigeonhole/icon.integral.record.png" alt="">
+		<span>兑换记录</span>
+		<img src="./images/pigeonhole/enter.png" alt="" style="width: 10px;height: 15px;float:right;margin-top:11px;">
+	</div>
+	<div id="swopRecord" class="personalCenter_share">
+		<span class="personalCenter_change lt ui_btn" data-action="swopRecord" data-type="now">今日</span>
+		<span class="ui_btn" data-action="swopRecord" data-type="yesterday">昨日</span>
+		<span class="rg ui_btn" data-action="swopRecord" data-type="month">当月</span>
+	</div>
+	<div class="personalCenter_money">
+		<span class="lt"style="width:50%">兑换次数</br><span id="swopNumber"><%=userInfo.crusrNowExchcount%></span></span>
+
+		<span class="rg"style="width:50%">兑换积分</br><span id="swopSum"><%=userInfo.crusrNowExchintegral%></span></span></span>
+	</div>
+</div>
+</div>

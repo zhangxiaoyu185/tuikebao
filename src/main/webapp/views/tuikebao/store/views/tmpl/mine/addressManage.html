@@ -1,0 +1,46 @@
+<div class="addressManage">
+	<%for(var i=0; i<list.length; i++) {%>
+		<div class="addressManage_item ui_btn <%=list[i].bsarsDefault==1?"selected": ""%>" data-index="<%=i%>" data-action="addressSelected">
+			<div class="top">
+				<span class="left"><%=list[i].bssasName%></span>
+				<span class="right"><%=list[i].bssasMobile%></span>
+			</div>
+			<div class="bottom">
+				<span class="left"><%=list[i].bssasProvinceName%><%=list[i].bssasCityName%><%=list[i].bssasCountyName%><%=list[i].bssasAddress%></span>
+			</div>
+		</div>
+	<%}%>
+
+<!-- 	<div class="addressManage_item selected ui_btn" data-action="addressSelected">
+		<div class="top">
+			<span class="left">张小鱼</span>
+			<span class="right">1515713354</span>
+		</div>
+		<div class="bottom">
+			<span class="left">浙江杭州上城区延安路588号</span>
+		</div>
+	</div>
+
+	<div class="addressManage_item ui_btn" data-action="addressSelected">
+		<div class="top">
+			<span class="left">张小鱼</span>
+			<span class="right">1515713354</span>
+		</div>
+		<div class="bottom">
+			<span class="left">浙江杭州上城区延安路588号</span>
+		</div>
+	</div>
+
+	<div class="addressManage_item ui_btn" data-action="addressSelected">
+		<div class="top">
+			<span class="left">张小鱼</span>
+			<span class="right">1515713354</span>
+		</div>
+		<div class="bottom">
+			<span class="left">浙江杭州上城区延安路588号</span>
+		</div>
+	</div> -->
+
+</div>
+
+<div class="comm_bottom_btn ui_btn" data-action="addAddress">添加新地址</div>

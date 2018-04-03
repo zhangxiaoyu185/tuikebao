@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=0">
+<script type="text/javascript" src="../common/js/jquery/jquery-1.8.3.min.js?ts=new Date()"></script>
+<script type="text/javascript" src="../common/js/common/common.js?ts=new Date()"></script>
+<title></title>
+</head>
+
+<body>
+	<script language="javascript" type="text/javascript">
+		//获得url参数
+		function getParpam(name) {
+			var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			var r = window.location.search.substr(1).match(reg);
+			if(r!=null) return unescape(r[2]); return null;
+		}
+		
+		$(function() {
+			var productUuid = getParpam('P');
+			var shareUserUuid = getParpam('S');
+			
+			window.location.href = "http://show.hzlingdian.com/views/tuikebao/store/index.html?pageName=productDesc&productUuid="+productUuid+"&shareUserUuid="+shareUserUuid;
+		});
+	</script>
+</body>
+
+</html>

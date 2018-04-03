@@ -1,0 +1,32 @@
+<%if( list.length == 0 ){%>
+	<li>
+		<div id="mainStage">
+			<div class="warp">
+				<div class="page">
+					<img src="./images/order/order.png" alt="" style="width:88px;height:92px;"><span style="color:#999">无相关消息</span>
+				</div>
+			</div>
+		</div>
+	</li>
+
+<%}else{%>
+	<%for(var i=0; i<list.length; i++){%>
+		<li>
+			<%
+				var picName = "";
+				if(list[i].bsmecType == 1) {picName="cash"}
+				if(list[i].bsmecType == 2) {picName="integral"}
+				if(list[i].bsmecType == 3) {picName="grade"}
+				if(list[i].bsmecType == 4) {picName="gold"} 
+				var imgPath =  "./images/mine/"+picName+".png"
+			%>
+			<div class="messageCenter_bg">
+			 <div class="messageCenter_warp">
+			 	<img src="<%=imgPath%>" alt="">
+			 	<span class="rank"><%=list[i].bsmecContent%></span>
+			 	<span style="color:#666;font-size:13px;"><%=list[i].bsmecCdate%></span>
+				 </div>
+			</div>
+		</li>
+	<%}%>
+<%}%>

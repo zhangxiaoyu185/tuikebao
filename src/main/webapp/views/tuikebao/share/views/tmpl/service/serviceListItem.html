@@ -1,0 +1,15 @@
+<%for(var i=0; i<list.length; i++){%>
+	<li>
+		<div class="serviceList_item ui_btn" data-action="goDesc" data-bssteUuid="<%=list[i].bssdcUuid%>">
+			<div class="top">
+				<div class="title"><%=list[i].bssdcTitle%></div>
+				<div class="time"><%=list[i].bssdcCdate%></div>
+			</div>
+			<img src="<%=WEB_URL+"coreAttachment/image/get/"+list[i].bssdcPic%>" style="width: 100%">
+			<div class="bottom">
+				阅读全文
+				<div class="serviceToDesc"></div>
+			</div>
+		</div>
+	</li>
+<%}%>

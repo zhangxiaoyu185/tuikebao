@@ -1,0 +1,59 @@
+<div class="warp">
+	<div class="creditsExchange_top">
+		<div class="creditsExchange_txt">
+			<span>手机号码:</span><input id="attribution" placeholder="请输入兑换的手机号" type="number" style="font-size: 12px; margin-left: 10px; height: 20px; width: 55%; padding-left: 5px; outline: none; border: 0px"></br>
+			<span style="color:#888; font-size:13px;" id="numberAttribution">号码归属地</span>
+		</div>	
+	</div>
+
+	<div class="creditsExchange_area">
+		<span style="font-size:14px;">请选择充值金额</span>
+		<div class="creditsExchange_convert">
+
+			<%for(var i=0; i<integralList.length; i++){%>
+				<div class="creditsExchange_bar ui_btn" style="margin-right:1%" id="bseeeUuid" data-Uuid="<%=integralList[i].bseeeUuid%>" data-action="attrSelect" data-type="0">
+					<span><%=integralList[i].bseeeBill%>元</span>
+					<span style="font-size:12px;" id="integral" >兑换：<%=integralList[i].bseeeIntegral%>积分</span>
+				</div>
+
+			<%}%>
+			<!-- 
+			<div class="creditsExchange_bar selected ui_btn"style="margin-right:2%;" data-action="attrSelect" data-type="0">
+				<span>20.00元</span>
+				<span style="font-size:12px;">兑换：100积分</span>
+			</div>
+
+			<div class="creditsExchange_bar ui_btn"style="margin-right:2%" data-action="attrSelect" data-type="0">
+				<span>30.00元</span>
+				<span style="font-size:12px;">兑换：300积分</span>
+			</div>
+
+			<div class="creditsExchange_bar ui_btn" data-action="attrSelect" data-type="0">
+				<span>50.00元</span>
+				<span style="font-size:12px;">兑换：653积分</span>
+			</div>
+
+			<div class="creditsExchange_bar ui_btn"style="margin-right:2%;" data-action="attrSelect" data-type="0">
+				<span>100.00元</span>
+				<span style="font-size:12px;">兑换：2000积分</span>
+			</div>
+
+			<div class="creditsExchange_bar ui_btn"style="margin-right:2%;" data-action="attrSelect" data-type="0">
+				<span>300.00元</span>
+				<span style="font-size:12px;">兑换：3000积分</span>
+			</div>
+
+			<div class="creditsExchange_bar ui_btn" data-action="attrSelect" data-type="0">
+				<span>500.00元</span>
+				<span style="font-size:12px;">兑换：4000积分</span>
+			</div> -->
+		</div>
+	</div>
+	<div class="creditsExchange_alarm">
+		<img src="images/mine/jy.png" alt=""><span style="display:block; style="font-size:12px;"">推客宝不提供充值发票，如需发票请充值前向当地运营商咨询确认</span>
+	</div>
+</div>
+<div class="creditsExchange_balance">
+	<span style="margin-left:2%;" id="wantIntegral">兑换：0积分</span>
+	 <div class="creditsExchange_btn ui_btn" data-action="confirm">确认充值</div>  
+</div>

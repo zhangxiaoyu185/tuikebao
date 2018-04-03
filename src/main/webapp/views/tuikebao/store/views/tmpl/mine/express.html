@@ -1,0 +1,42 @@
+<div class="express_top">
+	<div class="item">
+		<span class="flag">物流公司</span>
+		<span class="value" id="ExpressName"><%=list.bsoimExpressName%></span>
+	</div>
+	<div class="item">
+		<span class="flag">订单编号</span>
+		<span class="value" id="Uuid" data-uuid="<%=list.bsoimUuid%>"><%=list.bsoimUuid%></span>
+	</div>
+	<div class="item">
+		<span class="flag">下单时间</span>
+		<span class="value" id="OrderTime"><%=list.bsoimOrderTime%></span>
+	</div>
+</div>
+
+<div class="express_bottom">
+	<div class="express_number">
+		<span class="flag">物流编码</span>
+		<span class="value" id="Expno"><%=list.bsoimExpno%></span>
+	</div>
+	<div>
+		<%if(information.length == 0){%>
+			<div class="flow_item">
+				<div class="express_ing"></div>
+				<div class="content_border">
+					<div class="desc">暂无物流信息</div>					
+				</div>
+			</div>
+		<%}else{%>
+			<% for(var j=0; j<information.length;j++){%>
+				<div class="flow_item">
+					<div class="express_ing"></div>
+					<div class="content_border">
+						<div class="desc"><%=information[j].bsoesContent%></div>
+						<div class="time"><%=information[j].bsoesCdate%></div>
+					</div>
+				</div>
+			<%}%>
+		<%}%>
+
+	</div>
+</div>

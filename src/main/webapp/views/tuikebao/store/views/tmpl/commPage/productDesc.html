@@ -1,0 +1,158 @@
+<div class="productDesc_top">
+  <div class="item selected ui_btn base" data-action="productDescType" data-type="base">基本信息</div>
+  <div class="separate"></div>
+  <div class="item ui_btn desc" data-action="productDescType" data-type="desc">商品详情</div>
+  <div class="separate" data-action="productDescType"></div>
+  <div class="item ui_btn" data-action="productDescType" data-type="evaluate">评价<span id="evaluateCount"></span></div>
+</div>
+<div class="productDesc_top_placeholder"></div>
+
+<!-- 商品基本信息 -->
+<div id="productDesc_base" class="productDesc_base">
+  <div id="index_slides">
+    <%if(prduct.bsprtImageUrl1){%>
+    <img src="<%=WEB_URL+"coreAttachment/image/get/"+prduct.bsprtImageUrl1%>" class="productDesc_img" />
+    <%}%>
+    <%if(prduct.bsprtImageUrl2){%>
+    <img src="<%=WEB_URL+"coreAttachment/image/get/"+prduct.bsprtImageUrl2%>" class="productDesc_img" />
+    <%}%>
+    <%if(prduct.bsprtImageUrl3){%>
+    <img src="<%=WEB_URL+"coreAttachment/image/get/"+prduct.bsprtImageUrl3%>" class="productDesc_img" />
+    <%}%>
+    <%if(prduct.bsprtImageUrl4){%>
+    <img src="<%=WEB_URL+"coreAttachment/image/get/"+prduct.bsprtImageUrl4%>" class="productDesc_img" />
+    <%}%>
+    <%if(prduct.bsprtImageUrl5){%>
+    <img src="<%=WEB_URL+"coreAttachment/image/get/"+prduct.bsprtImageUrl5%>" class="productDesc_img" />
+    <%}%>
+  </div>
+  <div class="productDesc_content">
+    <div id="productName" class="title"><%=prduct.bsprtName%></div>
+    <div class="price">￥<%=prduct.bsprtSalePrice%>元</div>
+    <div class="order_price">原价<span class="out_time">￥<%=prduct.bsprtOrignalPrice%></span></div>
+    <div class="bottom"> <span class="left">快递：<%=prduct.bsprtExpress%>元</span> <span>销售：<%=prduct.bsprtSaleCount%>笔</span> <span class="right"><%=prduct.bsprtAddress%></span> </div>
+    <div class="boundary"></div>
+    <%if(bsprtProductTagNames && bsprtProductTagNames.length>1){%>
+    <div class="label ui_btn" data-action="openShade" data-openTypeId="baseService">
+      <%for(var i=0; i<bsprtProductTagNames.length-1; i++){%>
+      <span class="item"><%=bsprtProductTagNames[i]%></span>
+      <%}%>
+      <div class="more"></div>
+    </div>
+    <%}%>
+  </div>
+  <div class="productDesc_param ui_btn" data-action="openShade" data-openTypeId="paramShade"> <span class="ml-12">产品参数</span>
+    <div class="rightArrows_flag"></div>
+  </div>
+  <div class="productDesc_param attr ui_btn" data-action="openShade" data-openTypeId="attribute"> <span class="ml-12">请选择<%=attrTitle%></span>
+    <div class="rightArrows_flag"></div>
+  </div>
+  <div  class="productDesc_shade_div" >
+    <div class="productDesc_shade ui_btn" data-action="shut"></div>
+    <!-- 产品参数 start -->
+    <div id="paramShade" class="productDesc_shade_cotent" style="background: #fff;">
+      <div class="param">
+        <div class="title">产品参数</div>
+        <% if(bsprtRuleParam.length == 0){%>
+        <div class="attr" style="height:340px;"></div>
+        <%}else{%>
+        <%for(var i=0; i<bsprtRuleParam.length; i++){%>
+        <div class="item">
+          <div class="attr"><%=bsprtRuleParam[i].flag%></div>
+          <div class="value"><%=bsprtRuleParam[i].val%></div>
+        </div>
+        <%}%>
+        <%}%>
+      </div>
+    </div>
+    <!-- 产品参数 start --> 
+    
+    <!-- 基础服务 start -->
+    <div id="baseService" class="productDesc_shade_cotent"  style=" background-color: rgb(255, 255, 255);">
+      <div class="baseService">
+        <div class="title">基础服务</div>
+        <%for(var i=0; i<bsprtRuleParamContent.length; i++){%>
+        <div class="item">
+          <div class="attr">
+            <div class="flag"><%=bsprtRuleParamContent[i].bststIcon%></div>
+          </div>
+          <div class="value">
+            <div class="value_title"><%=bsprtRuleParamContent[i].bststName%></div>
+            <div class="value_content"> <%=bsprtRuleParamContent[i].bststDesc%> </div>
+          </div>
+        </div>
+        <%}%>
+      </div>
+    </div>
+    <!-- 基础服务 end --> 
+    
+    <!-- 属性 start -->
+    <div id="attribute" class="productDesc_shade_cotent" style="background: transparent;">
+      <div class="attribute">
+        <div class="top">
+          <div class="product_border"> <img src="<%=WEB_URL+"coreAttachment/image/get/"+prduct.bsprtSharePic%>" class="product_img" /> </div>
+          <div class="title">
+            <div class="price">￥<span id="selectPrice"></span></div>
+            <div class="content">请选择<%=attrTitle%><span>库存:<span id="store"></span></span></div>
+            <div class="quit ui_btn" data-action="closeShade">
+            <!-- <img src=""> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="selectArea">
+          <div class="cotent">
+            <%for(var i=0; i<bsprtAttrJson.length; i++) {%>
+            <div class="cotent_title t_title" data-uuid="<%=bsprtAttrJson[i].uuid%>"><%=bsprtAttrJson[i].name%></div>
+            <div class="cotent_item noSelect" data-key="<%=bsprtAttrJson[i].uuid%>">
+              <%for(var j=0; j<bsprtAttrJson[i].data.length; j++){%>
+              <div class="item_select ui_btn" data-action="attrSelect" data-type="<%=bsprtAttrJson[i].data[j].uuid%>"><%=bsprtAttrJson[i].data[j].name%></div>         
+              <%}%>
+            </div>
+            <%}%>
+          </div>
+        </div>
+
+        <div class="div_number"> <span>数量</span>
+            <div class="right_div">
+              <div class="addSubtract_btn ui_btn" data-action="subtract">-</div>
+              <div id="number_val" class="number_val">1</div>
+              <div class="addSubtract_btn ui_btn" data-action="add">+</div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- 属性 end -->
+    <div id="close_btn" class="close_btn ui_btn" data-action="closeShade">关闭</div>
+    <div id="sure_btn" class="close_btn ui_btn" data-action="sureBuyOrAddCat">确定</div>
+    <div id="close_attr" class="close_attr">
+      <div class="item addToCart ui_btn" data-action="addToCartAttr">加入购物车</div>
+      <div class="item sure ui_btn" data-action="sureBuy">确定</div>
+    </div>
+  </div>
+  <div class="productDesc_btn_bottom">
+    <div class="item addToCart ui_btn" data-action="addToCart"  data-openTypeId="attribute">加入购物车</div>
+    <div class="item goBuy ui_btn"  data-action="goSure" data-openTypeId="attribute">立即购买</div>
+  </div>
+</div>
+
+<!-- 商品详情 -->
+<div id="productDesc_content" class="productDesc_content"></div>
+
+<!-- 商品评价 -->
+<div id="productDesc_evaluate" class="productDesc_evaluate" style="">
+
+  <div class="div_content">
+    <div id="wrapper" style="margin-top: 11px;">
+      <div id="scroller">
+        <div id="scroller-pullDown"> <span id="down-icon" class="icon-double-angle-down pull-down-icon"></span> <span id="pullDown-msg" class="pull-down-msg">下拉刷新</span> </div>
+        <div id="scroller-content">
+          <ul>
+          </ul>
+        </div>
+        <div id="scroller-pullUp"> <span id="up-icon" class="icon-double-angle-up pull-up-icon"></span> <span id="pullUp-msg" class="pull-up-msg">上拉加载</span> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="productDesc_btn_bottom_placeholder"></div>

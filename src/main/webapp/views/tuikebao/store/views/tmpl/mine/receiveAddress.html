@@ -1,0 +1,47 @@
+<div class="receiveAddress_warp">
+	<!-- <div class="divide"></div>
+	<div class="area">
+		<div class="addresslocality">
+			<div class="photo_btn ui_btn"></div>
+			<div class="addressDetails"> 收货人：张小雨
+				<span class="areaRight">1345679245</span>
+				<div class="desc ellipsis">收货地址：浙江省上城区延safsd发大水法安路588号</div>
+			</div>
+		</div>
+		<div class="addressArea">
+			<div class="addressArea_btn ui_btn" data-action="receiveSelected">设为默认地址</div>
+			<div class="addressEdit">
+				<span class="ui_btn" data-action="eiditAddress">编辑</span>
+				<span class="ui_btn" data-action="deleteAddress">删除</span>
+			</div>	
+
+		</div>
+	</div> -->
+
+	<%for(var i=0; i<list.length; i++){%>
+	<div class="divide"></div>
+	<div class="area">
+		<div class="addresslocality">
+			<div class="photo_btn ui_btn"></div>
+			<div class="addressDetails">收货人：<span float="left"><%=list[i].bssasName%></span>
+				<span class="areaRight"><%=list[i].bssasMobile%></span>
+				<div class="desc ellipsis">收货地址：<span><%=list[i].bssasCityName+list[i].bssasCountyName +list[i].bssasAddress%></span></div>
+			</div>
+		</div>
+		<div class="addressArea">
+			<%
+			var flagClass = "";
+			if(list[i].bsarsDefault==1){
+				flagClass = "selected";
+			}
+			%>
+			<div class="addressArea_btn <%=flagClass%> ui_btn" data-action="receiveSelected" data-uuid=<%=list[i].bssasUuid%> data-action="returnSelected">设为默认地址</div>
+			<div class="addressEdit">
+				<span class="ui_btn" data-action="eiditAddress" data-uuid=<%=list[i].bssasUuid%>>编辑</span>
+				<span class="ui_btn" data-action="deleteAddress" data-uuid=<%=list[i].bssasUuid%>> 删除</span>
+			</div>	
+		</div>
+	</div>
+<%}%>
+<div class="comm_bottom_btn ui_btn" data-action="addAddress">添加新地址</div>
+</div>

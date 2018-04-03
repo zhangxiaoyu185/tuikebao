@@ -1,0 +1,35 @@
+<div id="wrapper">
+	<div id="scroller">
+		<div id="scroller-pullDown">
+			<span id="down-icon" class="icon-double-angle-down pull-down-icon"></span>
+			<span id="pullDown-msg" class="pull-down-msg">下拉刷新</span>
+		</div>
+		<div id="scroller-content">
+			<ul>
+				<li class="notRefresh">
+					<div id="index_slides">
+						<%for(var i=0; i<banner.length; i++){%>
+								<img src="<%=WEB_URL+"coreAttachment/image/get/"+banner[i].bsbarPic%>" alt="">
+						<%}%>
+					</div>
+
+					<div id="type_page_wrapper" class="productType_wrapper typePage">
+						<!-- 计算宽度 n*75-->
+						<div class="productType_border">
+							<%for(var i=0; i<subClass.length; i++){%>
+							<div class="item <%=i==0?"selected":""%> ui_btn" data-action="typeSelect" data-Uuid="<%=subClass[i].bspcyUuid%>"><%=subClass[i].bspcyName%></div>
+							
+							<%}%>
+						</div>
+					</div>
+
+					<div class="productType_placeholder"></div>
+				</li>
+			</ul>
+		</div>
+		<div id="scroller-pullUp">
+			<span id="up-icon" class="icon-double-angle-up pull-up-icon"></span>
+			<span id="pullUp-msg" class="pull-up-msg">上拉加载</span>
+		</div>
+	</div>
+</div>

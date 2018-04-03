@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>公众号编辑</title>
+<link type="text/css" rel="stylesheet" href="../css/common/base-min.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../css/common/index.css" media="all" />
+<script type="text/javascript" src="../js/jquery/jquery-1.8.3.min.js?ts=new Date()"></script>
+<script type="text/javascript" src="../../js/jquery.js?ts=new Date()"></script>
+<script type="text/javascript" src="../../js/jquery-form.js?ts=new Date()"></script>
+<script type="text/javascript" src="../js/layer/layer.js?ts=new Date()"></script>
+<script type="text/javascript" src="../js/common/common.js?ts=new Date()"></script>
+<script type="text/javascript" src="../js/busi/corewechat.js?ts=new Date()"></script>
+
+<!-- 上传控件 -->
+<link rel="stylesheet" type="text/css" href="../js/upFile/cropper/dist/cropper.css" />
+<link rel="stylesheet" type="text/css" href="../js/upFile/cropper/css/main.css"/>
+<link rel="stylesheet" type="text/css" href="../js/upFile/upImg.css"/>
+<script type='text/javascript' src='../js/upFile/upImg//js/LocalResizeIMG.js'></script>
+<script type="text/javascript" src="../js/upFile/cropper/dist/cropper.js"></script>
+<script type="text/javascript" src="../js/upFile/upImg.js"></script>
+</head>
+<body>
+	<div class="rightTop greyBox">
+		<span class="cur_postion">当前位置： [公众号编辑 ]</span>
+	</div>
+
+	<div class="navTow">
+		<a href="javaScript:store();" class="navTow_in bg_color" id="store">商城端</a>
+		<a href="javaScript:share();" class="navTow_in" id="share">分享端</a>
+	</div>
+	
+	<div class="rightContent" style=" margin-top: 40px;" id="storeContent">
+		<div class="box">
+			<ul class="list">
+				<li class="list-li">
+					<label class="leftLi">appid：</label>
+					<div class="rightLi">
+						<input type="text" class="inputStyle crwctAppidStore"/>
+						<span class="p-red"> *</span>
+					</div>
+				</li>
+				<li class="list-li">
+					<label class="leftLi">appsecret：</label>
+					<div class="rightLi">
+						<input type="text" class="inputStyle crwctAppsecretStore"/>
+						<span class="p-red"> *</span>
+					</div>
+				</li>
+				<li class="list-li">
+					<label class="leftLi">二维码：</label>
+					<div class="rightLi">
+						<div id="store_img_upload_pic" class="upImg_div">
+						</div>
+					</div>
+				</li>
+				<li class="list-li">
+					<label class="leftLi">商户号partner/mch_id：</label>
+					<div class="rightLi">
+						<input type="text" class="inputStyle crwctPartnerStore"/>
+					</div>
+				</li>
+				<li class="list-li">
+					<label class="leftLi">商户密钥partnerkey：</label>
+					<div class="rightLi">
+						<input type="text" class="inputStyle crwctPartnerkeyStore"/>
+					</div>
+				</li>
+				<li class="list-li">
+					<label class="leftLi">项目名称：</label>
+					<div class="rightLi">
+						<input type="text" class="inputStyle crwctProjectNameStore"/>
+					</div>
+				</li>
+				<li class="list-li">
+					<label class="leftLi">项目logo：</label>
+					<div id="img_upload_pic_logo_store" class="upImg_div">
+						<div class="upImg_flag_store crwctProjectLogoStore" data-field="crwctProjectLogoStore" data-uuid="" data-width="100%" data-height="100%" data-cratmType="14" data-cratmDir="14">
+							<input type="file" class="input_filt_logo_store"/>			
+						</div>
+					</div>
+				</li>
+				<li class="list-li">
+					<label class="leftLi">项目描述：</label>
+					<div class="rightLi">
+						<input type="text" class="inputStyle crwctProjectDescStore"/>
+					</div>
+				</li>
+				<li class="list-li">
+					<label class="leftLi">备注：</label>
+					<div class="rightLi">
+						<textarea class="textAreaStyle crwctRemarksStore"></textarea>
+					</div>
+				</li>
+				<li class="list-li">
+					<input type="button" class="buttonStyle submitStore" value="商城端修改"/>
+				</li>
+			</ul>
+		</div>
+	</div>
+<!-- display: none -->
+	<div class="rightContent" style=" margin-top: 40px; display: none" id="shareContent">
+		<div class="box">
+			<ul class="list">
+				<li class="list-li">
+					<label class="leftLi">appid：</label>
+					<div class="rightLi">
+						<input type="text" class="inputStyle crwctAppidShare"/>
+						<span class="p-red"> *</span>
+					</div>
+				</li>
+				<li class="list-li">
+					<label class="leftLi">appsecret：</label>
+					<div class="rightLi">
+						<input type="text" class="inputStyle crwctAppsecretShare"/>
+						<span class="p-red"> *</span>
+					</div>
+				</li>
+				<li class="list-li">
+					<label class="leftLi">二维码：</label>
+					<div class="rightLi">
+						<div id="share_img_upload_pic" class="upImg_div">
+						</div>
+					</div>
+				</li>
+				<li class="list-li">
+					<label class="leftLi">商户号partner/mch_id：</label>
+					<div class="rightLi">
+						<input type="text" class="inputStyle crwctPartnerShare"/>
+					</div>
+				</li>
+				<li class="list-li">
+					<label class="leftLi">商户密钥partnerkey：</label>
+					<div class="rightLi">
+						<input type="text" class="inputStyle crwctPartnerkeyShare"/>
+					</div>
+				</li>
+				<li class="list-li">
+					<label class="leftLi">项目名称：</label>
+					<div class="rightLi">
+						<input type="text" class="inputStyle crwctProjectNameShare"/>
+					</div>
+				</li>
+				<li class="list-li">
+					<label class="leftLi">项目logo：</label>
+					<div id="img_upload_pic_logo_share" class="upImg_div">
+						<div class="upImg_flag_share crwctProjectLogoShare" data-field="crwctProjectLogoShare" data-uuid="" data-width="100%" data-height="100%" data-cratmType="14" data-cratmDir="14">
+							<input type="file" class="input_filt_logo_share"/>			
+						</div>
+					</div>
+				</li>
+				<li class="list-li">
+					<label class="leftLi">项目描述：</label>
+					<div class="rightLi">
+						<input type="text" class="inputStyle crwctProjectDescShare"/>
+					</div>
+				</li>
+				<li class="list-li">
+					<label class="leftLi">备注：</label>
+					<div class="rightLi">
+						<textarea class="textAreaStyle crwctRemarksShare"></textarea>
+					</div>
+				</li>
+				<li class="list-li">
+					<input type="button" class="buttonStyle submitShare" value="分享端修改"/>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

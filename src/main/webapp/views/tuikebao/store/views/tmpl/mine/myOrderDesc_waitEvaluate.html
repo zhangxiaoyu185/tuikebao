@@ -1,0 +1,56 @@
+<div class="myOrderDesc_warp">
+	<div class="myOrderDesc_top">
+		<span>待评价</span>
+		<div class="gift_flag"></div>
+	</div>
+
+	<div class="myOrderDesc_address">
+		<div class="address_flag"></div>
+		<div class="address_item"><span>收货人：<%=fulfil.bsorrName%></span> <span class="phone"><%=fulfil.bsorrMobile%></span></div>
+		<div class="address_item" ><nobr>收获地址：<%=fulfil.bsorrCityName+fulfil.bsorrCountyName+fulfil.bsorrAddress%></nobr></div>
+	</div>
+
+	<div class="myOrderDec_content">
+		<span class="number">订单号：<%=fulfil.bsoimOrder%></span>
+	</div>
+
+	<div class="myOrderDec_content_border">
+		<div class="div_middle">
+			<img src="<%=WEB_URL+"coreAttachment/image/get/"+fulfil.bsoimStorePic%>" class="product_img" />
+			<div class="content">
+				<div class="title"><%=fulfil.bsoimProductName%></div>
+				<div class="attr"><%=fulfil.bsoimAttrName%></div>
+			</div>
+			<div class="div_right">
+				<div class="price">￥<%=fulfil.bsoimPrice%></div>
+				<div class="number">x<%=fulfil.bsoimQuantity%></div>
+			</div>
+		</div>
+	</div>
+	<div class="myOrder_total">
+		<div class="item">
+			<span class="left">共1件商品  支付合计：</span>
+			<% 
+				var total = fulfil.bsoimPrice * fulfil.bsoimQuantity;
+			%>
+			<span class="price right">￥<%=total%></span>
+		</div>
+	</div>
+
+
+
+	<div class="myOrder_bottom">
+		<div class="item">订单编号：<%=fulfil.bsoimUuid%></div>
+		<div class="item">交易号：<%=fulfil.bsoimOrder%></div>
+		<div class="item">创建时间：<%=fulfil.bsoimCdate%></div>
+		<div class="item">付款时间：<%=fulfil.bsoimPayTime%></div>
+		<div class="item">发货时间：<%=fulfil.bsoimShippingTime%></div>
+		<div class="item">成交时间：<%=fulfil.bsoimFinishTime%></div>
+	</div>
+
+
+	<div class="myOrder_bottom_btn">
+		<div class="myOrder_btn normal ui_btn" data-action="goEvaluate" data-uuid="<%=fulfil.bsoimUuid%>" data-Product="<%=fulfil.bsoimProduct%>" data-AttrName="<%=fulfil.bsoimAttrName%>">去评价</div>
+		<div class="myOrder_btn cancel ui_btn" data-action="goDelete" data-uuid="<%=fulfil.bsoimUuid%>">删除订单</div>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+<div class="onLine_phone">
+	<%for(var i=0; i<telphone.length; i++){%>
+	<a href="tel:<%=telphone[i]%>">
+		<div class="item">
+			客服热线电话<%=i+1%>：<%=telphone[i]%>
+			<div class="phone_flag"></div>
+		</div>
+	</a>
+	<%}%>
+	
+</div>
+
+<%for(var j=0; j<customerQq.length; j++){%>
+<div class="qq_item">
+	<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=<%=customerQq[j]%>&amp;site=oicqzone.com&amp;menu=yes" target="_blank">
+		<div class="qq_flag"></div>
+		<div class="qq_span">QQ客服<%=j+1%>:</div>
+	</a>
+</div>
+<%}%>
+<!-- <div class="qq_item">
+	<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=450459217&amp;site=oicqzone.com&amp;menu=yes" target="_blank">
+		<div class="qq_flag"></div>
+		<div class="qq_span">QQ客服2</div>
+	</a>
+</div>
+<div class="qq_item">
+	<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=450459217&amp;site=oicqzone.com&amp;menu=yes" target="_blank">
+		<div class="qq_flag"></div>
+		<div class="qq_span">QQ客服3</div>
+	</a>
+</div> -->
+

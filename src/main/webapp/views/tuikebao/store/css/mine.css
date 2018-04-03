@@ -1,0 +1,1309 @@
+/***********************我的订单  start**********************/
+.myOrder_type_border {
+	width: 100%;
+	height: 45px;
+}
+
+.myOrder_type_border .item {
+	width: 20%;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+	color: #666;
+	font-weight: bold;
+	float: left;
+	background: #fff;
+	border-bottom: solid 1px #b0b0b0;
+}
+
+.myOrder_type_border .item.selected {
+	height: 42px;
+	color: #fb0200;
+	border-bottom: solid 4px #fb0200;
+}
+
+.myOrder_item {
+	width: 100%;
+	overflow: auto;
+	margin-top: 10px;
+	background: #fff;
+}
+
+.myOrder_item .top {
+	width: 100%;
+	height: 34px;
+	line-height: 34px;
+	background: #fff;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.myOrder_item .top .orderNumber {
+	color: #333;
+	margin-left: 10px;
+	float: left;
+}
+
+.myOrder_item .top .status {
+	color: #fb0200;
+	margin-right: 10px;
+	float: right;
+}
+
+.div_middle_border {
+	width: 100%;
+	overflow: auto;
+}
+
+.myOrder_item .div_middle  {
+	height: 100px;
+	padding-left: 99px;
+	padding-right: 100px;
+	position: relative;
+	background: #f5f6f7;
+	margin-top: 12px;
+}
+
+.myOrder_item .div_middle.waitPay {
+	padding-right: 50px;
+}
+
+.myOrder_item .div_middle:first-child {
+	margin-top: 0px;
+}
+
+.myOrder_item .div_middle .product_img {
+	width: 75px;
+	height: 75px;
+	position: absolute;
+	left: 12px;
+	top: 12px;
+}
+
+.myOrder_item .content {
+	width: 100%;
+	height: 100px;
+} 
+
+.myOrder_item .content .title {
+	width: 100%;
+    height: 42px;
+    color: #333;
+    font-size: 12px;
+    top: 14px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.myOrder_item .content .title.ellipsis {
+	height: 28px;
+    text-overflow: ellipsis; 
+    -o-text-overflow: ellipsis;
+    white-space: nowrap; 
+}
+    
+.myOrder_item .content .attr {
+	width: 100%;
+    height: 13px;
+    color: #999;
+    font-size: 12px;
+    top: 18px;
+    position: relative;
+}
+
+.myOrder_item .content .attr.waitPay {
+	top: 15px;
+}
+
+.myOrder_item .content .div_flag {
+	width: 100%;
+    height: 18px;
+    color: #f23030;
+    margin-top: 13px;
+}
+
+.myOrder_item .content .div_flag .item {
+	height: 14px;
+	padding: 2px;
+	line-height: 14px;
+	border: solid 1px #f23030;
+	float: left;
+	font-size: 12px;
+	border-radius: 3px;
+	margin-right: 12px;
+}
+
+.myOrder_item .price_red {
+	width: 100%;
+	height: 13px;
+	font-size: 12px;
+	color: #f23030;
+	clear: both;
+	margin-top: 7px;
+}
+
+.myOrder_item .div_number {
+	width: 100px;
+	color: #999;
+	font-size: 12px;
+	position: absolute;
+	right: 0px;
+	text-align: right;
+	top: 0px;
+}
+
+.myOrder_item .div_number.waitPay {
+	width: 35px;
+	top: 35px;
+	padding-right: 12px;
+}
+
+.myOrder_item .div_number .price {
+	padding-right: 12px;
+	height: 13px;
+	margin-top: 15px;
+	color: #333;
+}
+
+.myOrder_item .div_number .number {
+	padding-right: 12px;
+	height: 13px;
+	margin-top: 35px;
+	color: #999;
+}
+
+.myOrder_item .sum_item {
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	font-size: 15px;
+	border-bottom: solid 1px #f5f6f7;
+}
+
+.myOrder_item .sum_item:last-child {
+	border-bottom: 0px;
+}
+
+.myOrder_item .sum_item .flag {
+	width: 75%;
+	height: 45px;
+	color: #333;
+	float: left;
+	text-align: right;
+}
+
+.myOrder_item .sum_item .content {
+	width: 25%;
+	height: 45px;
+	color: #fb0200;
+	float: left;
+	text-align: left;
+}
+
+.myOrder_item .sum_item .content.kd {
+	color: #333;
+}
+
+.myOrder_item .goPay_div {
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	font-size: 15px;
+	border-bottom: solid 1px #cacaca;
+	border-top: solid 1px #cacaca;
+}
+
+.myOrder_item .goPay_div .goPay {
+	width: 105px;
+	height: 45px;
+	line-height: 45px;
+	background: #fb0200;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	float: right;
+}
+
+.myOrder_item .div_sum {
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	font-size: 12px;
+	border-bottom: solid 1px #f5f6f7;
+}
+
+.myOrder_item .div_sum .span_sum {
+	font-size: 12px;
+	float: right;
+	color: #555;
+	margin-right: 10px;
+}
+
+.myOrder_item .div_sum .span_sum .span_price {
+	color: #333;
+}
+
+.myOrder_item .bottom {
+	width: 100%;
+	height: 40px;
+	margin-top: 1px;
+	background: #fff;
+}
+
+.myOrder_item .bottom .myOrder_btn {
+	width: 67px;
+	height: 21px;
+	line-height: 21px;
+	text-align: center;
+	margin-right: 10px;
+	float: right;
+	font-size: 12px;
+	/*font-weight: bold;*/
+	border-radius: 3px;
+	margin-top: 10px;
+}
+
+.myOrder_item .bottom .myOrder_btn.goPay {
+	background: #fb0200;
+	color: #fff;
+}
+
+.myOrder_item .bottom .myOrder_btn.normal {
+	background: #fff;
+	color: #fb0200;
+	border: solid 1px #fb0200;
+}
+
+.myOrder_item .bottom .myOrder_btn.cancel {
+	background: #fff;
+	color: #999;
+	border: solid 1px #dedede;
+}
+
+/***********************我的订单  end***********************/
+
+/***********************个人中心  start**********************/
+.personCenter_top {
+	width: 100%;
+	height:165px;
+	background:-webkit-linear-gradient(left,#fa5658, #fbb83d);
+	position: relative;
+}
+
+.personCenter_top img {
+	width: 100%;
+}
+
+.personCenter_top .content {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+}
+
+.personCenter_top .content .head {
+	width: 74px;
+	height: 74px;
+	background: url(../images/mine/img-head-picture.png) no-repeat;
+	border-radius: 37px;
+	-webkit-background-size: 74px 74px;
+	background-size: 74px 74px;
+	margin: 16px auto 0px auto;
+}
+
+.personCenter_top .content .phone {
+	width: 100%;
+	height: 13px;
+	text-align: center;
+	color: #fff;
+	margin-top: 14px;
+	font-size: 12px;
+}
+
+.personCenter_top .content .grade {
+	width: 100%;
+	height: 14px;
+	text-align: center;
+	color: #fff;
+	margin-top: 14px;
+	font-size: 13px;
+}
+
+.personCenter_myOrder {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: solid 1px #cacaca;
+	background: #fff;
+}
+
+.personCenter_myOrder .title {
+	font-size: 15px;
+	color: #333;
+	margin-left: 14px;
+}
+
+.personCenter_myOrder .toDesc {
+	font-size: 15px;
+	color: #999;
+	float: right;
+	margin-right: 14px;
+}
+
+.personCenter_status {
+	width: 100%;
+	height: 65px;
+	border-bottom: solid 1px #cacaca;
+	background: #fff;
+	margin-bottom: 3px;
+}
+
+.personCenter_status .item {
+	width: 20%;
+	height: 65px;
+	text-align: center;
+	font-size: 13px;
+	color: #666;
+	float: left;
+}
+
+.personCenter_status .item .red_flag {
+	min-width: 14px;
+    height: 14px;
+    border-radius: 8px;
+    background: #fb0200;
+    color: #fff;
+    line-height: 16px;
+    float: right;
+    top: 6px;
+    position: relative;
+    left: -14px;
+    font-size: 12px;
+    padding: 1px;
+}
+
+.personCenter_status .item .wait_pay {
+	width: 25px;
+	height: 25px;
+	margin: 12px auto 6px auto;
+	background: url(../images/mine/wait_pay.png) no-repeat;
+	-webkit-background-size: 25px 25px;
+	background-size: 25px 25px;
+}
+
+.personCenter_status .item .wait_send {
+	width: 25px;
+	height: 25px;
+	margin: 12px auto 6px auto;
+	background: url(../images/mine/wait_send.png) no-repeat;
+	-webkit-background-size: 25px 25px;
+	background-size: 25px 25px;
+}
+
+.personCenter_status .item .wait_received {
+	width: 25px;
+	height: 25px;
+	margin: 12px auto 6px auto;
+	background: url(../images/mine/wait_received.png) no-repeat;
+	-webkit-background-size: 25px 25px;
+	background-size: 25px 25px;
+}
+
+.personCenter_status .item .wait_evaluat {
+	width: 25px;
+	height: 25px;
+	margin: 12px auto 6px auto;
+	background: url(../images/mine/wait_evaluat.png) no-repeat;
+	-webkit-background-size: 25px 25px;
+	background-size: 25px 25px;
+}
+
+.personCenter_status .item .after_sale {
+	width: 25px;
+	height: 25px;
+	margin: 12px auto 6px auto;
+	background: url(../images/mine/after_sale.png) no-repeat;
+	-webkit-background-size: 25px 25px;
+	background-size: 25px 25px;
+}
+
+.personCenter_item {
+	width: 48%;
+	height: 68px;
+	border: solid 1px #cacaca;
+	background: #fff;
+	margin-top: 5px;
+}
+
+.personCenter_item.left {
+	float: left;
+}
+
+.personCenter_item.right {
+	float: right;
+}
+
+.personCenter_item img {
+	width: 25px;
+	margin: 21px 10px 0px 20px;
+	float: left;
+}
+
+.personCenter_item .content {
+	height: 68px;
+	float: left;
+}
+
+.personCenter_item .content .title {
+	font-size: 15px;
+	color: #666;
+	margin-top: 16px;
+	font-weight: bold;
+}
+
+.personCenter_item .content .desc  {
+	font-size: 12px;
+	color: #666;
+	margin-top: 6px;
+}
+
+/***********************个人中心  end***********************/
+
+/***********************物流详情  start**********************/
+.express_top {
+	width: 100%;
+	overflow: auto;
+	background: #fff;
+	border-top:solid 1px #cacaca;
+	border-bottom: solid 1px #cacaca; 
+	padding-bottom: 12px;
+}
+
+.express_bottom {
+	width: 100%;
+	overflow: auto;
+	background: #fff;
+	border-top:solid 1px #cacaca;
+	margin-top: 12px;
+}
+
+.express_top .item {
+	height: 16px;
+	line-height: 16px;
+	margin-top: 11px;
+}
+
+.express_bottom .express_number {
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	border-bottom: solid 1px #cacaca;
+}
+
+.express_top .item .flag,.express_bottom .express_number .flag {
+	margin-left: 11px;
+	font-size: 15px;
+	color: #333;
+}
+
+.express_top .item .value,.express_bottom .express_number .value {
+	margin-left: 20px;
+	font-size: 12px;
+	color: #888;
+}
+
+.express_bottom .flow_item {
+	width: 95%;
+	overflow: auto;
+	float: right;
+	border-left: solid 1px #dedede;
+	padding-top: 15px;
+}
+
+.express_bottom .flow_item:first-child {
+	margin-top: 15px;
+	padding-top: 0px;
+}
+
+.express_bottom .flow_item .content_border {
+	width: 90%;
+	overflow: auto;
+	color: #999;
+	border-top: solid 1px #cacaca;
+	float: right;
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+
+.express_bottom .flow_item:first-child .content_border {
+	border-top: 0px;
+	color: #333;
+	padding-top: 0px;
+	position: relative;
+}
+
+.express_bottom .flow_item .content_border .desc {
+	font-size: 15px;
+}
+
+.express_bottom .flow_item .content_border .time {
+	font-size: 12px;
+	margin-top: 20px;
+}
+
+.express_bottom .flow_item:first-child .express_ing {
+	width: 16px;
+	height: 16px;
+	background: url(../images/mine/express_ing.png) no-repeat;
+	-webkit-background-size: 16px 16px;
+	background-size: 16px 16px;
+	margin-left: -8px;
+    z-index: 999;
+    position: absolute;
+    margin-top: -3px;
+}
+
+.express_bottom .flow_item .express_ing {
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background: #999;
+	margin-left: -5px;
+	position: absolute;
+	margin-top: 16px;
+}
+
+/***********************物流详情  end***********************/
+
+/***********************评价  start**********************/
+.evaluate_top {
+	width: 100%;
+	height: 46px;
+	/*border-bottom: solid 1px #cacaca;*/
+	background: #fff;
+}
+
+.evaluate_top .evaluate_head {
+	width: 30px;
+	height: 30px;
+	background: url(../images/mine/evaluate_head.png) no-repeat;
+	-webkit-background-size: 30px 30px;
+	background-size: 30px 30px;
+	margin: 9px 0px 0px 12px;
+	float: left;
+}
+
+.evaluate_top .img_item {
+	height: 19px;
+    float: left;
+    margin: 15px 0px 0px 30px;
+    padding-left: 25px;
+    line-height: 19px;
+    color: #888;
+}
+
+.evaluate_top .img_item.praise {
+	background: url(../images/mine/praise.png) no-repeat;
+	-webkit-background-size: 17px 19px;
+	background-size: 17px 19px;
+}
+
+.evaluate_top .img_item.praise.selected {
+	color: #fb0200;
+	background: url(../images/mine/praise_selected.png) no-repeat;
+	-webkit-background-size: 17px 19px;
+	background-size: 17px 19px;
+}
+
+.evaluate_top .img_item.moderate {
+	background: url(../images/mine/moderate.png) no-repeat;
+	-webkit-background-size: 17px 19px;
+	background-size: 17px 19px;
+}
+
+.evaluate_top .img_item.moderate.selected {
+	color: #fb0200;
+	background: url(../images/mine/moderate_selected.png) no-repeat;
+	-webkit-background-size: 17px 19px;
+	background-size: 17px 19px;
+}
+
+.evaluate_top .img_item.negative {
+	background: url(../images/mine/negative.png) no-repeat;
+	-webkit-background-size: 17px 19px;
+	background-size: 17px 19px;
+}
+
+.evaluate_top .img_item.negative.selected {
+	color: #fb0200;
+	background: url(../images/mine/negative_selected.png) no-repeat;
+	-webkit-background-size: 17px 19px;
+	background-size: 17px 19px;
+}
+
+.evaluate_textarea {
+	width: 96%;
+	padding: 2%;
+	height: 160px;
+	border: 0px;
+	border-top: solid 1px #f5f6f7;
+}
+
+.evaluate_pic {
+	width: 100%;
+	height: 80px;
+	background: #fff;
+	border-bottom: solid 1px #cacaca;
+}
+
+.evaluate_pic .item {
+	width: 70px;
+	height: 70px;
+	background: url(../images/mine/picUp_falg.png) no-repeat;
+	-webkit-background-size: 70px 70px;
+	background-size: 70px 70px;
+	float: left;
+	margin-left: 12px;
+	margin-top: 2px;
+}
+
+.evaluate_sure_btn {
+	width: 90%;
+	height: 45px;
+	background: #ffcd02;
+	margin: 36px auto;
+	color: #fff;
+	font-size: 17px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 45px;
+	border-radius: 3px;
+}
+/***********************评价  end***********************/
+
+/***********************我的消息  start**********************/
+.myMessage_item {
+	width: 90%;
+	overflow: auto;
+	margin: 15px auto;
+	position: relative;
+	padding: 20px 10px;
+	background: #fff;
+}
+
+.myMessage_item img {
+	width: 62px;
+	float: left;
+	margin-right: 8px;
+}
+
+.myMessage_item .content {
+	font-size: 15px;
+	line-height: 20px;
+	color: #222;
+}
+
+.myMessage_item .time {
+	color: #666;
+	float: right;
+	font-size: 12px;
+	margin-top: 8px;
+	margin-right: 10px;
+} 
+
+/***********************我的消息  end***********************/
+
+/***********************我的订单详情  start**********************/
+.myOrderDesc_warp {
+	width: 100%;
+	overflow:auto;
+	margin-top: 10px;
+	background: #fff;
+}
+.myOrderDesc_warp .myOrderDesc_top {
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	color: #fff;
+	background: #dc2924;
+}
+
+.myOrderDesc_warp .myOrderDesc_top span {
+	font-size: 15px;
+	font-weight: bold;
+	margin-left: 44px;
+}
+
+.myOrderDesc_warp .myOrderDesc_top .gift_flag {
+	width: 62px;
+	height: 62px;
+	background: url(../images/mine/gift_flag.png) no-repeat;
+	-webkit-background-size: 62px 62px;
+	background-size: 62px 62px;
+	float: right;
+	margin: 10px 60px 0px 0px;
+}
+
+.myOrderDesc_warp .myOrderDesc_address {
+	width: 100%;
+	height: 65px;
+	background: #fff;
+	border-bottom: solid 1px #cacaca;
+}
+
+.myOrderDesc_warp .myOrderDesc_address .address_flag {
+	width: 26px;
+	height: 23px;
+	background: url(../images/mine/address_flag.png) no-repeat;
+	-webkit-background-size: 16px 23px;
+	background-size: 16px 23px;
+	margin: 22px 0px 0px 22px;
+	float: left;
+}
+
+.myOrderDesc_warp .myOrderDesc_address .address_item {
+	width:96%;
+    	font-size: 13px;
+    	height: 50%;
+    	line-height: 30px;
+    	color: #333;
+    	padding-left:4%;
+    	position: relative;
+    	text-overflow: ellipsis; 
+}
+
+.myOrderDesc_warp .myOrderDesc_address .address_item .phone {
+	font-size: 13px;
+	color: #333;
+	float: right;
+	margin-right:12px;
+}
+
+.myOrderDesc_warp .myOrderDec_content {
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	color: #333;
+	background: #fff;
+	
+}
+
+.myOrderDesc_warp .myOrderDec_content_border {
+	width: 100%;
+	background: #fff;
+}
+
+.myOrderDesc_warp .myOrderDec_content_border .div_middle  {
+	height: 100px;
+	padding-left: 99px;
+	padding-right: 100px;
+	position: relative;
+	background: #f5f6f7;
+	margin-top: 12px;
+}
+
+.myOrderDesc_warp .myOrderDec_content_border .div_middle:first-child {
+	margin-top: 0px;
+}
+
+.myOrderDesc_warp .myOrderDec_content_border .div_middle .product_img {
+	width: 75px;
+	height: 75px;
+	position: absolute;
+	left: 12px;
+	top: 12px;
+}
+
+.myOrderDesc_warp .myOrderDec_content_border .content {
+	width: 100%;
+/*	overflow: auto;*/
+} 
+
+.myOrderDesc_warp .myOrderDec_content_border .content .title {
+	width: 100%;
+    	color: #333;
+    	font-size: 12px;
+    	top: 12px;
+    	position: relative;
+}
+
+.myOrderDesc_warp .myOrderDec_content_border .content .attr {
+	width: 100%;
+    	height: 13px;
+    	color: #999;
+    	font-size: 12px;
+    	margin-top: 20px;
+    	position: relative;
+}
+
+.myOrderDesc_warp .myOrderDec_content_border .div_right {
+	width: 88px;
+	height: 100px;
+	color: #999;
+	font-size: 12px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	text-align: right;
+	padding-right: 12px;
+}
+
+.myOrderDesc_warp .myOrderDec_content_border .div_right .price {
+	color: #333;
+	margin-top: 14px;
+}
+
+.myOrderDesc_warp .myOrderDec_content_border .div_right .number {
+	color: #999;
+	margin-top: 36px;
+}
+
+.myOrderDesc_warp .myOrderDec_content .number {
+	margin-left: 12px;
+	color: #333;
+}
+
+.myOrderDesc_warp .myOrder_total {
+	width: 94%;
+	border-bottom: solid 1px #cacaca;
+	background: #fff;
+	padding: 0px 3%;
+	overflow: auto;
+    padding-bottom: 12px;
+}
+
+.myOrderDesc_warp .myOrder_total .item {
+	width: 100%;
+	height: 13px;
+	margin-bottom: 8px;
+	color: #999;
+	font-size: 12px;
+	clear: both;
+	top: 8px;
+	position: relative;
+}
+
+.myOrderDesc_warp .myOrder_total .item span {
+	height: 13px;
+}
+
+.myOrderDesc_warp .myOrder_total .item:last-child {
+	color: #333;
+}
+
+.myOrderDesc_warp .myOrder_total .item .left {
+	width: 75%;
+	float: left;
+	text-align: right;
+}
+
+.myOrderDesc_warp .myOrder_total .item .right {
+	float: right;
+	width: 25%;
+	text-align: left;
+}
+
+.myOrderDesc_warp .myOrder_total .item .right.price {
+	color: #fb0200;
+}
+
+.myOrderDesc_warp .myOrder_price {
+	width: 100%;
+	height: 40px;
+	background: #fff;
+	border-bottom: solid 1px #f5f6f7;
+	line-height: 40px;
+	font-size: 12px;
+	position: relative;
+    clear: both;
+}
+
+.myOrderDesc_warp .myOrder_price .flag {
+	margin-left: 12px;
+	color: #333;
+}
+
+.myOrderDesc_warp .myOrder_bottom {
+	width: 94%;
+	overflow: auto;
+	padding: 12px 3%;
+	font-size: 12px;
+	color: #999;
+	background: #fff;
+	border-bottom: solid 1px #f5f6f7;
+}
+
+.myOrderDesc_warp .myOrder_bottom .item {
+	width: 100%;
+	height: 18px;
+	line-height: 18px;
+
+}
+
+.myOrderDesc_warp .myOrder_bottom_btn {
+	width: 100%;
+	height: 45px;
+	background: #fff;
+	border-bottom: solid 1px #cacaca;
+}
+
+.myOrderDesc_warp .myOrder_bottom_btn .myOrder_btn {
+	width: 67px;
+	height: 21px;
+	line-height: 21px;
+	text-align: center;
+	margin-right: 10px;
+	float: right;
+	font-size: 12px;
+	/*font-weight: bold;*/
+	border-radius: 3px;
+	margin-top: 10px;
+}
+
+/*.myOrderDesc_warp .myOrder_bottom_btn .myOrder_btn.goPay {
+	background: #ff5a00;
+	color: #fff;
+}
+*/
+.myOrderDesc_warp .myOrder_bottom_btn .goPay {
+	width: 105px;
+	height: 45px;
+	line-height: 45px;
+	background: #fb0200;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	float: right;
+}
+
+.myOrderDesc_warp .myOrder_bottom_btn .myOrder_btn.normal {
+	background: #fff;
+	color: #fb0200;
+	border: solid 1px #fb0200;
+}
+
+.myOrderDesc_warp .myOrder_bottom_btn .myOrder_btn.cancel {
+	background: #fff;
+	color: #999;
+	border: solid 1px #dedede;
+}
+
+/***********************我的订单详情  end***********************/
+
+/***********************管理收货地址  start**********************/
+.addressManage {
+	width: 100%;
+	overflow: auto;
+	margin-top: 12px;
+}
+
+.addressManage_item {
+	width: 100%;
+	height: 90px;
+	color: #666;
+	font-size: 14px;
+	border-top: solid 1px #cacaca;
+	background: #fff;
+}
+
+.addressManage_item:last-child {
+	border-bottom: solid 1px #cacaca;
+}
+
+.addressManage_item.selected {
+	background: #999;
+	background-image: url(../images/mine/address_selected.png);
+	background-repeat: no-repeat;
+	background-position:95% center;
+	-webkit-background-size: 18px 18px;
+	background-size: 18px 18px;
+	color: #fff;
+}
+
+.addressManage_item .top {
+	width: 100%;
+	height: 16px;
+	margin-top: 19px;
+}
+
+.addressManage_item .left {
+	float: left;
+	margin-left: 12px;
+
+}
+
+.addressManage_item .right {
+	float: right;
+	margin-right: 15%;
+}
+
+.addressManage_item .bottom {
+	width: 100%;
+	height: 16px;
+	margin-top: 10px;
+}
+/***********************管理收货地址  end***********************/
+
+/***********************收货地址  start***********************/
+.receiveAddress_warp {
+	width: 100%;
+	overflow: auto;
+	font-size: 15px;
+}
+.receiveAddress_warp .divide {
+	width: 100%;
+	height: 13px;
+	background: #f5f6f7;
+}
+
+.receiveAddress_warp .area {
+	width: 100%;
+	height: 104px; 
+	background:#fff;
+	border-top: 1px solid #cacaca;
+	border-bottom:1px solid #cacaca;
+	color: #333;
+}
+
+.receiveAddress_warp .area .areaRight {
+	float: right;
+	margin-right: 12px;
+}
+
+.receiveAddress_warp .area .addresslocality {
+	width: 100%;
+	height: 66px;
+	border-bottom: 1px solid #cacaca;
+}
+
+.receiveAddress_warp .area .addresslocality .photo_btn {
+	width: 34px;
+	height: 44px;
+	background:url('../images/mine/icon_address.png')no-repeat;
+	background-size:16px 24px;
+	background-position: 18px 18px;
+	margin-right:14px;
+	float: left;
+}
+
+.receiveAddress_warp .area .addresslocality .selected {
+	background:url('../images/mine/address_flag.png')no-repeat;
+	background-size:16px 24px;
+	background-position: 18px 18px;
+}
+
+.receiveAddress_warp .area .addresslocality .addressDetails {
+	height: 80%;
+	width: 82%;
+	padding-top: 10px;
+	float: right;
+}
+
+.receiveAddress_warp .area .addressArea {
+	width: 100%;
+	height: 38px;
+}
+
+.receiveAddress_warp .area .desc {
+	color: #666;
+    	margin-top: 9px;
+    	display: block;
+}
+
+.receiveAddress_warp .area .addressArea .addressArea_btn {
+	width: 100px;
+	height: 35px;
+	background:url('../images/mine/twien_nor.png')no-repeat;
+	background-size:14px 14px;
+	background-position: 18px 10px;
+	padding-left:40px;
+	float: left;
+	line-height: 35px;
+ }
+
+ .receiveAddress_warp .area .addressArea .selected {
+ 	background:url('../images/mine/icon_Tick.png')no-repeat;
+	background-size:14px 14px;
+	background-position: 18px 10px;
+ }
+
+ .receiveAddress_warp .area .addressArea .addressEdit {
+ 	width: 154px;
+ 	height: 100%;
+ 	float: right;
+ 	color: #666;
+ }
+
+ .receiveAddress_warp .area .addressArea .addressEdit span {
+ 	width: 60px;
+ 	height: 22px;
+ 	line-height: 22px;
+ 	border: 1px solid #cacaca;
+ 	border-radius: 5px;
+ 	margin-left: 10px;
+ 	display: block;
+ 	float: left;
+ 	margin-top: 6px;
+ 	text-align: center;
+ }
+/***********************收货地址  end***********************/
+
+/***********************新建收货地址  start***********************/
+.newAddress_warp {
+	width: 100%;
+	overflow: auto;
+}
+.newAddress_warp .newAddress_text {
+	width: 98%;
+    	height: 50px;
+    	border-top: 1px solid #cacaca;
+    	background: #fff;
+    	font-size: 15px;
+    	line-height: 50px;
+    	text-align: left;
+    	padding-left: 2%;
+}
+.newAddress_warp .newAddress_area {
+	width: 98%;
+	height: 100px;
+	border-bottom: 1px solid #cacaca;
+	background: #fff;
+	line-height:36px;
+	text-align:left;
+	padding-left: 2%;
+	border-top: 1px solid #cacaca;
+}
+.newAddress_warp .newAddress_btn {
+	width: 350px;
+	height: 50px;
+	margin:0 auto;
+	background:#ffcd02;
+	border-radius:5px; 
+	margin-top:25px;
+	color:#f5f5f5;
+	font-size: 17px;
+	line-height:50px;
+	text-align: center;
+}
+
+.newAddress_warp input {
+	width: 65%;
+	height:48px;
+	border:0;
+	font-size: 15px;
+	text-align:left;
+	margin:0;
+	float: right;
+	padding: 0px 2%;
+}
+
+.newAddress_warp textarea {
+	width: 75%;
+	height:80px;
+	border:0;
+	text-align:left;
+	margin:0;
+	float: right;
+	padding: 10px 2%;
+}
+/***********************新建收货地址  end***********************/
+
+/***********************账户设置  start***********************/
+
+.div-head {
+	width: 95%;
+	float: right;
+	height: 55px;
+	line-height: 55px;
+	font-size: 16px;
+	border-bottom: solid 1px #e2e1e1;
+}
+
+.img-head-picture {
+	width: 46px;
+	height: 46px;
+	background: url("../images/mine/img-head-picture.png") no-repeat;
+	-webkit-background-size: 46px 46px;
+	background-size: 46px 46px;
+	float: right;
+	margin-top: 5px;
+	margin-right: 6px;
+	border-radius: 23px;
+	position: relative;
+}
+
+.img-head-input {
+	width: 72px;
+    	height: 46px;
+    	border-radius: 23px;
+    	-moz-opacity: 0.5;
+    	-khtml-opacity: 0.5;
+    	opacity: 0;
+    	float: right;
+    	position: relative;
+}
+
+.accountSetting_warp {
+	width: 100%;
+	overflow: auto;
+}
+
+.accountSetting_warp .accountSetting_warp_rg {
+	float:right;
+	margin-right:2%;
+	font-size: 15px;
+}
+
+.accountSetting_warp .accountSetting_warp_rg img {
+	width: 45px;
+	height: 45px;
+}
+
+.accountSetting_warp .divide {
+	width: 100%;
+	height: 13px;
+	background: #f5f6f7;
+}
+
+.accountSetting_warp .accountSetting_portrait {
+	width: 98%;
+	height: 65px;
+	border-bottom: 1px solid #cacaca;
+	background: #fff;
+	line-height: 65px;
+	text-align:left;
+	padding-left:2%;
+	font-size: 15px;
+	
+}
+
+.accountSetting_warp .accountSetting_text {
+	width: 98%;
+	height: 50px;
+	border-bottom: 1px solid #cacaca;
+	background: #fff;
+	line-height: 49px;
+	text-align:left;
+	padding-left: 2%;
+} 
+
+.accountSetting_btn {
+	width:332px;
+	height:44px;
+	margin:0 auto;
+	background:#ffcd02;
+	border-radius:5px; 
+	margin-top:25px;
+	color:#f5f5f5;
+	line-height:44px;
+	text-align: center;
+}
+
+.accountSetting_birth {
+	width: 55%;
+   	height: 40px;
+    	border: 0px;
+    	text-align: right;
+}
+/***********************账户设置  end***********************/
+

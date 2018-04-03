@@ -1,0 +1,46 @@
+<div class="div_content">
+<%if( list.length == 0 ){%>
+	<li>
+		<div id="mainStage">
+			<div class="warp">
+				<div class="page">
+					<img src="./images/order/order.png" alt="" style="width:88px;height:92px;"><span style="color:#999">无相关订单</span>
+				</div>
+			</div>
+		</div>
+	</li>
+
+<%}else{%>
+	<%for(var i=0; i<list.length; i++){%>
+		<div class="item">
+			<div class="top">
+				<div class="head" style="background: url(<%=WEB_URL+"coreAttachment/image/get/"+list[i].bseveHead%>) no-repeat;-webkit-background-size: 42px 42px;background-size: 42px 42px;"></div>
+				<div class="name"><%=list[i].bseveName%></div>
+				<div class="time"><%=list[i].bseveCdate%></div>
+			</div>
+			<div class="content"><%=list[i].bseveContent%></div>
+
+			<%if(list[i].bsevePic1){%>
+				<img src="<%=WEB_URL+"coreAttachment/image/get/"+list[i].bsevePic1%>">
+			<%}%>
+			<%if(list[i].bsevePic2){%>
+				<img src="<%=WEB_URL+"coreAttachment/image/get/"+list[i].bsevePic2%>">
+			<%}%>
+			<%if(list[i].bsevePic3){%>
+				<img src="<%=WEB_URL+"coreAttachment/image/get/"+list[i].bsevePic3%>">
+			<%}%>
+			<%if(list[i].bsevePic4){%>
+				<img src="<%=WEB_URL+"coreAttachment/image/get/"+list[i].bsevePic4%>">
+			<%}%>
+			<%if(list[i].bsevePic5){%>
+				<img src="<%=WEB_URL+"coreAttachment/image/get/"+list[i].bsevePic5%>">
+			<%}%>
+			<!-- <img src="images/test/myOrder.png">
+			<img src="images/test/myOrder.png">
+			<img src="images/test/myOrder.png">
+			<img src="images/test/myOrder.png"> -->
+			<div class="bottom"><%=list[i].bseveAttrName%></div>
+		</div>
+	<%}%>
+<%}%>
+</div>

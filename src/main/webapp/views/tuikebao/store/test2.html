@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A basic demo of Cropper.">
+  <meta name="keywords" content="HTML, CSS, JS, JavaScript, jQuery plugin, image cropping, image crop, image move, image zoom, image rotate, image scale, front-end, frontend, web development">
+  <meta name="author" content="Fengyuan Chen">
+  <title>Cropper3</title>
+  <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../dist/cropper.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script type="text/javascript" src="plugins/zepto.js"></script>
+</head>
+<body>
+  <div id="box" class="box">
+            <button id="test">重复绑定触发按钮</button>(点击此按钮两次及以上,即可触发重复绑定,再点击下面的按钮就可看到结果)
+            <br/><br/>
+            <button class="test"  id="test1">click重复绑定测试按钮</button>
+            <button class="test"  id="test2">click绑定一次测试按钮</button>
+            <button class="test"  id="test3" data-val="a111">live重复绑定测试按钮</button>
+            <button class="test" id="test4" data-val="a111222">live绑定一次测试按钮</button>
+        </div>
+        <script type="text/javascript" src="../static/jquery-1.6.1.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                var i = 1,j=1,k=1,h=1,n=1;
+                var triggerBind = function(){
+                    $("#test1").click(function() {
+                        alert("click未解除绑定重复绑定执行第" + j++ + "次");
+                    });
+                    $("#test2").unbind('click').click(function() {
+                        alert("click解除绑定执行" + k++ + "次");
+                    });
+
+                    $("#test3").live("click",function() {
+                        var a = $(this).attr('data-val');
+                        alert(a);
+                        var b = $('#test3').attr('data-val');
+                        alert(b);
+                        alert("live未解除绑定重复执行第" + h++ + "次");
+                    });
+                    $(".test").die().live("click",function() {
+                        var a = $(this).attr('data-val');
+                        alert(a);
+                        var b = $('#test4').attr('data-val');
+                        alert(b);
+                        alert("live解除绑定后执行" + n++ + "次");
+                    });
+                }                
+                $("#test").click(function() {
+                    triggerBind();
+                    alert("触发绑定点击第" + i++ + "次");
+                });
+            });
+        </script>
+
+  
+
+</body>
+</html>

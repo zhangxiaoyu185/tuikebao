@@ -1,0 +1,44 @@
+<div class="personInfo-border">
+	<div class="head_item" >
+		<span>头像</span>
+		<div class="img-head-border ui_btn" onchange="changeHead()">
+			<div id="img_head_pic" class="img-head-picture"><input type="file" id="uploadphoto" name="uploadfile" style="display: block;-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0;" class="img-head-picture" /></div>
+		</div>
+	</div>
+	<div class="personInfo-item">
+			<span style="float: left;">昵称</span>
+			<input id="infoName" style="text-align: right;padding-right: 17px;" class="person-text" placeholder="请输入您的昵称" />
+	</div>
+</div>
+
+<div class="div-personInfo-bottom">
+	<div onclick="changeSexLayer()">
+		<div class="div-item-noBorder">
+			<span style="color: #4E443C;">性别</span>
+			<span class="item-content-right">></span><span class="item-content-right" id="sexValue">男</span>
+		</div>
+	</div>
+	<div>
+		<div class="div-item">
+			<div onclick="changeAddress()">
+				<span style="float: left;">地址</span>
+				<span id="myAddress" class="item-content-right" style="width: 68%;white-space: nowrap;text-overflow: ellipsis;-o-text-overflow: ellipsis;overflow: hidden;text-align: right;"></span>
+			</div>	
+		</div>
+	</div>
+
+	<div onclick="">
+		<div class="div-item">
+			<span style="color: #4E443C;">出生年月</span>
+			<input id="birth" style="text-align: right; padding-right: 18px; width: 68%;" class="person-text" placeholder="请输入出生年月" />
+		</div>
+	</div>
+	<div class="div-item">
+		<span style="float: left;">手机号</span>
+		<span id="phoneNumber" class="item-content-right" style="width: 68%;white-space: nowrap;text-overflow: ellipsis;-o-text-overflow: ellipsis;overflow: hidden;text-align: right;"></span>
+	</div>
+</div>
+
+<div class="comm-bottom-btn" style="margin-top: 35px;">
+	<span class="comm-bottom-span" onclick="changePersonInfo()">保存</span>
+</div>

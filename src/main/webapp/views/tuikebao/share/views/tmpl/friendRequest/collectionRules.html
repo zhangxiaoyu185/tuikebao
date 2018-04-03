@@ -1,0 +1,41 @@
+<div class="inviteFriends_warp">
+	<div class="collectionRules_top">
+		
+		<span>符合以下条件领取对应奖励</span>
+	</div>
+	<div class="collectionRules_receiveIcon">
+		<div class="collectionRules_areaLt">
+			<img src="./images/pigeonhole/people.png" alt=""></div>
+		<div class="collectionRules_areaRt">
+			<img src="./images/pigeonhole/integral.png" alt="">
+		</div>
+	</div>
+	<!-- <div class="collectionRules_list">
+		<div class="collectionRules_areaLt">3人</div>
+		<div class="collectionRules_areaRt">0.5分</div>
+	</div>
+
+	<div class="collectionRules_list">
+		<div class="collectionRules_areaLt">5人</div>
+		<div class="collectionRules_areaRt">1分</div>
+	</div>
+
+	<div class="collectionRules_list">
+		<div class="collectionRules_areaLt">10人</div>
+		<div class="collectionRules_areaRt">2分</div>
+	</div>
+
+	<div class="collectionRules_list">
+		<div class="collectionRules_areaLt">5人</div>
+		<div class="collectionRules_areaRt">1分</div>
+	</div> -->
+	<%for(var i=0; i<rule.length; i++){%>
+	<li>
+		<div class="collectionRules_list">
+			<div class="collectionRules_areaLt"><%=rule[i].bsireCount%>人</div>
+			<div class="collectionRules_areaRt"><%=rule[i].bsireIntegral%>分</div>
+		</div>
+	</li>
+<%}%>
+
+</div>

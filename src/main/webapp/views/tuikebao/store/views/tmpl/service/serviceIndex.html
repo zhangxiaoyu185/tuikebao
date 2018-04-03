@@ -1,0 +1,19 @@
+<div class="serviceIndex_warp">
+<%for(var i=0; i<list.length; i++){%>
+	<%if(i%2==0){%>
+		<div class="serviceIndex_item top ui_btn" data-action="goList" data-index="<%=i%>">
+			<div class="img_flag ">
+				<div class="greenhand_flag">
+					<img src="<%=WEB_URL+"coreAttachment/image/get/"+list[i].bssteIcon%>"  alt=""></div><span style="line-height: 26px;float:left;text-indent:0"><%=list[i].bssteName%></span>
+		</div>
+	</div>
+	<%}else{%>
+		<div class="serviceIndex_item bottom ui_btn" data-action="goList" data-index="<%=i%>">
+			<div class="img_flag ">
+				<div class="greenhand_flag">
+					<img src="<%=WEB_URL+"coreAttachment/image/get/"+list[i].bssteIcon%>"  alt=""></div><span style="line-height: 26px;float:left;text-indent:0"><%=list[i].bssteName%></span>
+			</div>
+		</div>
+	<%}%>
+<%}%>
+</div>

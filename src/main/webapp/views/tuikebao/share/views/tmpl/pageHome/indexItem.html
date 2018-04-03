@@ -1,0 +1,34 @@
+<%if( commodity.length == 0 ){%>
+	<li>
+		<div id="mainStage">
+			<div class="warp">
+				<div class="page">
+					<img src="./images/order/order.png" alt="" style="width:88px;height:92px;"><span style="color:#999">无相关信息</span>
+				</div>
+			</div>
+		</div>
+	</li>
+<%}else{%>
+<%for(var j=0; j<commodity.length; j++){%>
+	<li>
+		<div class="index_recommend">
+			<div class="div_product">
+				<img src="<%=WEB_URL+"coreAttachment/image/get/"+commodity[j].bsprtSharePic%>" class="img_product" />
+				<div class="name ellipsis"><%=commodity[j].bsprtName%></div>
+				<div class="desc">
+					<span class="price">￥<%=commodity[j].bsprtSalePrice%>元</span>
+					<span class="sell_num">已售：<%=commodity[j].bsprtSaleCount%>件</span>
+				</div>
+				<div class="desc">
+					<span class="order_price">原价:￥<%=commodity[j].bsprtOrignalPrice%>元</span>
+					<span class="kd">快递:<%=commodity[j].bsprtExpress%></span>
+				</div>
+			</div>
+			<div class="div_share ui_btn" data-uuid="<%=commodity[j].bsiptProduct%>" data-action="goProductDesc" data-sharePic="<%=commodity[j].bsprtSharePic%>" data-storePic="<%=commodity[j].bsprtStorePic%>">
+				<div class="span_share" data-money="<%=crusrGrade[j]%>" data-integral="<%=integral[j]%>">赚<%=crusrGrade[j]%>元</div>
+				<div class="btn_share">分享赚钱</div>
+			</div>
+		</div>
+	</li>
+<%}%>
+<%}%>

@@ -1,0 +1,22 @@
+<div class="warp">
+	<div class="upGrade_bg">
+		<div class="upGrade_warp">
+			<img src="<%=WEB_URL+"coreAttachment/image/get/"+userInfo.crusrHead%>" alt="">
+			<div class="upGrade_shell">
+				<div class="upGrade_txt">
+				<span style="font-size: 18px;"><%=userInfo.crusrName%>
+					<span style=""class="rack"><%=userInfo.nextCrgdeName%></span>
+				
+				</span></div>
+
+				<div class="upGrade_rectangle">
+				<div class="bar">
+					<img src="./images/mine/leaf.png" alt="">
+					<span><%=userInfo.crusrIntegral%>/<%=userInfo.nextCrgdeIntegral%></span>
+				</div>
+			</div>
+			</div> 	
+		</div>
+	</div>
+	<div class="upGrade_btn ui_btn" data-action="Upgrade" data-nextCrgdeUuid="<%=userInfo.nextCrgdeUuid%>">升级</div>
+</div>

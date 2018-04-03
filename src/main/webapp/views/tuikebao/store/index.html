@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width"; />
+		<title id="title"></title>
+
+		<link rel="stylesheet" type="text/css" href="css/tool/comm.css" />
+		<link rel="stylesheet" type="text/css" href="css/tool/slides.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/pageHome.css" />
+		<link rel="stylesheet" type="text/css" href="css/commPage.css" />
+		<link rel="stylesheet" type="text/css" href="css/service.css" />
+		<link rel="stylesheet" type="text/css" href="css/mine.css" />
+		
+		<link rel="stylesheet" type="text/css" href="plugins/cropper/dist/cropper.css">
+	    <link rel="stylesheet" type="text/css" href="plugins/cropper/css/main.css">
+		<!-- <link rel="stylesheet" type="text/css" href="plugins/mobiscroll/slideUpDownRefresh_files/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="plugins/mobiscroll/slideUpDownRefresh_files/bootstrap-theme.css" /> -->
+		<link rel="stylesheet" type="text/css" href="plugins/mobiscroll/iosSelect.css" />
+		<link rel="stylesheet" type="text/css" href="plugins/mobiscroll/slideUpDownRefresh_files/iscroll.css" />
+
+		<link rel="stylesheet" type="text/css" href="plugins/layer/need/layer.css" />
+		<link rel="stylesheet" type="text/css" href="plugins/mobiscroll/date/css/mobiscroll.scroller.css"/>
+	    <link rel="stylesheet" type="text/css" href="plugins/mobiscroll/date/css/mobiscroll.scroller.sense-ui.css"/>
+
+	</head>
+	<body>
+		<div id="mainStage" style="height:0px"></div>
+
+		<div id="placeholder" style="height: 50px"></div>
+		<div id="footNavBar" class="footNavBar">
+			<div class="footNavBar_item" onclick="index_page()">
+				<div class="item img_item img_index">首页</div>
+			</div>
+			<div class="footNavBar_item" onclick="hot_page()">
+				<div class="item img_item img_hot">热榜</div>
+			</div>
+
+			<div class="footNavBar_item" onclick="shoppingCart_page()">
+				<div class="item img_item img_shoppingCart">购物车</div>
+			</div>
+
+			<div class="footNavBar_item" onclick="serve_page()">
+				<div class="item img_item img_serve">服务</div>
+			</div>
+			<div class="footNavBar_item" onclick="mine_page()">
+				<div class="item img_item img_mine">我的</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+	
+			function index_page() {
+				Views.indexView.willShow();
+			}
+			function hot_page() {
+				Views.hotListView.willShow();
+			}
+			function shoppingCart_page() {
+				dataSave('cartIndex', 1);
+				var flag = false;
+        		dataSave('flag',flag);
+				Views.shoppingCartView.willShow();
+			}
+			function serve_page() {
+				Views.serviceIndexView.willShow();
+			}
+			function mine_page() {
+				Views.myIndexView.willShow();
+			}
+		</script>
+
+		<script type="text/javascript" src="js/config/config.js"></script>
+		<script type="text/javascript" src="js/config/views-register.js"></script>
+
+		<script type="text/javascript" src="plugins/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="plugins/jquery.slides.min.js"></script>
+		
+		<script type="text/javascript" src="plugins/template/template-native.js"></script>
+		<script type="text/javascript" src="plugins/fastclick.js"></script>
+		<script type="text/javascript" src="plugins/layer/layer.js"></script>
+		
+		<script type="text/javascript" src="js/tool/common.js"></script>
+		<script type="text/javascript" src="js/tool/util.js"></script>
+  		<script type="text/javascript" src="js/tool/ui-layout.js"></script>
+  		<script type="text/javascript" src="plugins/iscroll/iscroll.js"></script>
+  		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  	 	<script type="text/javascript" src="js/tool/wxTool.js"></script>
+
+
+  		<script type="text/javascript" src="js/login.js"></script>
+
+  		<script type="text/javascript" src="js/commPage.js"></script>
+  		<script type="text/javascript" src="js/pageHome.js"></script>
+  		<script type="text/javascript" src="js/service.js"></script>
+  		<script type="text/javascript" src="js/mine.js"></script>
+
+  		<script type="text/javascript" src="js/test/test.js"></script>
+  		<script type="text/javascript" src="js/test/listTest.js"></script>
+  		<script type="text/javascript" src="js/tool/app.js"></script>
+  		<script type="text/javascript" src="js/tool/widget.js"></script>
+
+  		<script src="plugins/mobiscroll/date/js/mobiscroll.core.js" type="text/javascript"></script>
+	    <script src="plugins/mobiscroll/date/js/mobiscroll.scroller.js" type="text/javascript"></script>
+	    <script src="plugins/mobiscroll/date/js/mobiscroll.datetime.js" type="text/javascript"></script>
+
+	    <script type="text/javascript" src="plugins/mobiscroll/slideUpDownRefresh_files/iscroll.js"></script>
+    	<script src="plugins/mobiscroll/iosSelect.js" type="text/javascript"></script>
+	    <!-- 测试 -->
+	    <script src="plugins/mobiscroll/areaData_v2.js" type="text/javascript"></script>
+	    
+	    <!-- <script src="plugins/mobiscroll/date/js/mobiscroll.select.js" type="text/javascript"></script>-->
+	    <!-- <script src="plugins/mobiscroll/date/js/mobiscroll.scroller.ios.js" type="text/javascript"></script>
+	    <script src="plugins/mobiscroll/date/js/mobiscroll.scroller.android.js" type="text/javascript"></script> -->
+	   <!-- <script src="plugins/mobiscroll/date/js/mobiscroll.scroller.android-ics.js" type="text/javascript"></script> -->
+	   <!-- <script src="plugins/mobiscroll/date/js/mobiscroll.scroller.wp.js" type="text/javascript"></script> -->
+	    <script src="plugins/mobiscroll/date/js/mobiscroll.i18n.zh.js" type="text/javascript"></script>
+
+		<script type='text/javascript' src='plugins/upFile/js/LocalResizeIMG.js'></script>
+		<script type='text/javascript' src='plugins/upFile/js/patch/mobileBUGFix.mini.js'></script>
+  		<script type="text/javascript" src="plugins/cropper/dist/cropper.js"></script>
+
+		<script type="text/javascript" src="js/tool/upImg.js"></script>
+	</body>	
+</html>

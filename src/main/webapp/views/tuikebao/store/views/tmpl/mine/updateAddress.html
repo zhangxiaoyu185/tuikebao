@@ -1,0 +1,29 @@
+
+<div class="newAddress_warp">
+	<div class="newAddress_text"><span>收货人姓名</span>
+		<input type="text" id="bssasName" placeholder="请输入姓名"
+		value="<%=address.bssasName%>">
+	</div>
+	<div class="newAddress_text">手机号码
+		<input type="text" id="bssasMobile" placeholder="请输入手机号码"value="<%=address.bssasMobile%>"
+		>
+	</div>
+	<div class="newAddress_text">省、市、区
+		<input id="newArea"  type="text" placeholder="请输入省、市、区"
+		value="<%=address.bssasProvinceName+' '+
+address.bssasCityName+' '+address.bssasCountyName%>" oneUuid="<%=address.bssasProvince%>"
+twoUuid="<%=address.bssasCity%>"
+threeUuid="<%=address.bssasCounty%>"
+>nav
+	<!-- 	<input id="area" class="accountSetting_warp_rg accountSetting_birth" placeholder="请输入您的地址"/> -->
+	</div>
+	<div class="newAddress_text">邮政编码
+		<input type="text" id="bsarsZipCode" placeholder="请输入邮政编码"value="<%=address.bsarsZipCode%>">
+	</div>
+	<div class="newAddress_area">详细地址
+		<textarea id="bssasAddress" placeholder="请输入详细地址"><%=address.bssasAddress%></textarea>
+	</div>
+	<div class="comm_bottom_btn ui_btn" data-action="updateAddress">确定</div> 		
+</div>
+
+

@@ -1,0 +1,103 @@
+<div class="personCenter_top">
+	
+	<div class="content">
+		<div id="headPic" class="head ui_btn" data-action="goPersonInfo"></div>
+		<div class="grade"><%=userInfo.crusrName?userInfo.crusrName:""%></div>
+		<div class="phone"><%=userInfo.crusrMobile?userInfo.crusrMobile:""%></div>
+		
+	</div>
+</div>
+
+<div class="personCenter_myOrder ui_btn" data-action="goMyOrder" data-index="0">
+	<span class="title">我的订单</span>
+	<span class="toDesc">查看全部订单 ></span>
+</div>
+
+<div class="personCenter_status">
+	<div class="item ui_btn" data-action="goMyOrder" data-index="0">
+		<%if( userInfo.crusrPendingPay != 0){%>
+				<div class="red_flag"><%=userInfo.crusrPendingPay?userInfo.crusrPendingPay:0%></div>
+		<%}%>
+		<div class="wait_pay"></div>
+		<span>待付款</span>
+	</div>
+	<div class="item ui_btn" data-action="goMyOrder" data-index="1">
+		<%if( userInfo.crusrPendingShip != 0){%>
+			<div class="red_flag"><%=userInfo.crusrPendingShip?userInfo.crusrPendingShip:0%></div>
+		<%}%>		
+		<div class="wait_send"></div>
+		<span>待发货</span>
+	</div>
+	<div class="item ui_btn" data-action="goMyOrder" data-index="2">
+		<%if( userInfo.crusrPendingRecv != 0){%>
+			<div class="red_flag"><%=userInfo.crusrPendingRecv?userInfo.crusrPendingRecv:0%></div>
+		<%}%>
+		<div class="wait_received"></div>
+		<span>待收货</span>
+	</div>
+	<div class="item ui_btn" data-action="goMyOrder" data-index="3">
+		<%if( userInfo.crusrPendingEval != 0){%>
+			<div class="red_flag"><%=userInfo.crusrPendingEval?userInfo.crusrPendingEval:0%></div>
+		<%}%>
+		<div class="wait_evaluat"></div>
+		<span>待评价</span>
+	</div>
+	<div class="item ui_btn" data-action="goAfterSale" data-index="4">
+		<%if( userInfo.crusrRefund != 0){%>
+			<div class="red_flag"><%=userInfo.crusrRefund?userInfo.crusrRefund:0%></div>
+		<%}%>
+		<div class="after_sale"></div>
+		<span>退款/售后</span>
+	</div>
+</div>
+
+<div style="width: 100%; min-height: 280px;">
+	<div class="personCenter_item left ui_btn" data-action="goAddressManageView">
+		<img src="images/mine/address.png">
+		<div class="content">
+			<div class="title">收货地址</div>
+			<div class="desc">我的收货地址</div>
+		</div>
+	</div>
+
+	<div class="personCenter_item right ui_btn" data-action="goAccountSettingView">
+		<img src="images/mine/account_settings.png">
+		<div class="content">
+			<div class="title">账户设置</div>
+			<div class="desc">隐私与安全</div>
+		</div>
+	</div>
+
+	<div class="personCenter_item left ui_btn" data-action="goMyMessageView">
+		<img src="images/mine/message_center.png">
+		<div class="content">
+			<div class="title">消息中心</div>
+			<div class="desc">我的消息</div>
+		</div>
+	</div>
+	<div class="personCenter_item right ui_btn" data-action="goShoppingCartView">
+		<img src="images/mine/shopping_cart.png">
+		<div class="content">
+			<div class="title">购物车</div>
+			<div class="desc">我的购物车</div>
+		</div>
+	</div>
+
+	<!-- <a href="http://www.baidu.com">
+		<div class="personCenter_item left">
+			<img src="images/mine/about_us.png">
+			<div class="content">
+				<div class="title">关于推客宝</div>
+				<div class="desc">去查看</div>
+			</div>
+		</div>
+	</a> -->
+
+	<div class="personCenter_item left ui_btn" data-action="exitApp">
+		<img src="images/mine/about_us.png">
+		<div class="content">
+			<div class="title">退出</div>
+			<div class="desc">退出应用</div>
+		</div>
+	</div>
+</div>

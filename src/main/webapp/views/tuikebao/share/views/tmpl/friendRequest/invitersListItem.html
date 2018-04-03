@@ -1,0 +1,34 @@
+<div class="invitersList_warp">
+	<%for(var i=0; i<list.length; i++){%>
+		
+		<%
+			var time = list[i].bsirnIdate;
+        	var timeArray=time.split(" ");
+		%>
+
+	<div class="invitersList_area">
+		<div class="invitersList_list">
+			<img src="<%=WEB_URL+"coreAttachment/image/get/"+list[i].bsirnBeInvitedHead%>" alt="">
+			<span>您邀请了<%=list[i].bsirnBeInvited%></span>
+			<span style="float:right"><%=timeArray[0]%></span>
+		</div>
+	</div>
+	<!-- <div class="invitersList_area">
+		<div class="invitersList_list">
+			<img src="./images/pigeonhole/tx2.png" alt="">
+			<span>您邀请了北小路</span>
+			<span style="float:right">2016-2-2</span>
+		</div>
+	</div>	
+	<div class="invitersList_area">
+		<div class="invitersList_list">
+			<img src="./images/pigeonhole/tx3.png" alt="">
+			<span>您邀请了西小巷</span>
+			<span style="float:right">2016-2-2</span>
+		</div>
+	</div> -->
+<%}%>
+</div>
+
+
+

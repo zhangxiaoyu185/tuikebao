@@ -1,0 +1,47 @@
+
+<%if( list.length == 0 ){%>
+	<li>
+		<div id="mainStage">
+			<div class="warp">
+				<div class="page">
+					<img src="./images/order/order.png" alt="" style="width:88px;height:92px;"><span style="color:#999">无相关订单</span>
+				</div>
+			</div>
+		</div>
+	</li>
+
+<%}else{%>
+
+	<%for(var i=0; i<list.length; i++){%>
+		<li>
+			<div class="myOrder_item">
+				<div class="top">
+					<span class="orderNumber">订单号：<%=list[i].bsoimUuid%></span>
+				</div>
+				<div class="div_middle_border">
+					<div class="div_middle ui_btn" data-uuid="<%=list[i].bsoimUuid%>" data-action="goDesc_waitReceive">
+						<img src="<%=WEB_URL+"coreAttachment/image/get/"+list[i].bsoimSharePic%>" class="product_img" />
+						<div class="content">
+							<img src="<%=WEB_URL+"coreAttachment/image/get/"+list[i].bsoimSharePic%>" class="product_img" />
+							<div class="content">
+								<div class="title"><%=list[i].bsoimProductName%></div>
+								<div class="attr">颜色分类：<%=list[i].bsoimAttrName%></div>
+							</div>
+							<div class="div_number">
+								<div class="price">￥<%=list[i].bsoimPrice%></div>
+								<div class="number">x<%=list[i].bsoimQuantity%></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="div_sum">
+					<span class="span_sum">共<%=list[i].bsoimQuantity%>件商品  合计:<span class="span_price"><%=list[i].bsoimValue%>元</span>  (含运费<%=list[i].bsoimExpress%>元)</span>
+				</div>
+				<div class="bottom">
+					<div class="myOrder_btn normal ui_btn" data-action="confirm" data-uuid="<%=list[i].bsoimUuid%>">确认收货</div>
+					<div class="myOrder_btn normal ui_btn" data-OrderTime="<%=list[i].bsoimOrderTime%>" data-ExpressName="<%=list[i].bsoimExpressName%>" data-action="goExpress" data-Uuid="<%=list[i].bsoimUuid%>" data-Expno="<%=list[i].bsoimExpno%>" data-ExpressCode="<%=list[i].bsoimExpressCode%>" data-OrderTime="<%=list[i].bsoimOrderTime%>">查看物流</div>
+				</div>
+			</div>
+		</li>
+	<%}%>
+<%}%>

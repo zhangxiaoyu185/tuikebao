@@ -1,0 +1,69 @@
+
+
+<div class="invitersList_warp">
+	<div class="rankingList_top">
+
+		<%
+			var ranking=rankingList.length;
+			if( ranking == 3){
+				var width="33%";
+			}
+			if( ranking == 2){
+				var width="50%";
+			}
+			if( ranking == 1){
+				var width="100%";
+			}
+		%>
+
+		<%for(var i=0; i<ranking; i++){%>
+		<div style="width:<%=width%>" class="rankingList_nav ui_btn" data-action="attrSelect"><%=rankingList[i].bsicsPeriods%></div> 	
+		<%}%>
+		<!-- <div class="rankingList_nav ui_btn selected" data-action="attrSelect">170201</div>
+		<div class="rankingList_nav ui_btn" data-action="attrSelect">170202</div>
+		<div class="rankingList_nav ui_btn" data-action="attrSelect">170203</div> -->
+	</div>
+	
+	<%for(var j=0; j<ranking; j++){%>
+	<div class="rankingInformation" style="display: none;">
+	<div class="rankingList_area" style="margin-top:9px;">
+		<div class="areaLt">
+			<img src="<%=WEB_URL+"coreAttachment/image/get/"+rankingList[j].bsicsGoldGainerHead%>" alt="">
+			<span><%=rankingList[j].bsicsGoldGainerName + rankingList[j].bsicsGoldMatters%><span>奖励：<%=rankingList[j].bsicsGoldReward%></span>
+			<span>领取奖励有效期为一周</span></span>
+		</div>
+
+		<div class="areaRg">
+			1
+		</div>
+	</div>
+	
+	<div class="rankingList_area" style="margin-top:9px;">
+		<div class="areaLt">
+			<img src="<%=WEB_URL+"coreAttachment/image/get/"+rankingList[j].bsicsSilverGainerHead%>" alt="">
+			<span><%=rankingList[j].bsicsSilverMatters%><span>奖励：<%=rankingList[j].bsicsSilverReward%></span>
+			<span>领取奖励有效期为一周</span></span>
+
+		</div>
+
+		<div class="areaRg">
+			2
+		</div>
+	</div>
+
+	<div class="rankingList_area" style="margin-top:9px;">
+		<div class="areaLt">
+			<img src="<%=WEB_URL+"coreAttachment/image/get/"+rankingList[j].bsicsBronzeGainerHead%>" alt="">
+			<span><%=rankingList[j].bsicsBronzeMatters%><span>奖励：<%=rankingList[j].bsicsBronzeReward%></span>
+			<span>领取奖励有效期为一周</span></span>
+
+		</div>
+
+		<div class="areaRg">
+			3
+		</div>
+	</div>
+	</div>
+	<%}%>
+	<div class="txt">注意：如未完善个人信息请尽快完善，客服会第一时间与获奖人联系 </div>
+</div>

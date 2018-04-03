@@ -1,0 +1,23 @@
+<%if( list.length == 0 ){%>
+    <li>
+        <div id="mainStage">
+            <div class="warp">
+                <div class="page">
+                    <img src="./images/order/order.png" alt="" style="width:88px;height:92px;"><span style="color:#999">无相关订单</span>
+                </div>
+            </div>
+        </div>
+    </li>
+<%}else{%>
+
+
+<%for(var i=0; i<list.length; i++){%>
+	<li>
+		<div class="myMessage_item">
+			<img src="<%=WEB_URL+"coreAttachment/image/get/"+list[i].bsmecProductPic%>">
+			<span class="content"><%=list[i].bsmecContent%></span>
+			<span class="time"><%=list[i].bsmecCdate%></span>
+		</div>
+	</li>
+<%}%>
+<%}%>

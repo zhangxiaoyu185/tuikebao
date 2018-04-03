@@ -1,0 +1,61 @@
+<div class="rewardCollection_warp">
+	<div class="rewardCollection_top">	
+		<span style="float: left;margin-left: 35%" data-date="<%=date.bsiayPeriods%>" id="date" ><%=date.bsiayPeriods%>期</span>
+		<div class="inviteColumn_topRule ui_btn" data-action="openReward">领取规则 > </div>
+	</div>
+
+	<div class="rewardCollection_nav">
+		<div class="outsideFrame">
+			<div class="insideFrame">
+				<div class="imperialCrown"></div>
+				<span id="invitationNumber" style="font-size: 12px" data-designation = "<%=number.crusrInviteNused%>" >我的邀请：<%=number.crusrInviteNused%>人 > </span></br>
+				<div class="bronze"></div>
+			</div>
+		</div>
+		<div class="grade">			
+				<div class="grade_logo">普</div><div class="beeline"></div>
+				<div class="grade_logo">青</div><div class="beeline"></div>
+				<div class="grade_logo">银</div><div class="beeline"></div>
+				<div class="grade_logo">金</div>
+		<div class="clear"></div>
+		<span style="margin-top: 10px;display: block;"id="level"></span>
+		</div>
+	</div>
+	
+	<div class="inviteColumn">
+		<div class="inviteColumn_top">
+			<span>您邀请的人数：</span>
+		</div>	
+		<div class="inviteColumn_top" style="border: 0;text-align: center;">
+			<span style="color: #939393;"><%=number.crusrInviteNused%>人</span>
+		</div>
+		
+	</div>
+
+	<div class="inviteColumn">
+		<div class="inviteColumn_top">
+			<span>符合以下奖励条件：</span>
+		</div>	
+		<div class="inviteColumn_top" >
+			<div class="inviteColumn_top_nav inviteColumn_topLt">
+				<img src="./images/pigeonhole/people.png" style="width: 30px;height: 22px;" alt="">
+			</div>
+			<div class="inviteColumn_top_nav inviteColumn_topRg">
+				<img src="./images/pigeonhole/integral.png" alt="" style="width: 31px;height: 30px;">
+			</div>
+		</div>
+		<%if(rule == ""){%>
+			<div style=" width: 100% height: 50px; line-height: 50px; text-align: center;" class="inviteColumn_top_nav inviteColumn_topLt">没有符合的奖励</div>
+		<%}else{%>
+			<div class="inviteColumn_top" style="border: 0">
+				<div class="inviteColumn_top_nav inviteColumn_topLt"><%=rule.bsireCount%>人</div>
+				<div class="inviteColumn_top_nav inviteColumn_topRg"><%=rule.bsireIntegral%>分</div>
+			</div>	
+		<%}%>
+
+	</div>
+
+	<div class="rewardCollection_receive ui_btn" data-action="receive" data-Uuid="<%=rule.bsireUuid%>" id="gain">领&nbsp;&nbsp;&nbsp;&nbsp;取</div>
+	<!-- <div class="rewardCollection_receive">已领取</div>
+	<div class="rewardCollection_receive">领&nbsp;&nbsp;&nbsp;&nbsp;取</div> -->
+</div>	

@@ -1,0 +1,23 @@
+<%if( list.length == 0 ){%>
+	<li>
+		<div id="mainStage">
+			<div class="warp">
+				<div class="page">
+					<img src="./images/order/order.png" alt="" style="width:88px;height:92px;"><span style="color:#999">无相关信息</span>
+				</div>
+			</div>
+		</div>
+	</li>
+
+<%}else{%>
+
+	<%for(var i=0; i<list.length; i++){%>
+		<li>
+			<div class="record_top"style="margin-bottom:2px;border:0">
+			 	<div class="presentationRecord_area"><%=list[i].bscrdAlipayName%></div>
+			 	<div class="presentationRecord_area" style="width: 25%;"><%=list[i].bscrdAmount%></div>
+			 	<div class="presentationRecord_area" style="width: 41%;  line-height: initial;  padding-top: 3px;"><%=list[i].bscrdUdate%></div>
+			</div>
+		</li>
+	<%}%>
+<%}%>
